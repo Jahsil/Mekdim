@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add User</title>
+    <link rel="stylesheet" href="../../assets/css/admin/HeaderFooter.css">
+    <link rel="stylesheet" href="../../assets/css/admin/AddUser.css">
+
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="../../assets/images/logo.png" alt="logo" >
+      <nav class="nav_links">
+        
+        
+        <div class="dropdown">
+            <button><a href="admin.html" class="home">Home</a></button>
+            <div class="account">
+              <button>Account</button>
+              <ul>
+                <li><a href="AccountActivation.html">Activation</a></li>
+                <li><a href="AddUser.html">Add User</a></li>
+                
+              </ul>
+            </div>
+            <div class="approve">
+              <button>Approve</button>
+              <ul>
+                <li><a href="GradeReportApproval.html">Grade</a></li>
+                <li><a href="Clubs.html">Clubs</a></li>
+                <li><a href="LostId.html">Lost ID</a></li>
+                <li><a href="ClearanceApproval.html">Clearance</a></li>
+                <li><a href="Dormitory.html">Dormitory</a></li>
+                
+              </ul>
+            </div>
+
+              <div class="other">
+                <button>Other</button>
+                <ul>
+                  <li><a href="#">Change Theme</a></li>
+                  <li><a href="#">Change Password</a></li>
+                </ul>
+              </div>
+
+              <div class="logout">
+                <button>Log Out</button>
+                
+              </div>
+
+          </div>
+
+
+      </nav>
+     
+    </header>
+
+    <div class="body">
+        <h1>Create Account For User</h1>
+        <form>
+        <article><h2>Input the information in the space provided</h2><br>
+            
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text">             &nbsp;            
+                <label for="id">Id Number:</label>
+                <input type="text"><br><br>
+                <label for="password">Password:</label>
+                <input type="password">          &nbsp;
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password"><br><br>
+                <input type="radio" name="occupation"> <label for="">Student</label>  &nbsp;
+                <input type="radio" name="occupation"> <label for="">Instructor</label>  &nbsp;
+                <input type="radio" name="occupation"> <label for="">Administrator</label>
+            </form>
+
+        </article><br>
+        
+        <article><h2>For Student:</h2><br>
+        
+            <label for="yearLevel">Year Level:</label>
+            <select name="yearLevel" id="">
+                <option value="1">Year 1</option>
+                <option value="2">Year 2</option>
+                <option value="3">Year 3</option>
+                <option value="4">Year 4</option>
+                <option value="5">Year 5</option>
+            </select>
+            <label for="Department">Department:</label>
+            <select name="deps" id="">
+                <option value="SECE">Electrical</option>
+                <option value="SME">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="biomed">Biomed</option>
+                <option value="soft">Software</option>
+            </select>
+        
+        </article><br>
+        <article>
+            <h2>For Instructor:</h2><br>
+            
+                <label for="educationLevel">Education Level:</label>
+                <select name="degree" id="">
+                    <option value="bach">Bachelors</option>
+                    <option value="SME">Masters</option>
+                    <option value="Civil">PhD</option>
+                </select>
+            
+        </article><br>
+        <article><h2>For Administrator:</h2><br>
+            
+                <label for="responsibility">Responsibility:</label>
+                <select name="responsibility" id="">
+                    <option value="resp1">Dean of Department</option>
+                    <option value="resp2">Chariman of Stream</option>
+                    <option value="resp3">Executive Director</option>
+                </select>
+            
+        </article><br>
+        <input class="submit" type="submit">
+    </form>
+    </div>
+
+    <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+  </body>
+</html>
