@@ -1,0 +1,37 @@
+.body h1{
+    color: #52ab98;
+    font-style: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.body h2{
+    color: #52ab98;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+article {
+    background-color: white;
+    width: 60%;
+    height: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input[type=button], input[type=submit]{
+    width: 8%;
+    height: 11%;
+    text-align: center;
+
+}
+.submit {
+    display: grid;
+    margin: auto;
+}
+label{
+    color: #52ab98;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

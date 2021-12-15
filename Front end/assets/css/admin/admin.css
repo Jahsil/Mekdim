@@ -328,7 +328,6 @@ input[type="submit"]:hover{
     list-style: none;
     border-radius: 10px;
     opacity: 0;
-    pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.4s ease;
   }
@@ -346,8 +345,7 @@ input[type="submit"]:hover{
     left: 0px;
     list-style: none;
     border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0; 
     transform: translateY(-10px);
     transition: all 0.4s ease;
   }
@@ -367,7 +365,6 @@ input[type="submit"]:hover{
     list-style: none;
     border-radius: 10px;
     opacity: 0;
-    pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.4s ease;
   }
@@ -422,7 +419,6 @@ input[type="submit"]:hover{
   .logout button:focus + ul
     {
     opacity: 1;
-    pointer-events: all;
     transform: translateY(0px);
   }
   

@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Admin Home</title>
+    <title>Grade Report Approval</title>
     <link rel="stylesheet" href="../../assets/css/admin/HeaderFooter.css">
-    <link rel="stylesheet" href="../../assets/css/admin/admin.css">
+    <link rel="stylesheet" href="../../assets/css/admin/GradeReportApproval.css">
+
   </head>
   <body>
     <header class="header">
@@ -13,7 +14,7 @@
         
         
         <div class="dropdown">
-            <button><a href="admin.html" class="home">Home</a></button>
+            <button><a href=admin.html" class="home">Home</a></button>
             <div class="account">
               <button>Account</button>
               <ul>
@@ -34,6 +35,10 @@
               </ul>
             </div>
 
+            
+
+              
+
               <div class="other">
                 <button>Other</button>
                 <ul>
@@ -53,9 +58,39 @@
       </nav>
      
     </header>
-    <div>
-      <h1>Home Page of the Admin</h1>
+    <div class="body">
+      <h1>Student Grade Report</h1>
+        <article>
+        <form action="">
+            <label for="">Course Name:</label>
+            <input type="text" ><br>
+            <input class="submit" type="submit">
+        </form>
+        </article><br>
+        <h2>Grades of Students:</h2>
+        <form action="">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Approval</th>
+            </tr>
+            <tr>
+                <td>Student 1</td>
+                <td>Unapproved</td>
+                <td><button>Approve</button> <button>Disapprove</button></td>
+            </tr>
+            <tr>
+                <td>Student 2</td>
+                <td>Unapproved</td>
+                <td><button>Approve</button> <button>Disapprove</button></td>
+            </tr>
+        </table><br>
+        <input class="submit" type="submit">
+    </form>
     </div>
+
+
     <footer class="footer">
       
       <div class="container">
