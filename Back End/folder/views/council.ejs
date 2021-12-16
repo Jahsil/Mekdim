@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Council</title>
+    <link rel="stylesheet" href="/council/style.css">
+  </head>
+  <body>
+
+    <table id="customers">
+      <tr>
+        <th>Conncil Name</th>
+        <th>Telephone Number</th>
+        <th>Campus</th>
+        <th>FoundationDate</th>
+        <th>Email</th>
+      </tr>
+      
+      <% if (council !== 0) { %>
+          <% council.forEach( council => { %>
+          <tr>
+            <td> <%= council.CouncilName %>  </td>
+            <td> <%= council.OfficeNo %>  </td>
+            <td> <%= council.Campus %>  </td>
+            <td> <%= council.FoundationDate %>  </td>
+            <td> <%= council.Email %>  </td>
+          </tr>
+          <% }) %>
+        </table>
+        <% } else { %>
+        </table>
+        <p> There is no council in the university at the moment </p>
+      
+        <%  } %>
+    
+    </table>
+
+  </body>
+</html>
+
+
