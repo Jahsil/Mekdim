@@ -2,8 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
-
 :root{
   --primary-color:#266777 !important;
   --secondary-color:#52ab98 !important;
@@ -21,9 +19,11 @@
   --quinary-color:#323232 !important;
 }
 
+
 body{
   background-color: var(--quaternary-color);
 }
+
 
 .header{
   box-sizing: border-box;
@@ -309,37 +309,75 @@ input[type="submit"]:hover{
 
 
 
+/* This is the instructor type */
 
-/* This is the Admin type */
+.dropdown {
+  height: 10vh;
+  width: 70%;
+  
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.grade, .course, .assignment, .other,
+ .other, .logout {
+  position: relative;
+ 
+}
 
 
-  
-  .dropdown {
-    height: 10vh;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .account, .approve, .other, .logout {
-    position: relative;
-  }
-  
-  
-  
-  
 
-/* This is the approve dropdown CSS */
+
+
+/* This is the OTHER dropdown CSS */
 
 .other{
-  height: 70% !important;
-  display: flex;
-  align-items: center;
+height: 70% !important;
+display: flex;
+align-items: center;
 
 } 
 .other ul{
+margin-top: 10px;
+top: 5.5vh;
+position: absolute;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+align-items: center;
+width: 150px;
+height: 120px;
+background: var(--quinary-color);
+left: 0px;
+list-style: none;
+border-radius: 10px;
+
+}
+
+.hide{
+display: none !important;
+}
+.other:hover  .hide {
+display: flex !important;
+background-color: var(--quinary-color) ;
+border-radius: 10px;
+
+}
+
+
+
+/* This is the Assignment dropdown CSS */
+
+.assignment{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+  
+  } 
+  .assignment ul{
   margin-top: 10px;
   top: 5.5vh;
   position: absolute;
@@ -347,7 +385,43 @@ input[type="submit"]:hover{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 150px;
+  height: 120px;
+  background: var(--quinary-color);
+  left: 0px;
+  list-style: none;
+  border-radius: 10px;
+  
+  }
+  
+  .hide{
+  display: none !important;
+  }
+  .assignment:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+  }
+
+
+/* This is the GRADE dropdown CSS */
+
+.grade{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+
+} 
+.grade ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
   height: 120px;
   background: var(--quinary-color);
   left: 0px;
@@ -359,7 +433,7 @@ input[type="submit"]:hover{
 .hide{
   display: none !important;
 }
-.other:hover  .hide {
+.grade:hover  .hide {
   display: flex !important;
   background-color: var(--quinary-color) ;
   border-radius: 10px;
@@ -367,79 +441,41 @@ input[type="submit"]:hover{
 }
 
 
+/* This is the COURSE dropdown CSS */
 
 
-/* This is the approve dropdown CSS */
+.course{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
 
-  .approve{
-    height: 70% !important;
-    display: flex;
-    align-items: center;
+} 
+.course ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 120px;
+  background: var(--quinary-color);
+  left: 0px;
+  list-style: none;
+  border-radius: 10px;
+ 
+}
 
-  } 
-  .approve ul{
-    margin-top: 10px;
-    top: 5.5vh;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    height: 280px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-   
-  }
-
-  .hide{
-    display: none !important;
-  }
-  .approve:hover  .hide {
-    display: flex !important;
-    background-color: var(--quinary-color) ;
-    border-radius: 10px;
-    
-  }
-
-
-  /* This is the account dropdown CSS */
-
-
-  .account{
-    height: 70% !important;
-    display: flex;
-    align-items: center;
-
-  } 
-  .account ul{
-    margin-top: 10px;
-    top: 5.5vh;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-   
-  }
-
-  .hide{
-    display: none !important;
-  }
-  .account:hover  .hide {
-    display: flex !important;
-    background-color: var(--quinary-color) ;
-    border-radius: 10px;
-    
-  }
+.hide{
+  display: none !important;
+}
+.course:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+}
 
 
 
@@ -452,62 +488,76 @@ input[type="submit"]:hover{
 
 /* Hover Effects for the drop downs*/
 
-  .account li,
-  .approve li,
-   .other li,
-  .logout li {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--quinary-color);
-    border-radius: 10px;
-    
-    
-  }
-  
-  .account li:hover,
-  .approve li:hover,
-    .other li:hover,
-  .logout li:hover {
-    background-color: var(--primary-color) ;
-    border-radius: 10px;
-    float: none;   
-  }
-  
-
-
-
-
-
-
-
-  .account a,
-  .approve a,
-   .other a,
-  .logout a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    float: none;
-    
-  }
-
-
-  
-  .dropdown button,
-  .home {
-    
-    background: none;
-    text-decoration: none;
-    border: none;
-    color: var(--quinary-color);
-    font-size: 18px;
-    cursor: pointer;
-    
-  }
-
+.grade li,
+.course li,
+.assignment li,
+ .other li,
+.logout li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--quinary-color);
+  border-radius: 10px;
   
   
- 
+}
+
+.grade li:hover,
+.course li:hover,
+.assignment li:hover,
+  .other li:hover,
+.logout li:hover {
+  background-color: var(--primary-color) ;
+  border-radius: 10px;
+  float: none;   
+}
+
+
+
+
+
+
+
+
+.grade a,
+.course a,
+.assignment a,
+ .other a,
+.logout a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  float: none;
   
+}
+
+
+
+.dropdown button,
+.home {
+  
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: var(--quinary-color);
+  font-size: 18px;
+  cursor: pointer;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

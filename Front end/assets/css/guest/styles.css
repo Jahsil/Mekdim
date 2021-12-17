@@ -1,35 +1,35 @@
-/*Inherited form main page*/
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
-
 :root{
-  --primary-color:#266777 !important;
-  --secondary-color:#52ab98 !important;
-  --tertiary-color:#c8d8e4 !important;
-  --quaternary-color:#f2f2f2 !important;
-  --quinary-color:#ffffff !important;
+  --primary-color:#266777 ;
+  --secondary-color:#52ab98;
+  --tertiary-color:#c8d8e4;
+  --quaternary-color:#f2f2f2;
+  --quinary-color:#ffffff;
   
 }
 
 .dark-theme{
-  --primary-color:#f0f0f0 !important;
-  --secondary-color:#929292 !important;
-  --tertiary-color:#484848 !important;
-  --quaternary-color:#121212 !important;
-  --quinary-color:#323232 !important;
+  --primary-color:#f0f0f0 ;
+  --secondary-color:#929292;
+  --tertiary-color:#484848;
+  --quaternary-color:#121212;
+  --quinary-color:#323232;
 }
 
 body{
   background-color: var(--quaternary-color);
+ 
+}
+:root{
+  --primary: var(--primary-color);
 }
 
 .header{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
+  background-color:var(--primary-color);
 
 }
 
@@ -37,7 +37,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 10%;
+  padding: 1.4em 10%;
   background-color: var(--primary-color);
 }
 .logo{
@@ -121,7 +121,7 @@ a{
 .social a{
   height: 30px;
   width: 30px;
-  background: var(--secondary-color);
+  background-color:  var(--secondary-color);
   border-radius: 5px;
   margin:10px 5px;
   text-align: center;
@@ -179,6 +179,7 @@ hr{
   background:var(--quinary-color);
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  background-color: var(--quinary-color);
 }
 .right h1{
   color: var(--secondary-color);
@@ -207,6 +208,7 @@ form .txt_field{
   border: none;
   background: none;
   outline: none;
+  color: var(--primary-color);
 }
 .txt_field label{
   position: absolute;
@@ -236,6 +238,7 @@ form .txt_field{
 .txt_field input:focus ~ span::before,
 .txt_field input:valid ~ span::before{
   width: 100%;
+  
 }
 .pass{
   margin: -5px 0 20px 5px;
@@ -252,7 +255,7 @@ input[type="submit"]{
   background: var(--secondary-color);
   border-radius: 25px;
   font-size: 18px;
-  color: var(--quaternary-color);
+  color:var(--quaternary-color);
   font-weight: 700;
   cursor: pointer;
   outline: none;
@@ -273,241 +276,11 @@ input[type="submit"]:hover{
   background:var(--quaternary-color);
   border-radius: 10px;
  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* This is the Admin type */
-
-
-  
-  .dropdown {
-    height: 10vh;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .account, .approve, .other, .logout {
-    position: relative;
-  }
-  
-  
-  
-  
-
-/* This is the approve dropdown CSS */
-
-.other{
-  height: 70% !important;
-  display: flex;
-  align-items: center;
-
-} 
-.other ul{
-  margin-top: 10px;
-  top: 5.5vh;
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  height: 120px;
-  background: var(--quinary-color);
-  left: 0px;
-  list-style: none;
-  border-radius: 10px;
  
 }
 
-.hide{
-  display: none !important;
-}
-.other:hover  .hide {
-  display: flex !important;
-  background-color: var(--quinary-color) ;
-  border-radius: 10px;
-  
-}
-
-
-
-
-/* This is the approve dropdown CSS */
-
-  .approve{
-    height: 70% !important;
-    display: flex;
-    align-items: center;
-
-  } 
-  .approve ul{
-    margin-top: 10px;
-    top: 5.5vh;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    height: 280px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-   
-  }
-
-  .hide{
-    display: none !important;
-  }
-  .approve:hover  .hide {
-    display: flex !important;
-    background-color: var(--quinary-color) ;
-    border-radius: 10px;
-    
-  }
-
-
-  /* This is the account dropdown CSS */
-
-
-  .account{
-    height: 70% !important;
-    display: flex;
-    align-items: center;
-
-  } 
-  .account ul{
-    margin-top: 10px;
-    top: 5.5vh;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-   
-  }
-
-  .hide{
-    display: none !important;
-  }
-  .account:hover  .hide {
-    display: flex !important;
-    background-color: var(--quinary-color) ;
-    border-radius: 10px;
-    
-  }
 
 
 
 
 
-
-
-
-
-
-/* Hover Effects for the drop downs*/
-
-  .account li,
-  .approve li,
-   .other li,
-  .logout li {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--quinary-color);
-    border-radius: 10px;
-    
-    
-  }
-  
-  .account li:hover,
-  .approve li:hover,
-    .other li:hover,
-  .logout li:hover {
-    background-color: var(--primary-color) ;
-    border-radius: 10px;
-    float: none;   
-  }
-  
-
-
-
-
-
-
-
-  .account a,
-  .approve a,
-   .other a,
-  .logout a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    float: none;
-    
-  }
-
-
-  
-  .dropdown button,
-  .home {
-    
-    background: none;
-    text-decoration: none;
-    border: none;
-    color: var(--quinary-color);
-    font-size: 18px;
-    cursor: pointer;
-    
-  }
-
-  
-  
- 
-  
