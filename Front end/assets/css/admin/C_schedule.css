@@ -1,3 +1,4 @@
+/*Done By Merry Terefe*/
 /*This CSS implement the schedule format  */
 .wrapper{/*it divided the whole page into three rows and 12 columns*/
     display:grid;
@@ -136,7 +137,7 @@ table {/*Property of the table */
         height: 200px;
       }
       th {/*property of header table*/
-      background-color: #04AA6D;
+      background-color: #043755;
       color: white;
     }
       th, td {/*property of the table content*/
