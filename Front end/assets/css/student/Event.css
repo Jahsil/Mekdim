@@ -1,0 +1,100 @@
+/*Done By Merry Terefe*/
+/*Implement the event page's css*/
+.wrapper{/*it divided the whole page into three rows and 12 columns*/
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:  100px 1000px 60px;
+}
+:root{
+--primary: #266777;
+}
+.header{/*The header property is shown here*/
+  grid-column: span 12;
+  text-align: center;
+  background-color: #f1f1f1;
+}  
+.menu{/* The Menu property is shown here*/
+  grid-column: span 3;
+  text-align: left;
+  font-style: bold;
+  background-color: rgb(255,255,255);
+}
+
+.content{/* IT shows the property of Content*/
+  grid-column: span 9;
+  background-color: rgb(255,255,255);
+  text-align: center;
+}
+.footer{/*Describes the footer Property of the page*/
+grid-column: span 12;
+color: #266777;
+bottom: 0vh;
+right: 0vh;
+left: 0vh;
+padding: 10px;
+}
+
+@media  screen and(max-width:480px){/*Describe the property of the page when the max width is equal to 480px*/
+  .header{
+      grid-column: span6;
+  }
+  .menu{
+      grid-row: 1;
+      grid-column: span 12;
+  }
+  .content{
+      grid-column:span 12 ;
+  }
+}
+body{/*The property of the body is shown here*/
+  background-color: rgb(255,255,255);
+  margin: 0;
+}
+  .meeting_content{/*Property of the meeting content*/
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    padding: 20px;
+    text-align: left;
+    width: 25%;
+    margin-top: 6px;
+ }
+ .exam_content{/*property of the exam content */
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    padding: 20px;
+    text-align: left;
+    width: 25%;
+    margin-top: 6px;
+ }
+ .prelude{/*Property of the prelude class*/
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    padding: 20px;
+    margin: auto;
+}
+input[type=submit] {/*property of submit button*/
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {/*property of the submit button when the cursor hver over it*/
+    background-color: #555;}
+#d_event{/*property of the d_event id*/
+    padding: auto;
+    width: 25%;
+    height:15%;
+    margin-top: 6px;
+}
+input[type=button] {/*property of input button*/
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+    padding: 12px 20px;
+    border: black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=button]:hover {/*property of the input button when the cursor hover over it */
+    background-color: rgb(94, 88, 94);}
