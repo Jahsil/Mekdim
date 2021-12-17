@@ -256,7 +256,7 @@ form .txt_field{
   text-decoration: underline;
 }
 input[type="submit"]{
-  width: 20%;
+  width: 60%;
   height: 50px;
   border:none;
   background: #ffffff;
