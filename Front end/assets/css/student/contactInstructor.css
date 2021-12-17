@@ -1,0 +1,18 @@
+/* Abdennasir Taju ATR/4057/11 */
+
+
+.body h1 {
+    color: #52ab98;
+    font-style: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+input[type=submit]{
+    width: 8%;
+    height: 11%;
+    text-align: center;
+    left: 46%;
+
+}
