@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<!--Done By Merry Terefe-->
+<head>
+    <title>Course Schedule Checking</title>
+    <link rel="stylesheet" href="C_schedule.css"><!--This link the the html with css file-->
+    <link rel="stylesheet" href="HeaderFooter.css"><!--This link the the html with css file-->
+</head>
+
+
+<body><!--This the body where all content that is displayed in the page is coded-->
+    <div class="wrapper"><!--This contens the whole division of the html page-->
+        <div class="header"><!--The header division of the page is shown here-->
+            <img class="logo" src="images/logo.png" alt="logo"><!--The image of a logo is inserted here-->
+            <nav class="nav_links">
+                <ul>
+
+                    <div class="dropdown"><!--The dropdown button is listed in here-->
+                        <button><a href="#" class="home">Home</a></button><!--The Home button -->
+                        <div class="financial_aid"><!--The Financial aid Button-->
+                            <button>Financial Aid</button>
+
+                        </div>
+                        <div class="staff"><!--The Staff Button-->
+                            <button>Staff</button>
+                            <ul><!--The sub content of the staff button-->
+                                <li><a href="#">Staff Evaluation</a></li>
+                                <li><a href="#">Contact instructor</a></li>
+                                <li><a href="#">Contact Dep. Head </a></li>
+                                <li><a href="#">Makeup Exam Request</a></li>
+                                <li><a href="#">Assignment Submission</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="counsel"><!--The The Counsel Button-->
+                            <button>Counsel</button>
+                            <ul><!--The sub content of counsel button-->
+                                <li><a href="#">Counsel Info.</a></li>
+                                <li><a href="#">Counsel Election</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="clubs"><!--The Clubs Button-->
+                            <button>Clubs</button>
+                            <ul>
+                                <li><a href="#">Create</a></li>
+                                <li><a href="#">View</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="grade"><!--The Grade button-->
+                            <button>Grade</button>
+                            <ul>
+                                <li><a href="#">Grade Report & Assesment</a></li>
+                                <li><a href="#">Grade Change Petition</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="course"><!--The Course Button-->
+                            <button>Course</button>
+                            <ul>
+                                <li><a href="#">Check List</a></li>
+                                <li><a href="#">Registration</a></li>
+                                <li><a href="#">Add / Drop</a></li>
+                                <li><a href="#">Material</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="schedule"><!--The Schedule Button-->
+                            <button>Schedule</button>
+                            <ul>
+                                <li><a href="#">Course Schedule</a></li>
+                                <li><a href="#">Event Schedule</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="student_service"><!--The Student Service Button-->
+                            <button>Sevices</button>
+                            <ul>
+                                <li><a href="#">Dormitory</a></li>
+                                <li><a href="#">Cost Sharing</a></li>
+                                <li><a href="#">Placement Check</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="other"><!--The Othr Button-->
+                            <button>Other</button>
+                            <ul>
+                                <li><a href="#">Intra Transfer</a></li>
+                                <li><a href="#">Clearance Form</a></li>
+                                <li><a href="#">Withdrawal</li>
+                                <li><a href="#">Lost ID</a></li>
+                                <li><a href="#">Change Password</a></li>
+                                <li><a href="#">Change Profile </a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="logout"><!--The Logout Button-->
+                            <button>Log Out</button>
+
+                        </div>
+
+                    </div>
+
+                </ul>
+            </nav>
+
+        </div>
+        <div class="menu"><!--The Content Of the Menu page-->
+            <ul><!--The links for the menu -->
+                <li><a class="active" href="Course_Schedule_Checking.html">Course Schedule</a></li>
+                <li><a href="Event_Schedule_Checking.html">Event Schedule</a></li>
+            </ul>
+        </div>
+        <div class="content"><!--The main content of the page-->
+            <h2>Welcome To Course Schedule Checking</h2>
+            <p>Please Provide the required information for course scheduling</p>
+            <div class="Course_schedule">
+                <form><!--The form format of the page is shown here-->
+                    <div class="row">
+                        <div class="col-25"><!--The left column of the content page-->
+                            <label for="department"> Department</label>
+                        </div>
+                        <div class="col-75"><!--The right column of the content page-->
+                            <select name="dropdown">
+                                <option value="Electrical" selected>Electrical</option>
+                                <option value="Software">Software</option>
+                                <option value="Civil">Civil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="year"> Year</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="dropdown">
+                                <option value="First" selected>First</option>
+                                <option value="Second">Second</option>
+                                <option value="Third">Third</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="semister">Semister</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="dropdown">
+                                <option value="First" selected>First</option>
+                                <option value="Second">Second</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="semister">Stream(if any)</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="dropdown">
+                                <option value="Computer" selected>Computer</option>
+                                <option value="Communication">Communication</option>
+                                <option value="Electronics">Electronics</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="semister">Section(if any)</label>
+                        </div>
+                        <div class="col-75">
+                            <select name="dropdown">
+                                <option value="A" selected>A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row"><!--The submit button-->
+                        <input type="submit" name="submit" value="Submit">
+                    </div>
+
+                </form>
+            </div>
+            <table>
+                <tr>
+                    <th>DaY</th><!--The header row of the table-->
+                    <th>Period</th>
+                    <th>Course</th>
+                    <th>Room</th>
+                    <th>Year</th>
+                    <th>Section</th>
+                    <th>Instructor</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td><!--The content of the table-->
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="footer"><!--The footer of the page-->
+            <div class="container">
+                
+                    <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights
+                            reserved.</small> </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

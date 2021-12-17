@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<!--Done By Merry Terefe-->
+<head>
+  <title>Event Schedule Checking</title>
+  <link rel="stylesheet" href="Event.css"><!--This link the the html with css file-->
+  <link rel="stylesheet" href="HeaderFooter.css"><!--This link the the html with css file-->
+</head>
+
+
+<body><!--This the body where all content that is displayed in the page is coded-->
+  <div class="wrapper"><!--This contens the whole division of the html page-->
+      <div class="header"><!--The header division of the page is shown here-->
+          <img class="logo" src="images/logo.png" alt="logo"><!--The image of a logo is inserted here-->
+          <nav class="nav_links">
+              <ul>
+
+                  <div class="dropdown"><!--The dropdown button is listed in here-->
+                      <button><a href="#" class="home">Home</a></button><!--The Home button -->
+                      <div class="financial_aid"><!--The Financial aid Button-->
+                          <button>Financial Aid</button>
+
+                      </div>
+                      <div class="staff"><!--The Staff Button-->
+                          <button>Staff</button>
+                          <ul><!--The sub content of the staff button-->
+                              <li><a href="#">Staff Evaluation</a></li>
+                              <li><a href="#">Contact instructor</a></li>
+                              <li><a href="#">Contact Dep. Head </a></li>
+                              <li><a href="#">Makeup Exam Request</a></li>
+                              <li><a href="#">Assignment Submission</a></li>
+
+                          </ul>
+                      </div>
+
+                      <div class="counsel"><!--The The Counsel Button-->
+                          <button>Counsel</button>
+                          <ul><!--The sub content of counsel button-->
+                              <li><a href="#">Counsel Info.</a></li>
+                              <li><a href="#">Counsel Election</a></li>
+                          </ul>
+                      </div>
+
+                      <div class="clubs"><!--The Clubs Button-->
+                          <button>Clubs</button>
+                          <ul>
+                              <li><a href="#">Create</a></li>
+                              <li><a href="#">View</a></li>
+                          </ul>
+                      </div>
+
+
+                      <div class="grade"><!--The Grade button-->
+                          <button>Grade</button>
+                          <ul>
+                              <li><a href="#">Grade Report & Assesment</a></li>
+                              <li><a href="#">Grade Change Petition</a></li>
+                          </ul>
+                      </div>
+
+
+                      <div class="course"><!--The Course Button-->
+                          <button>Course</button>
+                          <ul>
+                              <li><a href="#">Check List</a></li>
+                              <li><a href="#">Registration</a></li>
+                              <li><a href="#">Add / Drop</a></li>
+                              <li><a href="#">Material</a></li>
+                          </ul>
+                      </div>
+
+                      <div class="schedule"><!--The Schedule Button-->
+                          <button>Schedule</button>
+                          <ul>
+                              <li><a href="#">Course Schedule</a></li>
+                              <li><a href="#">Event Schedule</a></li>
+                          </ul>
+                      </div>
+
+
+                      <div class="student_service"><!--The Student Service Button-->
+                          <button>Sevices</button>
+                          <ul>
+                              <li><a href="#">Dormitory</a></li>
+                              <li><a href="#">Cost Sharing</a></li>
+                              <li><a href="#">Placement Check</a></li>
+                          </ul>
+                      </div>
+
+                      <div class="other"><!--The Othr Button-->
+                          <button>Other</button>
+                          <ul>
+                              <li><a href="#">Intra Transfer</a></li>
+                              <li><a href="#">Clearance Form</a></li>
+                              <li><a href="#">Withdrawal</li>
+                              <li><a href="#">Lost ID</a></li>
+                              <li><a href="#">Change Password</a></li>
+                              <li><a href="#">Change Profile </a></li>
+
+                          </ul>
+                      </div>
+
+                      <div class="logout"><!--The Logout Button-->
+                          <button>Log Out</button>
+
+                      </div>
+
+                  </div>
+
+              </ul>
+          </nav>
+
+      </div>
+    <div class="menu"><!--The content of the menu page-->
+      <ul><!--Links for the content of menu-->
+        <li><a class="active" href="Event_Schedule_Checking.html">Event Schedule</a></li>
+        <li><a href="Course_Schedule_Checking.html">Course Schedule</a></li>
+      </ul>
+    </div>
+    <div class="content"><!--The main content of the Page-->
+      <h4>Welcome to Event Schedule Checking</h4>
+
+      <p>Please provide the date you are looking for an event</p>
+      <div class="prelude">
+        <form><!--The form format of page is shown here-->
+          Date <input type="date" id="d_event" name="dateOfEvent" value="12/10/2021" /><!--The Date button-->
+          <input type="submit" name="submit" value="Submit" /><!--The submit button -->
+          <br>
+
+          <input type="button" id="meeting" name="meeting" value="Meeting"><!--Button for meeting-->
+          <input type="button" id="exam" name="exam" value="Exam">
+        </form>
+      </div><!--Content for meeting-->
+      <div class="meeting_content">
+        <h4>Meeting Title</h4>
+        <p>Even Date:</p>
+        <p>Event Starting Time:</p>
+        <p>Event End Time:</p>
+        <P>Event Venue:</P>
+        <p>Description....</p>
+        <pre>
+            My Bonnie lies over the ocean.
+         
+            My Bonnie lies over the sea.
+         
+            My Bonnie lies over the ocean.
+            
+            Oh, bring back my Bonnie to me.
+         </pre>
+      </div>
+      <div class="exam_content"><!--Content for Exam-->
+        <h4>Exam Title</h4>
+        <p>Even Date:</p>
+        <p>Event Starting Time:</p>
+        <p>Event End Time:</p>
+        <P>Event Venue:</P>
+        <p>Course Name:</p>
+        <p>Examiner Name:</p>
+      </div>
+    </div>
+    <div class="footer"><!--Footer of the page-->
+      <div class="container">
+
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
