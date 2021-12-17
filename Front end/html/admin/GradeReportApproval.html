@@ -1,3 +1,6 @@
+
+<!--Natnael Tedros - ATR/0119/11-->>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,7 +17,7 @@
         
         
         <div class="dropdown">
-            <button><a href=admin.html" class="home">Home</a></button>
+            <button><a href="admin.html" class="home">Home</a></button>
             <div class="account">
               <button>Account</button>
               <ul>
@@ -59,35 +62,44 @@
      
     </header>
     <div class="body">
-      <h1>Student Grade Report</h1>
-        <article>
+      <div class="courseSearch">
+        <h1>Student Grade Report</h1><br>
+          <p>Input the course name:</p><br>
         <form action="">
             <label for="">Course Name:</label>
-            <input type="text" ><br>
+            <input type="text" ><br><br>
             <input class="submit" type="submit">
         </form>
-        </article><br>
-        <h2>Grades of Students:</h2>
+        <br>
+      </div>
+      <div class="gradeList">
+        <h2>Grades of Students:</h2><br>
+        <p>List of students and their corresponding grades for the course inputted:</p><br>
         <form action="">
         <table>
             <tr>
                 <th>Name</th>
+                <th>Grade</th>
                 <th>Status</th>
                 <th>Approval</th>
             </tr>
             <tr>
                 <td>Student 1</td>
+                <td>A+</td>
                 <td>Unapproved</td>
                 <td><button>Approve</button> <button>Disapprove</button></td>
             </tr>
             <tr>
                 <td>Student 2</td>
+                <td>A+</td>
                 <td>Unapproved</td>
                 <td><button>Approve</button> <button>Disapprove</button></td>
             </tr>
         </table><br>
         <input class="submit" type="submit">
     </form>
+      </div>
+        
     </div>
 
 
