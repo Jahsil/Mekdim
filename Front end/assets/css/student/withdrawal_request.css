@@ -79,37 +79,22 @@ button:hover{
 }
 
 .section{
-  align-items:center;
+  align-items: left;
   margin-top:20px;
   width:100%;
   font-family:"Roboto";
   text-align:center;
   color: var(--primary-color);
   font-size:25px;
-  
 }
 #div_a {
-  text-align:center;
-  float:none;
-}
-
-#div_b {
-  text-align:center;
-  float:none;
-}
-#div_c{
-  text-align:center;
-  float:none;
-}
-#div_d{
-  padding:10px;
+  float:center;
+  border-color: var(--quinary-color);
+  background:var(--quinary-color);
+  border-radius: 10px;
   width:100%;
   text-align:center;
-  border-style:solid;
-  border-radius:20px;
-  border-color:var(--quinary-color);
-  background:var(--quinary-color);
-  float:none;
+  padding:7px;
 }
 footer{
   position: absolute;
@@ -289,7 +274,7 @@ input[type="submit"]{
   width: 20%;
   height: 50px;
   border:none;
-  background:var(--quaternary-color);
+  background: var(--quaternary-color);
   border-radius: 10px;
   font-size: 18px;
   color: var(--secondary-color);
@@ -298,24 +283,27 @@ input[type="submit"]{
   outline: none;
 }
 input[type="submit"]:hover{
-  border-color:  var(--primary-color);
-  background: var(--primary-color);
-  color:  var(--quinary-color);
-  transition: .5s;
-}
-select{
-  font-size:20px;
-  padding:12px;
-  border: 2px solid var(--quaternary-color);
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius:10px;
-  margin: 1px;
-}
-select:hover{
   border-color: var(--primary-color);
   background:var(--primary-color);
   color: var(--quinary-color);
   transition: .5s;
+}
+input[type=text] {
+  width:250px;
+  padding:12px;
+  border: 2px solid var(--quinary-color);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin: 3px;
+}
+
+textarea{
+  font-size:15px;
+  padding:5px;
+  border: 2px solid var(--quaternary-color);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin: 1px;  
 }
 
 .left{

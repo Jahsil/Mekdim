@@ -7,10 +7,21 @@ body{
   background-color: #f2f2f2;
 }
 :root{
-  --primary: #266777;
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+
 }
 
-
+.dark-theme{
+  --primary-color:#c4c4c4 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
 
 .header{
   display: flex;
@@ -50,7 +61,31 @@ button:hover{
   background-color: #52ab98;
 }
 
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 50%;
+  overflow: auto;
+}
 
+.menu li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.menu li a.active {
+  background-color: #043755;
+  color: white;
+}
+.menu li a:hover:not(.active) {
+  background-color: #555;
+  color: white;}
 
 footer{
   position: absolute;

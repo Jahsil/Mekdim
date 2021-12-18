@@ -1,9 +1,11 @@
+<!--Joshua Tadesse  ATR/7514/11-->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Student</title>
-    <link rel="stylesheet" href="../../assets/css/student/student.css">
+    <link rel="stylesheet" href="../../assets/css/student/lost_id_request.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 
@@ -16,8 +18,8 @@
         
         
                 <div class="dropdown">
-            <button><a href="#" class="home"><h4>Home</h4> </a></button>
-            <div class="financial_aid">
+            <button><a href="financialAid.html" class="home"><h4>Home</h4> </a></button>
+            <div class="#">
               <button><h4>Financial Aid</h4></button> <h4></h4>
               
             </div>
@@ -112,7 +114,31 @@
       </nav>
      
     </header>
-
+  <section class="section">
+    <h1>Lost ID Request</h1><br>								<!--main purpose of page-->
+    <p>Fill in all the required information</p>
+      <div id="div_a">
+        <form action="somewebsite.php">
+          <label for="name"><sub>Name:</sub></label>					<!--name information-->
+              <input type="text" id="name" name="name" value="" required><br><br>
+       
+          <label for="id"><sub>ID:</sub></label>						<!--ID information-->
+              <input type="text" id="id" name="id" value=""required><br><br>
+       
+               <label for="year"><sub>Current Year:</sub></label>				<!--Current year information-->
+              <input type="text" id="year" name="year" value="" required><br><br>
+       
+               <label for="dep"><sub>Department:</sub></label>					<!--Department information-->
+              <input type="text" id="dep" name="dep" value="" required><br><br>
+       
+               <label for="date"><sub>Date Lost:</sub></label>					<!--Date id was lost information-->
+              <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" required><br><br>
+       
+                   <input type="submit" value="Submit">					<!--submit and cancel buttons-->
+                   
+         </form>
+     </div>
+  </section>
 
     <footer class="footer">
       
