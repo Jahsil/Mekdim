@@ -9,6 +9,8 @@ const accountInfo = require("./routes/studentService/costsharing/accountInfo");
 const homeadr = require("./routes/studentService/costsharing/homeadr");
 const studentServiceplacement = require("./routes/studentService/dormitory/placement");
 const studentServiceapplication = require("./routes/studentService/dormitory/application");
+const projandassign = require("./routes/ProjandAssign/projandassign");
+const projandassSubmition = require("./routes/ProjandAssign/projandassSubmition");
 
 const app = express();
 app.set('view engine' ,  'ejs');
@@ -53,7 +55,7 @@ app.get('/home' , authentication.isStudentLoggedIn ,(req , res)=> {
 //council  - 
 app.use("/council", council);
 
-// Student service 
+// Student service - Euael Mekonen - ATR/1245/11
     // Cost sharing - accountInfo
 app.use("/costSharing/accountInfo", accountInfo);
     // Cost sharing - home address
@@ -62,3 +64,9 @@ app.use("/costSharing/homeadr", homeadr);
 app.use("/dormitory/placement", studentServiceplacement);
 //Dormitory Application
 app.use("/dormitory/Application", studentServiceapplication);
+
+// Project and Assignment - Milkiyas Gebremichael Gebru ATR/1277/11
+// project view
+app.use("/projectandassignment", projandassign);
+// project submission
+app.use("/projandassSubmition", projandassSubmition);

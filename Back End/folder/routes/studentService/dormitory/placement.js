@@ -17,7 +17,7 @@ placement.route("/")
             const adr1 = result[0].roomNumber;
             const adr2 = result[0].RequestStatus;
             if (adr2 !== "denied"){
-                if (adr2 == "approved"){
+                if (adr2 === "approved"){
                     if(adr0 == null || adr1 == null){
                         r = null;
                     }else {

@@ -1,6 +1,6 @@
 {
     "host": "localhost" , 
-    "user": "geek" , 
-    "password": "1560" , 
+    "user": "root" ,
+    "password": "milkiyas" ,
     "database": "mekdemschoolportal"
 }

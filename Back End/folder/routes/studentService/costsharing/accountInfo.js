@@ -14,9 +14,9 @@ accountInfo.route("/")
     let adr3 = req.body.foods;
     let adr4 = req.body.dorms;
     let adr5;
-    if(adr3 == undefined && adr4 == undefined) adr5 = "none";
-    else if(adr3 != undefined && adr4 == undefined) adr5 = "Food";
-    else if(adr3 == undefined && adr4 != undefined) adr5 = "Dorm";
+    if(adr3 === undefined && adr4 === undefined) adr5 = "none";
+    else if(adr3 !== undefined && adr4 === undefined) adr5 = "Food";
+    else if(adr3 === undefined && adr4 !== undefined) adr5 = "Dorm";
     else adr5 = "FoodAndDorm";
     console.log(adr5);
     let x = false;
