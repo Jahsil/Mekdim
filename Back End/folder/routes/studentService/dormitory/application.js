@@ -22,6 +22,10 @@ application.route("/")
         }
         res.redirect("/dormitory/placement");
      });
+    sql = `UPDATE dormitory SET RequestStatus = "pending"`;
+    connection.query(sql, (error, result) => {
+        if(error) return console.log(error.message);
+    });
 });
 
 module.exports = application;
