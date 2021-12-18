@@ -6,28 +6,45 @@
   grid-template-rows:  100px 1000px 60px;
 }
 :root{
---primary: #266777;
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+
+}
+
+.dark-theme{
+  --primary-color:#c4c4c4 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+:root{
+  --primary: var(--primary-color);
 }
 .header{/*The header property is shown here*/
   grid-column: span 12;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: var(--primary-color);
 }  
 .menu{/* The Menu property is shown here*/
   grid-column: span 3;
   text-align: left;
   font-style: bold;
-  background-color: rgb(255,255,255);
+  background-color: var(--quinary-color);
 }
 
 .content{/* IT shows the property of Content*/
   grid-column: span 9;
-  background-color: rgb(255,255,255);
+  background-color: var(--quinary-color);
   text-align: center;
 }
 .footer{/*Describes the footer Property of the page*/
 grid-column: span 12;
-color: #266777;
+color: var(--primary-color);
 bottom: 0vh;
 right: 0vh;
 left: 0vh;
@@ -47,15 +64,15 @@ padding: 10px;
   }
 }
 body{/*The property of the body is shown here*/
-  background-color: rgb(255,255,255);
+  background-color: var(--quaternary-color);
   margin: 0;}
   table {/*Property of the table*/
     border-collapse: collapse;
     width: 80%;
   }
   th {/*property of header in the table*/
-  background-color: #043755;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--quinary-color);
 }
   th, td {/*property of the component of the table*/
     text-align: left;
@@ -63,8 +80,8 @@ body{/*The property of the body is shown here*/
     width: 120px;
   }
   input[type=submit] {/*Property of submit button*/
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--quaternary-color);
     padding: 9px 25px;
     border:none;
     border-radius: 50px;
@@ -72,10 +89,10 @@ body{/*The property of the body is shown here*/
     transition: all 0.3s ease 0s;
   }
   input[type=submit]:hover {/*property of submit buttor when cursor hover over it*/
-    background-color: #45a049;}
+    background-color: var(--primary-color);}
     #add {/*property of add button*/
-      background-color: #4CAF50;
-      color: white;
+      background-color: var(--secondary-color);
+      color: var(--quaternary-color);
       padding: 12px 20px;
       border: none;
       border-radius: 4px;
@@ -83,10 +100,10 @@ body{/*The property of the body is shown here*/
       float: right;
     }
     #drop:hover, #add:hover {/*property of add and drop button when the cursor hover over it*/
-      background-color: #45a049;}
+      background-color: var(--primary-color);}
       #drop {/*property of drop button*/
-        background-color: rgb(255,255,255);
-        color: rgb(0,0,0);
+        background-color: var(--quinary-color);
+        color: var(--secondary-color);
         padding: 12px 20px;
         border: none;
         border-radius: 50px;

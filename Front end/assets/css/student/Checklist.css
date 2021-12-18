@@ -6,28 +6,46 @@
   grid-template-rows:  100px 1000px 60px;
 }
 :root{
---primary: #266777;
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+
 }
+
+.dark-theme{
+  --primary-color:#c4c4c4 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+:root{
+  --primary: var(--primary-color);
+}
+
 .header{/*The header property is shown here*/
   grid-column: span 12;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: var(--quaternary-color);
 }  
 .menu{/* The Menu property is shown here*/
   grid-column: span 3;
   text-align: left;
   font-style: bold;
-  background-color: rgb(255,255,255);
+  background-color: var(--quinary-color);
 }
 
 .content{/* IT shows the property of Content*/
   grid-column: span 9;
-  background-color: rgb(255,255,255);
+  background-color: var(--quinary-color);
   text-align: center;
 }
 .footer{/*Describes the footer Property of the page*/
 grid-column: span 12;
-color: #266777;
+color: var(--primary-color);
 bottom: 0vh;
 right: 0vh;
 left: 0vh;
@@ -47,21 +65,21 @@ padding: 10px;
   }
 }
 body{/*The property of the body is shown here*/
-  background-color: rgb(255,255,255);
+  background-color: var(--quaternary-color);
   margin: 0;}
   table {/*property of the table*/
     border-collapse: collapse;
     width: 65%;
   }
   th {/*property of the header row*/
-  background-color: #043755;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--quinary-color);
 }
   th, td {/*property of the content of the table*/
     text-align: left;
     padding: 8px;
     width: 120px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--tertiary-color);
   }
   label {/*property of the label*/
     padding: 12px 12px 12px 0;
