@@ -93,7 +93,7 @@ CREATE TABLE `assignments` (
   KEY `InstructorID_idx` (`InstructorID`),
   CONSTRAINT `Course` FOREIGN KEY (`Course`) REFERENCES `course` (`CourseID`),
   CONSTRAINT `InstructorID` FOREIGN KEY (`InstructorID`) REFERENCES `instructor` (`InstructorID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,6 +102,7 @@ CREATE TABLE `assignments` (
 
 LOCK TABLES `assignments` WRITE;
 /*!40000 ALTER TABLE `assignments` DISABLE KEYS */;
+INSERT INTO `assignments` VALUES (1,'Mike Litories','IDR/5433/03','C:/Users/Omen/Downloads/justtring/html_tutorial.pdf','emf');
 /*!40000 ALTER TABLE `assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,13 +116,13 @@ DROP TABLE IF EXISTS `assignmentsubmission`;
 CREATE TABLE `assignmentsubmission` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `Student` varchar(45) NOT NULL,
-  `Assignment` int NOT NULL,
+  `Assignment` varchar(45) NOT NULL,
+  `course` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `StudentID_idx` (`Student`),
   KEY `Assignment_idx` (`Assignment`),
-  CONSTRAINT `Assignment` FOREIGN KEY (`Assignment`) REFERENCES `assignments` (`ID`),
   CONSTRAINT `Student` FOREIGN KEY (`Student`) REFERENCES `student` (`StudentID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,6 +131,7 @@ CREATE TABLE `assignmentsubmission` (
 
 LOCK TABLES `assignmentsubmission` WRITE;
 /*!40000 ALTER TABLE `assignmentsubmission` DISABLE KEYS */;
+INSERT INTO `assignmentsubmission` VALUES (1,'Atr/1111/11','C:/Users/Omen/Downloads/justtring/Mekdim.zip','emf'),(2,'Atr/1111/11','C:/Users/Omen/Downloads/justtring/SRS.rtf','emf');
 /*!40000 ALTER TABLE `assignmentsubmission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -468,7 +470,7 @@ CREATE TABLE `course_student` (
   KEY `CourseChosen_idx` (`CourseChosen`),
   CONSTRAINT `CourseChosen` FOREIGN KEY (`CourseChosen`) REFERENCES `course` (`CourseID`),
   CONSTRAINT `StudentInCourse` FOREIGN KEY (`StudentInCourse`) REFERENCES `student` (`StudentID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -477,6 +479,7 @@ CREATE TABLE `course_student` (
 
 LOCK TABLES `course_student` WRITE;
 /*!40000 ALTER TABLE `course_student` DISABLE KEYS */;
+INSERT INTO `course_student` VALUES (1,'Atr/1111/11','java','f'),(2,'Atr/1111/11','emf','c');
 /*!40000 ALTER TABLE `course_student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -775,6 +778,33 @@ INSERT INTO `instructor` VALUES ('IDR/5433/03','Mike Litories','Male','Mikey',NU
 UNLOCK TABLES;
 
 --
+-- Table structure for table `lostid`
+--
+
+DROP TABLE IF EXISTS `lostid`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `lostid` (
+  `sId` varchar(45) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `currentyear` varchar(45) NOT NULL,
+  `Department` varchar(45) NOT NULL,
+  `datelost` varchar(45) NOT NULL,
+  PRIMARY KEY (`sId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='the table for lost id \n';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lostid`
+--
+
+LOCK TABLES `lostid` WRITE;
+/*!40000 ALTER TABLE `lostid` DISABLE KEYS */;
+INSERT INTO `lostid` VALUES ('Atr/1112/12','mike12','akldf','kljasdf','akljf'),('Atr/1212/11','mike','akldf','kljasdf','akljf'),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy');
+/*!40000 ALTER TABLE `lostid` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `makeupexamrequest`
 --
 
@@ -990,12 +1020,13 @@ DROP TABLE IF EXISTS `withdrawalrequest`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `withdrawalrequest` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+  `ID` varchar(45) NOT NULL,
   `StudentWithdrawing` varchar(45) NOT NULL,
-  `WithdrawalReason` varchar(100) NOT NULL,
+  `sex` varchar(100) NOT NULL,
+  `Department` varchar(45) NOT NULL,
+  `reason for withdrawal` varchar(450) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `StudentWithdrawing_idx` (`StudentWithdrawing`),
-  CONSTRAINT `StudentWithdrawing` FOREIGN KEY (`StudentWithdrawing`) REFERENCES `student` (`StudentID`)
+  CONSTRAINT `StudentWithdrawing` FOREIGN KEY (`ID`) REFERENCES `student` (`StudentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1005,16 +1036,9 @@ CREATE TABLE `withdrawalrequest` (
 
 LOCK TABLES `withdrawalrequest` WRITE;
 /*!40000 ALTER TABLE `withdrawalrequest` DISABLE KEYS */;
+INSERT INTO `withdrawalrequest` VALUES ('Atr/1111/11','teddy','male','elec','gobez negn beye selemaseb ');
 /*!40000 ALTER TABLE `withdrawalrequest` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'mekdemschoolportal'
---
-
---
--- Dumping routines for database 'mekdemschoolportal'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -1025,4 +1049,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-18 15:55:33
+-- Dump completed on 2021-12-18 21:50:38
