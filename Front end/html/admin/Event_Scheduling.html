@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
 <!--Done By Merry Terefe-->
+
 <head>
     <title>Event Scheduling</title>
-    <link rel="stylesheet" href="Front end/assets/css/admin/C_schedule.css"><!--This link the the html with css file-->
-    <link rel="stylesheet" href="Front end/assets/css/admin/HeaderofSchedule.css"><!--This link the the html with css file-->
+    <link rel="stylesheet" href="../../assets/css/admin/C_schedule.css">
+    <!--This link the the html with css file-->
+    <link rel="stylesheet" href="../../assets/css/admin/HeaderofSchedule.css">
+    <!--This link the the html with css file-->
 </head>
 
-<body><!--This the body where all content that is displayed in the page is coded-->
-    <div class="wrapper"><!--This contens the whole division of the html page-->
-        <div class="header"><!--The header division of the page is shown here-->
-            <img class="logo" src="Front end/assets/images/logo.png" alt="logo"><!--The image of a logo is inserted here-->
+<body>
+    <!--This the body where all content that is displayed in the page is coded-->
+    <div class="wrapper">
+        <!--This contens the whole division of the html page-->
+        <div class="header">
+            <!--The header division of the page is shown here-->
+            <img id="meklog" class="logo" src="../../assets/images/logo.png" alt="logo">
+            <!--The image of a logo is inserted here-->
             <nav class="nav_links">
                 <ul>
 
-                    <div class="dropdown"><!--The dropdown button is listed in here-->
-                        
-                        <button><a href="#" class="home">Home</a></button><!--The Home button-->
+                    <div class="dropdown">
+                        <!--The dropdown button is listed in here-->
+
+                        <button><a href="#" class="home">Home</a></button>
+                        <!--The Home button-->
                         <div class="account">
-                            <button>Account</button><!--The account button with its subcontent links-->
+                            <button>Account</button>
+                            <!--The account button with its subcontent links-->
                             <ul>
                                 <li><a href="#">Activation</a></li>
                                 <li><a href="#">Add User</a></li>
@@ -26,7 +36,8 @@
                             </ul>
                         </div>
                         <div class="approve">
-                            <button>Approve</button><!--The approve button with its subcontent links-->
+                            <button>Approve</button>
+                            <!--The approve button with its subcontent links-->
                             <ul>
                                 <li><a href="#">Grade</a></li>
                                 <li><a href="#">Clubs</a></li>
@@ -41,7 +52,8 @@
 
 
 
-                        <div class="other"><!--The other button with its subcontent links-->
+                        <div class="other">
+                            <!--The other button with its subcontent links-->
                             <button>Other</button>
                             <ul>
                                 <li><a href="#">Change Theme</a></li>
@@ -50,44 +62,57 @@
                             </ul>
                         </div>
 
-                        <div class="logout"><!--The logout button-->
+                        <div class="logout">
+                            <!--The logout button-->
                             <button>Log Out</button>
 
                         </div>
-
+                        <div>
+                            <img src="../../assets/images/dark2.png" id="icon" width="30px" height="30px">
+                        </div>
                     </div>
 
                 </ul>
             </nav>
 
         </div>
-        <div class="menu"><!--The left hand division of the content file-->
-           
+        <div class="menu">
+            <!--The left hand division of the content file-->
+
         </div>
-        <div class="content"><!--The Content division where the main content of the page is displayed-->
-            <h2>Welcome To Event Scheduling </h2><!--The Header-->
+        <div class="content">
+            <!--The Content division where the main content of the page is displayed-->
+            <h2>Welcome To Event Scheduling </h2>
+            <!--The Header-->
             <p>Please provide the required information about the event</p>
 
-            <div class="Event_schedule"><!--The Event Schedule division of the content-->
+            <div class="Event_schedule">
+                <!--The Event Schedule division of the content-->
                 <form>
 
-                    <div class="event_select"><!--Used for the selection of the event type-->
+                    <div class="event_select">
+                        <!--Used for the selection of the event type-->
 
                         <label>Select the Event type:</label>
                         <br>
-                        <input type="checkbox" id="meeting" name="event_meeting" value="Meeting"><!--Meeting checkbox-->
+                        <input type="checkbox" id="meeting" name="event_meeting" value="Meeting">
+                        <!--Meeting checkbox-->
                         <label for="meeting">Meeting</label><br>
-                        <input type="checkbox" id="exam" name="event_exam" value="Exam"><!--Exam checkbox-->
+                        <input type="checkbox" id="exam" name="event_exam" value="Exam">
+                        <!--Exam checkbox-->
                         <label for="exam">Exam</label><br>
                     </div>
             </div>
 
-            <div class="event"><!--The event division which consists rows and column of different type-->
+            <div class="event">
+                <!--The event division which consists rows and column of different type-->
                 <div class="row">
-                    <div class="col-25"><!--The left column of the event division-->
+                    <div class="col-25">
+                        <!--The left column of the event division-->
                         <label for="edate">Event Date</label>
                     </div>
-                    <div class="col-75"><!--The right column of the event division-->
+                    <div class="col-75">
+                        <!--The right column of the event division-->
                         <input type="date" id="edate" name="event_date" placeholder="Event date...." />
                     </div>
                 </div>
@@ -148,17 +173,20 @@
                             placeholder="Write description here....."></textarea>
                     </div>
                 </div>
-                <div class="row"><!--The row that contains th submit button-->
+                <div class="row">
+                    <!--The row that contains th submit button-->
                     <input type="submit" value="Submit">
                 </div>
                 <div class="row">
-                    <input type="reset" value="Reset"><!--The row that contains the reset button-->
+                    <input type="reset" value="Reset">
+                    <!--The row that contains the reset button-->
                 </div>
                 </form>
             </div>
 
         </div>
-        <div class="footer"><!--The footer division of the the page -->
+        <div class="footer">
+            <!--The footer division of the the page -->
             <div class="container">
 
                 <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights
@@ -168,6 +196,22 @@
 
         </div>
     </div>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "../../assets/images/light2.png";
+                meklog.src = "../../assets/images/logo3.png";
+
+            } else {
+                icon.src = "../../assets/images/dark2.png";
+                meklog.src = "../../assets/images/logo.png";
+
+            }
+
+        }
+    </script>
 </body>
 
 </html>
