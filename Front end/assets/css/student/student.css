@@ -19,6 +19,50 @@
   --quinary-color:#323232 !important;
 }
 
+.right {
+  position: absolute;
+  padding: 3em 5em;
+  text-align: center;
+  top: 65%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 35%;
+  background: var(--quinary-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+.left {
+  position: absolute;
+  padding: 3em 5em;
+  text-align: center;
+  top: 65%;
+  left: 25%;
+  height: 25%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  background: var(--quinary-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+.left img {
+  width: 70%;
+}
+.body h1 {
+  font-size: 50px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.left h1 {
+  font-size: 30px;
+}
+.right p {
+  color: var(--primary-color);
+}
+.right h1 {
+  font-size: 30px;
+  color: var(--secondary-color);
+}
 
 
 body{
