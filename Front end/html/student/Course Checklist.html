@@ -11,7 +11,7 @@
 <body><!--This the body where all content that is displayed in the page is coded-->
     <div class="wrapper"><!--This contens the whole division of the html page-->
         <div class="header"><!--The header division of the page is shown here-->
-            <img class="logo" src="../../assets/images/logo.png" alt="logo"><!--The image of a logo is inserted here-->
+            <img id="meklog" class="logo" src="../../assets/images/logo.png" alt="logo"><!--The image of a logo is inserted here-->
             <nav class="nav_links">
                 <ul>
 
@@ -104,7 +104,9 @@
                             <button>Log Out</button>
 
                         </div>
-
+                        <div>
+                            <img src="../../assets/images/dark2.png" id="icon" width="30px" height="30px">
+                        </div>
                     </div>
 
                 </ul>
@@ -165,6 +167,22 @@
 
         </div>
     </div>
+    <script>
+        var icon =document.getElementById("icon");
+ icon.onclick= function(){
+   document.body.classList.toggle("dark-theme");
+   if (document.body.classList.contains("dark-theme")){
+     icon.src= "../../assets/images/light2.png";
+     meklog.src="../../assets/images/logo3.png";
+   
+   } else{
+     icon.src="../../assets/images/dark2.png";
+     meklog.src="../../assets/images/logo.png";
+     
+   }
+ 
+ }
+     </script>
 </body>
 
 </html>
