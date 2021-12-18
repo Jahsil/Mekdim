@@ -79,28 +79,38 @@ button:hover{
 }
 
 .section{
-  align-items: left;
+  align-items:center;
   margin-top:20px;
   width:100%;
   font-family:"Roboto";
   text-align:center;
   color: var(--primary-color);
-  font-size:23px;
+  font-size:25px;
+  
 }
 #div_a {
-  float:left;
-  width:25%;
-  text-align:right;
-  margin-left:50px;
+  text-align:center;
+  float:none;
 }
 
 #div_b {
-  float:right;
-  text-align:left;
-  margin-left:100px;
-  width:60%;
+  text-align:center;
+  float:none;
 }
-
+#div_c{
+  text-align:center;
+  float:none;
+}
+#div_d{
+  padding:10px;
+  width:100%;
+  text-align:center;
+  border-style:solid;
+  border-radius:20px;
+  border-color:var(--quinary-color);
+  background:var(--quinary-color);
+  float:none;
+}
 footer{
   position: absolute;
   bottom: 0vh;
@@ -276,17 +286,16 @@ form .txt_field{
   text-decoration: underline;
 }
 input[type="submit"]{
-  width: 60%;
+  width: 20%;
   height: 50px;
   border:none;
-  background:  var(--quinary-color);
+  background:var(--quaternary-color);
   border-radius: 10px;
   font-size: 18px;
   color: var(--secondary-color);
   font-weight: 700;
   cursor: pointer;
   outline: none;
-  
 }
 input[type="submit"]:hover{
   border-color:  var(--primary-color);
@@ -294,15 +303,20 @@ input[type="submit"]:hover{
   color:  var(--quinary-color);
   transition: .5s;
 }
-input[type=text] {
-  width:250px;
+select{
+  font-size:20px;
   padding:12px;
-  border: 2px solid var(--quinary-color);
+  border: 2px solid var(--quaternary-color);
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius:10px;
-  margin: 3px;
+  margin: 1px;
 }
-
+select:hover{
+  border-color: var(--primary-color);
+  background:var(--primary-color);
+  color: var(--quinary-color);
+  transition: .5s;
+}
 
 .left{
   position: absolute;
