@@ -22,7 +22,10 @@ app.use(express.static('public'));
 app.listen(3000 , ()=>console.log("server running on port 3000"));
 //ROUTES AND CONTROLLERS
 
-//login 
+//login
+app.get("/", (req, res) => {
+    res.redirect("/login");
+})
 app.get('/login' , (req , res)=> {
     res.render('login' , {error: false });
 });
