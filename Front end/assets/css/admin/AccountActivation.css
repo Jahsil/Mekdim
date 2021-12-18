@@ -1,6 +1,25 @@
 
 /* Natnael Tedros - ATR/0119/11*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+
+
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+  
+}
+
+.dark-theme{
+  --primary-color:#f0f0f0 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
 
 h1 {
     text-align: center;
@@ -12,11 +31,9 @@ form {
     
 }
 
-/*for tables*/
-
 table, th, td {
-    background-color: white;
-    border: 1px solid #52ab98;
+    background-color: var(--quinary-color);
+    border: 1px solid var(--secondary-color);
     text-align: center;
     border-collapse: collapse;
     padding: 10px;
@@ -25,12 +42,12 @@ table, th, td {
 }
 
 th {
-    color: #52ab98;
+    color: var(--secondary-color);
     font-style: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 td {
-    color: #52ab98;
+    color: var(--secondary-color);
     font-style: lighter;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -44,19 +61,19 @@ input[type=submit]{
 }
 
 .body h1{
-    color: #52ab98;
+    color: var(--secondary-color);
     font-style: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .body h2{
-    color: #52ab98;
+    color: var(--secondary-color);
     text-align: center;
     font-weight: 800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .search{
     padding: 20px;
-    background-color: white;
+    background-color: var(--quinary-color);
     width: auto;
     height: auto;
     margin: 20px 20px;
@@ -65,7 +82,7 @@ input[type=submit]{
 }
 .viewSearch{
     padding: 20px;
-    background-color: white;
+    background-color: var(--quinary-color);
     width: auto;
     height: auto;
     margin: 20px 20px;
@@ -76,9 +93,9 @@ input[type=button]{
     width: 10%;
     height: 50px;
     border: 1px solid;
-  background: #52ab98;
+  background: var(--secondary-color);
   border-radius: 25px;
-  color: #f2f2f2;
+  color: var(--quaternary-color);
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -87,11 +104,11 @@ input[type=button]{
     
 }
 input[type="button"]:hover{
-    border-color: #266777;
+    border-color: var(--primary-color);
     transition: .5s;
   }
 .search label{
-    color: #52ab98;
+    color: var(--secondary-color);
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
