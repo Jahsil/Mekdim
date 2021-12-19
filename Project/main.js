@@ -18,12 +18,18 @@ const authRoutes = require('./routes/authRoutes');
 const admin = require('./routes/user/administrator/accounts');
 const extracurricular = require('./routes/user/student/extracurricular');
 const staff = require('./routes/user/student/staff');
+const other = require('./routes/user/student/other');
+const schedule = require('./routes/user/student/schedule');
+const studentService = require('./routes/user/student/studentService');
 
 //Routes
 app.use(authRoutes);
 app.use(admin);
 app.use(extracurricular);
 app.use(staff);
+app.use(other);
+app.use(schedule);
+app.use (studentService);
 
 
 app.listen(3000 , ()=>console.log("server running on port 3000"));
