@@ -188,6 +188,7 @@ CREATE TABLE `clearance` (
 
 LOCK TABLES `clearance` WRITE;
 /*!40000 ALTER TABLE `clearance` DISABLE KEYS */;
+INSERT INTO `clearance` VALUES ('Nathan','Zelalem','Kebede','11/11/2001','Atr/1111/11','Male','2011','I am awesome',''),('Nathan','Zelalem','ff','11/11/2001','Atr/1131/11','Male','2011','Awesomes','');
 /*!40000 ALTER TABLE `clearance` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -831,6 +832,7 @@ CREATE TABLE `lostid` (
   `currentyear` varchar(45) NOT NULL,
   `Department` varchar(45) NOT NULL,
   `datelost` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`sId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='the table for lost id \n';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -841,7 +843,7 @@ CREATE TABLE `lostid` (
 
 LOCK TABLES `lostid` WRITE;
 /*!40000 ALTER TABLE `lostid` DISABLE KEYS */;
-INSERT INTO `lostid` VALUES ('Atr/1112/12','mike12','akldf','kljasdf','akljf'),('Atr/1212/11','mike','akldf','kljasdf','akljf'),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy');
+INSERT INTO `lostid` VALUES ('Atr/1111/11','mike','2011','111','11/11/11','NOT APPROVED'),('Atr/1112/12','mike12','akldf','kljasdf','akljf',''),('Atr/1212/11','mike','akldf','kljasdf','akljf',''),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy',''),('ATR/3333/11','nati nati','2011','Elec','11/11/2001','NOT APPROVED');
 /*!40000 ALTER TABLE `lostid` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1092,4 +1094,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-19 13:05:48
+-- Dump completed on 2021-12-19 23:57:33
