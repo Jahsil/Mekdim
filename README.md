@@ -1,2 +1,2 @@
-# Mekdem
-Mekdem is a software enterprise project for a school portal
+# Mekdim
+Mekdim is a software enterprise project for a school portal
