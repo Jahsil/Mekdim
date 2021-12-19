@@ -1,0 +1,538 @@
+
+     
+     /*Inherited form main page*/
+
+     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+     :root{
+      --primary-color:#266777 !important;
+      --secondary-color:#52ab98 !important;
+      --tertiary-color:#c8d8e4 !important;
+      --quaternary-color:#f2f2f2 !important;
+      --quinary-color:#ffffff !important;
+      
+    }
+    
+    .dark-theme{
+      --primary-color:#c4c4c4 !important;
+      --secondary-color:#929292 !important;
+      --tertiary-color:#484848 !important;
+      --quaternary-color:#121212 !important;
+      --quinary-color:#323232 !important;
+    }
+    
+     body{
+       background-color: var(--quaternary-color);
+     }
+     
+     
+     .header{
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       background-color: var(--primary-color);
+     
+     }
+     
+     .header{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0.5em 10%;
+       background-color: var(--primary-color);
+     }
+     .logo{
+       cursor: pointer;
+     }
+     .nav_links {
+       list-style: none;
+     }
+     .nav_links li{
+       display: inline-block;
+       padding: 10px 20px;
+     }
+     .nav_links li a{
+       transition: all 0.3s ease 0s;
+     }
+     .nav_links li a:hover{
+      color: var(--secondary-color); transition: all 0.3s ease 0s;
+     }
+     button{
+       padding: 15px 35px;
+       font-size:20px;
+       background-color: #2b6677;
+       color: black;
+       border: none;
+       border-radius: 10px;
+       cursor: pointer;
+       transition: all 0.3s ease 0s;
+     }
+     button:hover{
+       background-color: var(--secondary-color);
+     }
+     
+     .form{
+       position:absolute;
+       right: 0vh;
+       padding: 0;
+       border: 100vh;
+       right: 50vh;
+       top: 30vh;
+     }
+     
+     table{
+       align-items: center;
+       text-align: center;
+       width: 100%;
+     }
+     
+     #div_b {
+       float:none;
+       width:30%;
+       text-align:center;
+       margin-left:100px;
+     }
+     
+     footer{
+       position: absolute;
+       bottom: 0vh;
+       right: 0vh;
+       left: 0vh;
+       padding: 10px;
+       
+       color: var(--primary-color);
+       
+     }
+     .container{
+       position: relative;
+       width: 100%;
+       max-width: 1100px;
+       
+       margin: 0 auto;
+       
+     }
+     li{
+       list-style: none;
+       line-height: 2;
+     }
+     a{
+       text-decoration: none;
+       color: var(--quinary-color);
+     }
+     .footer-content{
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       flex-wrap: wrap;
+     }
+     
+     
+     
+     .items li{
+       display: inline-block;
+       padding: 0px 2px;
+       position: relative;
+       bottom: -3vh;
+       color: var(--primary-color);
+       background-color: var(--primary-color);
+       border-radius: 5px;
+     }
+     .social{
+       display: flex;
+     }
+     .social a{
+       height: 30px;
+       width: 30px;
+       background: var(--secondary-color);
+       border-radius: 5px;
+       margin:10px 5px;
+       text-align: center;
+     }
+     .social a i{
+       font-size: 1.3em;
+       line-height: 30px;
+     }
+     
+     
+     hr{
+       opacity: .3;
+     }
+     .footer .end{
+       font-family: Roboto;
+       text-align: center;
+       padding: 20px 0 0 0;
+     }
+     
+     .footer_bottom{
+       position: absolute;
+       bottom: 0vh;
+       left: 50vh;
+       
+     }
+     
+     .form{
+       position:absolute;
+       right: 0vh;
+       padding: 0;
+       border: 100vh;
+       right: 50vh;
+       top: 30vh;
+     }
+     
+     
+     
+     *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: "Roboto";
+     }
+     
+     .items a{
+       padding: 1.2em;
+     }
+     .right{
+       position: absolute;
+       padding: 3em 5em;
+       top: 50%;
+       left: 75%;
+       transform: translate(-50%, -50%);
+       width: 400px;
+       background:var(--quinary-color);
+       border-radius: 10px;
+       box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+     }
+     .right h1{
+       color: var(--secondary-color);
+       font-style: bold;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     }
+     .center h1{
+       text-align: center;
+       padding: 20px 0;
+       border-bottom: 1px solid var(--secondary-color);
+     }
+     .center form{
+       padding: 0 40px;
+       box-sizing: border-box;
+     }
+     form .txt_field{
+       position: relative;
+       border-bottom: 2px solid var(--secondary-color);
+       margin: 30px 0;
+     }
+     .txt_field input{
+       width: 100%;
+       padding: 0 5px;
+       height: 40px;
+       font-size: 16px;
+       border: none;
+       background: none;
+       outline: none;
+     }
+     .txt_field label{
+       position: absolute;
+       top: 50%;
+       left: 5px;
+       color: var(--secondary-color);
+       transform: translateY(-50%);
+       font-size: 16px;
+       pointer-events: none;
+       transition: .5s;
+     }
+     .txt_field span::before{
+       content: '';
+       position: absolute;
+       top: 40px;
+       left: 0;
+       width: 0%;
+       height: 2px;
+       background: var(--primary-color);
+       transition: .5s;
+     }
+     .txt_field input:focus ~ label,
+     .txt_field input:valid ~ label{
+       top: -5px;
+       color: var(--primary-color);
+     }
+     .txt_field input:focus ~ span::before,
+     .txt_field input:valid ~ span::before{
+       width: 100%;
+     }
+     .pass{
+       margin: -5px 0 20px 5px;
+       color: var(--secondary-color);
+       cursor: pointer;
+     }
+     .pass:hover{
+       text-decoration: underline;
+     }
+     input[type="submit"]{
+       width: 100%;
+       height: 50px;
+       border: 1px solid;
+       background: var(--secondary-color);
+       border-radius: 25px;
+       font-size: 18px;
+       color: var(--quaternary-color);
+       font-weight: 700;
+       cursor: pointer;
+       outline: none;
+     }
+     input[type="submit"]:hover{
+       border-color: var(--primary-color);
+       transition: .5s;
+     }
+     input[type=text] {
+       width:250px;
+       padding:12px;
+       border: 2px solid #ffffff;
+       box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+       border-radius:10px;
+       margin: 3px;
+     }
+     input[type=number] {
+      width:250px;
+      padding:12px;
+      border: 2px solid #ffffff;
+      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      border-radius:10px;
+      margin: 3px;
+    }
+     
+     
+     .left{
+       position: absolute;
+       top: 50%;
+       right: 50%;
+       transform: translate(-50%, -50%);
+       width: 400px;
+       background:var(--quaternary-color);
+       border-radius: 10px;
+      
+     }
+     
+     /* This is the instructor type */
+     
+     .dropdown {
+       height: 10vh;
+       width: 70%;
+       
+       margin: auto;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       position: relative;
+     }
+     
+     .grade, .course, .assignment, .other,
+      .other, .logout {
+       position: relative;
+      
+     }
+     
+     
+     
+     
+     
+     /* This is the OTHER dropdown CSS */
+     
+     .other{
+     height: 70% !important;
+     display: flex;
+     align-items: center;
+     
+     } 
+     .other ul{
+     margin-top: 10px;
+     top: 5.5vh;
+     position: absolute;
+     display: flex;
+     justify-content: space-around;
+     flex-direction: column;
+     align-items: center;
+     width: 150px;
+     height: 120px;
+     background: var(--quinary-color);
+     left: 0px;
+     list-style: none;
+     border-radius: 10px;
+     
+     }
+     
+     .hide{
+     display: none !important;
+     }
+     .other:hover  .hide {
+     display: flex !important;
+     background-color: var(--quinary-color) ;
+     border-radius: 10px;
+     
+     }
+     
+     
+     
+     /* This is the Assignment dropdown CSS */
+     
+     .assignment{
+       height: 70% !important;
+       display: flex;
+       align-items: center;
+       
+       } 
+       .assignment ul{
+       margin-top: 10px;
+       top: 5.5vh;
+       position: absolute;
+       display: flex;
+       justify-content: space-around;
+       flex-direction: column;
+       align-items: center;
+       width: 150px;
+       height: 120px;
+       background: var(--quinary-color);
+       left: 0px;
+       list-style: none;
+       border-radius: 10px;
+       
+       }
+       
+       .hide{
+       display: none !important;
+       }
+       .assignment:hover  .hide {
+       display: flex !important;
+       background-color: var(--quinary-color) ;
+       border-radius: 10px;
+       
+       }
+     
+     
+     /* This is the GRADE dropdown CSS */
+     
+     .grade{
+       height: 70% !important;
+       display: flex;
+       align-items: center;
+     
+     } 
+     .grade ul{
+       margin-top: 5px;
+       top: 5.5vh;
+       position: absolute;
+       display: flex;
+       justify-content: space-around;
+       flex-direction: column;
+       align-items: center;
+       width: 150px;
+       height: 120px;
+       background: var(--quinary-color);
+       left: 0px;
+       list-style: none;
+       border-radius: 5px;
+      
+     }
+     
+     .hide{
+       display: none !important;
+     }
+     .grade:hover  .hide {
+       display: flex !important;
+       background-color: var(--quinary-color) ;
+       border-radius: 10px;
+       
+     }
+     
+     
+     /* This is the COURSE dropdown CSS */
+     
+     
+     .course{
+       height: 70% !important;
+       display: flex;
+       align-items: center;
+     
+     } 
+     .course ul{
+       margin-top: 10px;
+       top: 5.5vh;
+       position: absolute;
+       display: flex;
+       justify-content: space-around;
+       flex-direction: column;
+       align-items: center;
+       width: 150px;
+       height: 120px;
+       background: var(--quinary-color);
+       left: 0px;
+       list-style: none;
+       border-radius: 10px;
+      
+     }
+     
+     .hide{
+       display: none !important;
+     }
+     .course:hover  .hide {
+       display: flex !important;
+       background-color: var(--quinary-color) ;
+       border-radius: 10px;
+       
+     }
+     
+     
+     
+     /* Hover Effects for the drop downs*/
+     
+     .grade li,
+     .course li,
+     .assignment li,
+      .other li,
+     .logout li {
+       width: 100%;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: var(--quinary-color);
+       border-radius: 10px;
+       
+       
+     }
+     
+     .grade li:hover,
+     .course li:hover,
+     .assignment li:hover,
+       .other li:hover,
+     .logout li:hover {
+       background-color: var(--primary-color) ;
+       border-radius: 10px;
+       float: none;   
+     }
+     
+     
+     .grade a,
+     .course a,
+     .assignment a,
+      .other a,
+     .logout a {
+       color: var(--secondary-color);
+       text-decoration: none;
+       float: none;
+       
+     }
+     
+     
+     
+     .dropdown button,
+     .home {
+       
+       background: none;
+       text-decoration: none;
+       border: none;
+       color: var(--quinary-color);
+       font-size: 18px;
+       cursor: pointer;
+       
+     }
+     
