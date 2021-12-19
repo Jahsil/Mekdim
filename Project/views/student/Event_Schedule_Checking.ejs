@@ -1,0 +1,84 @@
+<!-- Event schedule checking by Sherif Ahmed -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Event Schedule Checking
+        <link rel="stylesheet" href="Event.css">
+    </title>
+</head>
+
+<body>
+    <header>
+        <h1>MEKDEM</h1>
+        <p>Student Portal</p>
+    </header>
+    <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+    <section>
+        <article>
+            <h2>Welcome to Event Schedule Checking</h2>
+
+            <p>Please provide the date you are looking for an event</p>
+           
+            <form action="/eventschedulechecking" method="post">
+
+            <div class="prelude">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="edate">Event Date</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="edate" name="event_date" placeholder="Event date...." required>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Event Date</th>
+                  <th>Event Venue</th>
+                  <th>Event Start</th>
+                  <th>Event End</th>
+                  <th>Event Description</th>
+                </tr>
+                
+                 <% if(msg != 0) { %>
+                        
+                    <tr>
+                     <td> <%= msg.EventName %>  </td>
+                     <td> <%= msg.Date %>  </td>
+                     <td> <%= msg.eventvenue %>  </td>
+                     <td> <%= msg.Startingtime %>  </td>
+                     <td> <%= msg.Endtime %>  </td>
+                     <td> <%= msg.Eventdescription %>  </td>
+
+                   </tr>
+                </table>
+                   <% } else {%>
+                   </table>
+                    <p>There is no Event on the specified date!  </p> %>
+                   <% } %>
+
+                   <div class="row">
+                    <input type="submit" value="Submit">
+                   </div>
+                   
+              
+             
+            </form>
+        </article>
+        <aside>
+            <!-- <ul>
+                <li><a class="active" href="Event_Schedule_Checking.html">Event Schedule</a></li>
+                <li><a href="Course_Schedule_Checking.html">Course Schedule</a></li>
+            </ul> -->
+        </aside>
+    </section>
+</body>
+
+</html>

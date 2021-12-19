@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+  margin : auto;
+}
+
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+/*for the drop down*/
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+form 
+{
+    text-align:center;
+}
+select
+{
+    margin:10px;
+}
+#red{
+    font-size: 18px;
+    color:red;
+}
+
+#green{
+    font-size: 18px;
+    color:green;
+}
+
+button{
+    margin:10px;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+
+
+</style>
+</head>
+<body>
+<form action="/evaluation" method = "POST">
+
+    <p> Select the instructor here </p>
+    <% if (instructor !== 0) { %>
+        <select name="instructor">
+        <% instructor.forEach( instructor => { %>
+                <option value = "<%=instructor.FullName%>" > <%=instructor.FullName%>  </option>
+        <% }) %>
+        </select> 
+      <% } else { %>
+        <p>No instructor is provided by the adminstrator </p>
+      <%  } %>  
+
+     
+    <table id="customers">
+        <tr>
+          <th></th>
+          <th>Strongly Agree</th>
+          <th>Agree</th>
+          <th>Neutral </th>
+          <th>Disagree </th>
+          <th>Strongly Disagree </th>
+        </tr>
+
+        <tr>
+            <td>Presentation_and_clarification_of_course</td>
+            <td><input type="radio" name="clarification" value="Strongly agree" required></td>
+            <td><input type="radio" name="clarification" value="Agree" required></td>
+            <td><input type="radio" name="clarification" value="Neutral" required></td>
+            <td><input type="radio" name="clarification" value="Diagree" required></td>
+            <td><input type="radio" name="clarification" value="Strongly diagree" required></td>
+        </tr>
+
+        <tr>
+         <td>Knowledge_of_the_subject</td>
+         <td><input type="radio" name="knowledge" value="Strongly agree" required></td>
+         <td><input type="radio" name="knowledge" value="Agree" required></td>
+         <td><input type="radio" name="knowledge" value="Neutral" required></td>
+         <td><input type="radio" name="knowledge" value="Diagree" required></td>
+         <td><input type="radio" name="knowledge" value="Strongly diagree" required></td>
+        </tr>
+
+         <tr>
+          <td>Ability_to_arouse_students</td>
+          <td><input type="radio" name="funny" value="Strongly agree" required></td>
+          <td><input type="radio" name="funny" value="Agree" required></td>
+          <td><input type="radio" name="funny" value="Neutral" required></td>
+          <td><input type="radio" name="funny" value="Diagree" required></td>
+          <td><input type="radio" name="funny" value="Strongly diagree" required></td>
+         </tr>
+
+         <tr>
+          <td>Providing_feedback_on_test</td>
+          <td><input type="radio" name="feedback" value="Strongly agree" required></td>
+          <td><input type="radio" name="feedback" value="Agree" required></td>
+          <td><input type="radio" name="feedback" value="Neutral" required></td>
+          <td><input type="radio" name="feedback" value="Diagree" required></td>
+          <td><input type="radio" name="feedback" value="Strongly diagree" required></td>
+         </tr>
+
+         <tr>
+          <td>Fairness_in_marking</td>
+          <td><input type="radio" name="fair" value="Strongly agree" required></td>
+          <td><input type="radio" name="fair" value="Agree" required></td>
+          <td><input type="radio" name="fair" value="Neutral" required></td>
+          <td><input type="radio" name="fair" value="Diagree" required></td>
+          <td><input type="radio" name="fair" value="Strongly diagree" required></td>
+         </tr>
+
+         <tr>
+          <td>Respect_for_students</td>
+          <td><input type="radio" name="respect" value="Strongly agree" required></td>
+          <td><input type="radio" name="respect" value="Agree" required></td>
+          <td><input type="radio" name="respect" value="Neutral" required></td>
+          <td><input type="radio" name="respect" value="Diagree" required></td>
+          <td><input type="radio" name="respect" value="Strongly diagree" required></td>
+         </tr>
+
+         <tr>
+          <td>Time_managemen</td>
+          <td><input type="radio" name="time" value="Strongly agree" required></td>
+          <td><input type="radio" name="time" value="Agree" required></td>
+          <td><input type="radio" name="time" value="Neutral" required></td>
+          <td><input type="radio" name="time" value="Diagree" required></td>
+          <td><input type="radio" name="time" value="Strongly diagree" required></td>
+         </tr>
+
+
+     </table>
+     <% if (message==1) { %>
+         <p id="red">you can not fill for the same instructor twice</p>
+    <% } else if(message==2) { %>
+         <p id="green">Your form has been submitted</p>
+    <% }  %>
+
+
+     <button type="submit" class="type">Submit</button>
+  </form>
+</body>
+</html>
+
