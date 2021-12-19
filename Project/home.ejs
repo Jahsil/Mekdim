@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Welcome to home </h1>
+
+      <%  if( user ) {  %>
+          <h1 >welcome to mekdim <%=user.FullName%>  </h1>
+      <% }  %>
+
+      <%if (user.InstructorID) { %>
+        <h1> your id is  <%= user.InstructorID %> </h1>
+      <% } else if (user.AdministratorID)  { %>
+        <h1> your id is  <%= user.AdministratorID %> </h1>
+      <% } else if (user.StudentID)  { %>
+        <h1> your id is  <%= user.StudentID %> </h1>
+        
+    <%  } else { %>
+      <h1> you have to be logged in </h1>
+    <a href="/login">login</a>
+    <% } %>
+</body>
+</html>

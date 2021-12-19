@@ -1,0 +1,43 @@
+<html>
+<head>  
+</head>
+<body>
+
+  <h1>Clearance Application</h1>					<!--Main purpose of the page-->
+  <h2>Students Name</h2>
+  
+
+  <form action="/clearance" method="post">					<!--Action that happens when button is pressed-->			
+  	 <label for="fname"><sub>First Name:</sub></label> 			<!--first name information-->
+ 	    <input type="text" id="fname" name="fname" value="">
+
+ 	<label for="mname"><sub>Middle Name:</sub></label>			<!--middle name information-->
+ 	    <input type="text" id="mname" name="mname" value="">
+
+        <label for="lname"><sub>Last Name:</sub></label>			<!--last name information-->
+            <input type="text" id="lname" name="lname" value=""><br><br>
+
+        <label for="date"><sub>Date of Birth:</sub></label>			<!--birthdate information-->
+ 	    <input type="text" id="date" name="date" value="dd/mm/yyyy">
+
+        <label for="id"><sub>ID:</sub></label>					<!--ID information-->
+ 	    <input type="text" id="id" name="id" value=""><br><br>
+
+        <label for="sex"><sub>Sex:</sub></label>				<!--Sex information-->
+ 	    <input type="text" id="sex" name="sex" value="">
+
+        <label for="CYear"><sub>Current Year:</sub></label>			<!--Current Year information-->
+ 	    <input type="text" id="cyear" name="cyear" value=""><br><br>
+
+        <label for="rfc"><sub>Reason for Clearance:</sub></label>		<!--Reason for Clearance information-->
+ 	    <input type="text" id="rfc" name="rfc" value=""><br><br>
+
+        <label for="myfile">Upload scanned clearance document:</label>		<!--Upload Clearance doc-->
+            <input type="file" id="myfile" name="myfile">
+                   <!-- <label for="captcha"><sub>Captcha Code:</sub></label>			captcha verification
+ 	    <input type="text" id="captcha" name="captcha" value=""><br><br> -->
+            <input type="submit" value="Submit">				<!--submit button-->
+</form>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!-- Event scheduling by Sherif Ahmed -->
+<!DOCTYPE html>
+<html>
+<!--This Code implements the event scheduling of the portal-->
+
+<head>
+    <title>Event Scheduling</title>
+    <link rel="stylesheet" href="new.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <h1>MEKDEM</h1>
+        <p>Student Portal</p>
+    </header>
+    <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+    </nav>
+
+    <section>
+        <article>
+            <div class="heading">
+                <h2>Welcome To Event Scheduling </h2>
+                <p>Please provide the required information about the event</p>
+            </div>
+            <div class="container">
+                
+                <form action="/eventschedule" method="post">
+
+                    
+                    
+
+                    <div class="event">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="ename">Event Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="ename" name="event_name" placeholder="Event name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="edate">Event Date</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="edate" name="event_date" placeholder="Event date...." required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="evenue">Event Venue</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="evenue" name="event_venue" placeholder="Event venue...." required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="stime">Starting Time</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="time" id="stime" name="event_start" placeholder="Starting time..." required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="etime">End Time</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="time" id="etime" name="event_end" placeholder="End time....." required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="cname">Event Description</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="mdescribe" rows="10" cols="50" name="event_description"
+                                    placeholder="Write Event description here....." required></textarea>
+                            </div>
+                        </div>
+                        <% if(error) { %>
+                            <p>The date is already occupied. Please try scheduling on another date!</p>
+                        <% } else {%>
+                        
+                            <p>The Event is scheduled successfully!</p> %>
+                        <% } %>
+                        <div class="row">
+                            <input type="submit" value="Submit">
+                        </div>
+                        <div class="row">
+                            <input type="reset" value="Reset  ">
+                        </div>
+                </form>
+            </div>
+            </div>
+        </article>
+        <aside>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+        </aside>
+
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>
