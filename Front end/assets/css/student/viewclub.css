@@ -1,0 +1,102 @@
+.view{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+.list{
+    padding-left: 250px;
+    line-gap-override: 100px;
+    line-height: 5px;
+    /* background-color: blue; */
+    margin-right: 590px;
+    margin-left: 610px;
+    padding-left: 30px;
+}
+#health{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 47px;
+    border-radius: 30px;
+    /* margin-left: 210px; */
+}
+#females{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 37px;
+    border-radius: 30px;
+    /* margin-left: 210px; */
+}
+#technology{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 47px;
+    border-radius: 30px;
+    /* margin-left: 210px; */
+}
+#Peace{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 88px;
+    border-radius: 30px;
+    /* margin-left: 210px; */
+}
+#Art{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 30px;
+    border-radius: 30px;
+    /* margin-left: 210px; */
+}
+#health:hover{
+    background-color: white;
+    color: black;
+}
+#females:hover{
+    background-color: white;
+    color: black;
+}
+#technology:hover{
+    background-color: white;
+    color: black;
+}
+#Peace:hover{
+    background-color: white;
+    color: black;
+}
+#Art:hover{
+    background-color: white;
+    color: black;
+}
+h1{
+    font-size: 150px;
+    margin-top: 100px;
+    opacity: 20%;
+    padding-left: 100px;
+    font-weight: 1000px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}

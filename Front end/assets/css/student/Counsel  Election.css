@@ -1,0 +1,51 @@
+.council{
+    margin-top: 100px;
+    /* line-height: 0px; */
+}
+
+.person1{
+    /* background-color: green; */
+    width: 33.33%;
+    float: right;
+    
+}
+.person2{
+    /* background-color: blue; */
+    width: 23.33%;
+    float: right;
+    padding-left: ;
+
+}
+.person3{
+    /* background-color: red; */
+    width: 33.33%;
+    padding-left: 290px;
+    margin-bottom: 100px;
+}
+#field{
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    /* padding-right: 5px; */
+    margin-left: 15px;
+}
+.img{
+    /* padding-left: 60; */
+    margin-left: 15px;
+}
+#button{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 47px;
+    border-radius: 15px;
+}
+#button:hover{
+    background-color: white;
+    color: black;
+    font-weight: 10px;
+}

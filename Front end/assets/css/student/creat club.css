@@ -1,0 +1,43 @@
+.registerclub{
+    margin-top: 200px;
+    margin-left: 500px;
+    /* background-color: blue; */
+    margin-right: 300px;
+}
+.inputs{
+    padding-left: 130px;
+    /* background-color: blue; */
+}
+h2{
+    padding-left: 130px;
+}
+.clubinfo{
+    padding-left: 130px;
+    margin-left: 130;
+}
+#button{
+    background-color: #2b6777;
+    color: white;
+    box-shadow: black;
+    outline:none;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 16px 70px;
+    border-radius: 30px;
+    margin-left: 180px;
+}
+#button:hover{
+    background-color: white;
+    color: #2b6777;
+    
+}
+#clubname{
+    padding-left: 130px;
+    /* background-color: blue; */
+}
+#clubinformation{
+    margin-left: 100px;
+    font-weight: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
