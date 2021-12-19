@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+}
+
+article {
+  width: 60%;
+  height: 20%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+input[type="button"],
+input[type="submit"] {
+  width: 15%;
+  text-align: center;
+}
+.submit {
+  display: grid;
+  margin: auto;
+}
