@@ -11,11 +11,11 @@ router.get('/council' , authentication.isStudentLoggedIn ,(req , res)=> {
     let sql =  `select * from council`;
     connection.query(sql , (error , result) => {
         if (result !==undefined && result.length > 0 ) {
-        res.render('council' , {council: result})
+        res.render('student/council' , {council: result})
         }
         else 
         {
-            res.render('council' , {council:0});
+            res.render('student/council' , {council:0});
         }
      });
 });
@@ -27,11 +27,11 @@ router.get('/club/information' , authentication.isStudentLoggedIn ,(req , res)=>
     let sql =  `select * from clubs where Status="Approved" `;
     connection.query(sql , (error , result) => {
         if (result !==undefined && result.length > 0 ) {
-        res.render('club' , {club: result})
+        res.render('student/club' , {club: result})
         }
         else 
         {
-            res.render('club' , {club:0});
+            res.render('student/club' , {club:0});
         }
      });
 });
@@ -44,11 +44,11 @@ router.get('/club/events' , authentication.isStudentLoggedIn ,(req , res)=> {
     let sql =  `select * from events where Status="Approved" `;
     connection.query(sql , (error , result) => {
         if (result !==undefined && result.length > 0 ) {
-        res.render('event' , {event: result})
+        res.render('student/event' , {event: result})
         }
         else 
         {
-            res.render('event' , {event:0});
+            res.render('student/event' , {event:0});
         }
      });
 });

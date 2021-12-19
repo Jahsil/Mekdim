@@ -12,11 +12,11 @@ router.get('/evaluation' , authentication.isStudentLoggedIn , (req , res)=> {
     connection.query(sql , (error , result) => {
         global = result;
         if (result !==undefined && result.length > 0 ) {
-        res.render('staff' , {instructor: result , message:0})
+        res.render('student/staff' , {instructor: result , message:0})
         }
         else 
         {
-            res.render('staff' , {instructor : 0 , message:0});
+            res.render('student/staff' , {instructor : 0 , message:0});
         }
      });
 });
@@ -31,7 +31,7 @@ router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {
     connection.query(sql , (error , result) => {   
         if(result == undefined)
         {
-            res.render('staff' , {instructor : global , message: 1});
+            res.render('student/staff' , {instructor : global , message: 1});
         }
         else
         {
@@ -39,7 +39,7 @@ router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {
             connection.query(sql , (error , result) => {   
                  if(result)
                    {
-                    res.render('staff' , {instructor : global , message: 2});
+                    res.render('student/staff' , {instructor : global , message: 2});
                  }
              });
         }
@@ -48,7 +48,7 @@ router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {
 
 
 router.get('/contactInstructor'  , ( req , res)=> {
-    res.render('contactInstructor' , {address:0});
+    res.render('student/contactInstructor' , {address:0});
 });
 
 
@@ -64,10 +64,10 @@ router.post('/contactInstructor' , (req , res) => {
              Email:result[0].Email,
              department:result[0].InstructorDepartment
          }
-         res.render('contactInstructor' , {address:address });
+         res.render('student/contactInstructor' , {address:address });
    
      } else {
-         res.render('contactInstructor' , {address: 1 });
+         res.render('student/contactInstructor' , {address: 1 });
       }
   });
 });
