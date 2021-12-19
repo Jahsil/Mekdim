@@ -216,6 +216,7 @@ CREATE TABLE `clubs` (
 
 LOCK TABLES `clubs` WRITE;
 /*!40000 ALTER TABLE `clubs` DISABLE KEYS */;
+INSERT INTO `clubs` VALUES ('Red Cross','Valid','11-11-11',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `clubs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -514,6 +515,44 @@ LOCK TABLES `courseadddroprequest` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `courseschedule`
+--
+
+DROP TABLE IF EXISTS `courseschedule`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `courseschedule` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `Department` varchar(45) NOT NULL,
+  `Year` varchar(45) NOT NULL,
+  `Semester` varchar(45) NOT NULL,
+  `Section` varchar(45) NOT NULL,
+  `Room` varchar(45) NOT NULL,
+  `Monday` varchar(45) DEFAULT NULL,
+  `Tuesday` varchar(45) DEFAULT NULL,
+  `Wednesday` varchar(45) DEFAULT NULL,
+  `Thursday` varchar(45) DEFAULT NULL,
+  `Friday` varchar(45) DEFAULT NULL,
+  `Monday2` varchar(45) DEFAULT NULL,
+  `Tuesday2` varchar(45) DEFAULT NULL,
+  `Wednesday2` varchar(45) DEFAULT NULL,
+  `Thursday2` varchar(45) DEFAULT NULL,
+  `Friday2` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `courseschedule`
+--
+
+LOCK TABLES `courseschedule` WRITE;
+/*!40000 ALTER TABLE `courseschedule` DISABLE KEYS */;
+INSERT INTO `courseschedule` VALUES (1,'Electrical','1','First','A','118','MAT','EMF','Free','EMF','Free','Free','Free','Free','DB','Free'),(2,'Electrical','2','Second','B','131','DB','ENG','Free','MAT','ENG','Free','DS','DS','Free','EMF'),(3,'Electrical','2','First','A','109','DS','DB','EMF','Free','Free','Free','Free','Free','DB','Free'),(4,'Electrical','3','Second','B','118','EMF','DS','DB','DS','DS','DB','DS','Free','Free','DS'),(5,'Electrical','3','First','A','131','ENG','Free','Free','DB','MAT','Free','Free','DS','MAT','Free'),(6,'Software','1','Second','B','109','MAT','DB','DS','Free','Free','DS','Free','Free','ENG','ENG'),(7,'Software','2','First','A','118','Free','Free','MAT','EMF','Free','ENG','MAT','Free','Free','DB'),(8,'Software','3','Second','B','109','MAT','ENG','EMF','Free','DB','Free','Free','MAT','DS','Free'),(9,'Civil','1','First','A','131','Free','DB','Free','Free','Free','DS','DS','Free','ENG','DB'),(10,'Civil','2','Second','B','118','ENG','ENG','MAT','MAT','ENG','Free','Free','Free','Free','EMF'),(11,'Civil','3','First','A','109','Free','DB','EMF','Free','Free','Free','DS','DS','DS','Free');
+/*!40000 ALTER TABLE `courseschedule` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `department`
 --
 
@@ -627,6 +666,7 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
+INSERT INTO `events` VALUES ('Blood Donation','Red Cross','Valid','11-11-11','AAiT','2:30');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -638,14 +678,14 @@ DROP TABLE IF EXISTS `eventschedule`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `eventschedule` (
-  `ID` int NOT NULL AUTO_INCREMENT,
   `EventName` varchar(45) NOT NULL,
   `Date` varchar(45) NOT NULL,
-  `Start-EndTime` varchar(45) NOT NULL,
-  `Location` varchar(45) NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `EventName_idx` (`EventName`),
-  CONSTRAINT `EventName` FOREIGN KEY (`EventName`) REFERENCES `events` (`EventName`)
+  `eventvenue` varchar(45) NOT NULL,
+  `Startingtime` varchar(45) NOT NULL,
+  `Endtime` varchar(45) NOT NULL,
+  `Eventdescription` varchar(255) NOT NULL,
+  PRIMARY KEY (`EventName`),
+  UNIQUE KEY `Date_UNIQUE` (`Date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -655,6 +695,7 @@ CREATE TABLE `eventschedule` (
 
 LOCK TABLES `eventschedule` WRITE;
 /*!40000 ALTER TABLE `eventschedule` DISABLE KEYS */;
+INSERT INTO `eventschedule` VALUES (' bfbaf ','2021-12-01','bdakjbdj','15:51','15:51','hgfhg'),(' exam ','2021-12-20','hall','00:00','15:04','no busy'),(' final exam ','2021-12-29','new','15:59','16:59','check 123'),(' gyyr ','2021-12-03','bdakjbdj','15:51','15:51','hgfhg'),(' SE mid exam ','2021-12-16','E118 Hall','19:30','22:00','none'),(' SE mid exam2 ','2021-12-17','nb','15:21','18:21','desc'),(' SE mid exam3 ','2021-12-22','nb2','20:30','16:00','not necessary');
 /*!40000 ALTER TABLE `eventschedule` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -773,7 +814,7 @@ CREATE TABLE `instructor` (
 
 LOCK TABLES `instructor` WRITE;
 /*!40000 ALTER TABLE `instructor` DISABLE KEYS */;
-INSERT INTO `instructor` VALUES ('IDR/5433/03','Mike Litories','Male','Mikey',NULL,NULL,'E-123','ElecEng','');
+INSERT INTO `instructor` VALUES ('IDR/1111/11','Kebede Abebe','Male','Kebed',NULL,NULL,'E-123','ElecEng',''),('IDR/5433/03','Abebe Abebe','Male','11111',NULL,NULL,'E-123','ElecEng','');
 /*!40000 ALTER TABLE `instructor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -899,16 +940,17 @@ DROP TABLE IF EXISTS `staffevaluation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `staffevaluation` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Staff` varchar(45) NOT NULL,
-  `Criteria1` varchar(45) NOT NULL,
-  `Criteria2` varchar(45) NOT NULL,
-  `Criteria3` varchar(45) NOT NULL,
-  `Criteria4` varchar(45) NOT NULL,
-  `Criteria5` varchar(45) NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `Staff_idx` (`Staff`),
-  CONSTRAINT `Staff` FOREIGN KEY (`Staff`) REFERENCES `instructor` (`InstructorID`)
+  `Presentation_and_clarification_of_course` varchar(25) DEFAULT NULL,
+  `Knowledge_of_the_subject` varchar(25) DEFAULT NULL,
+  `Ability_to_arouse_students’_interest` varchar(25) DEFAULT NULL,
+  `Providing_feedback_on_test` varchar(25) DEFAULT NULL,
+  `Fairness_in_marking` varchar(25) DEFAULT NULL,
+  `Respect_for_students` varchar(25) DEFAULT NULL,
+  `Time_management` varchar(25) DEFAULT NULL,
+  `StudentID` varchar(255) DEFAULT NULL,
+  `InstructorID` varchar(255) DEFAULT NULL,
+  KEY `StudentID` (`StudentID`),
+  CONSTRAINT `staffevaluation_ibfk_1` FOREIGN KEY (`StudentID`) REFERENCES `student` (`StudentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -918,6 +960,7 @@ CREATE TABLE `staffevaluation` (
 
 LOCK TABLES `staffevaluation` WRITE;
 /*!40000 ALTER TABLE `staffevaluation` DISABLE KEYS */;
+INSERT INTO `staffevaluation` VALUES ('Strongly agree','Agree','Agree','Neutral','Diagree','Neutral','Diagree','Atr/1111/11','Kebede Abebe');
 /*!40000 ALTER TABLE `staffevaluation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1049,4 +1092,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-18 21:50:38
+-- Dump completed on 2021-12-19 13:05:48
