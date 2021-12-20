@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mekdim Home</title>
+    <link rel="stylesheet" href="/assets/css/guest/styles.css">
+
+  </head>
+  <body>
+    <header class="header">
+      <img id="meklog" class="logo" src="/assets/images/logo.png" alt="logo" >
+      <nav class="nav_links">
+        <ul>
+          
+          <li class="nav-item">
+            <a href="news.html" class="nav-link"><h3> News</h3></a>
+          </li>
+          <li class="nav-item">
+            <a href="calendar.html" class="nav-link"><h3>Academic Caledar</h3> </a>
+          </li>
+         
+         
+          <li class="nav-item">
+              <a href="transfer.html" class="nav-link"><h3>Transfer</h3> </a>
+            </li>
+        </ul>
+      </nav>
+      <img src="/assets/images/dark2.png" id="icon" width="30px" height="30px">
+    </header>
+
+    <img src="/assets/images/uct-01.png" alt="" width="750" height="500" >
+
+    
+
+      
+  
+
+
+    <footer class="footer">
+      
+      <div class="container">
+        <div class="footer-content">
+            <div class="socials">
+              <img id="logofoot" class="logo" src="/assets/images/logo2.png" alt="logo" width="100px" height="35px">  
+             
+               
+                <div class="social">
+                    <a href="#"><i class="facebook"></i><img id="fbl" class="logo" src="/assets/images/fbl.png" alt="logo" width="30px" height="30px"> </a>
+                    <a href="#"><i class="twitter"></i><img id="twl" class="logo" src="/assets/images/twi.png" alt="logo" width="30px" height="30px"></a>
+                    <a href="#"><i class="youtube"></i><img id="ytl" class="logo" src="/assets/images/ytl.png" alt="logo" width="30px" height="30px"></a>
+                    <a href="#"><i class="Telegram"></i><img id="tgl" class="logo" src="/assets/images/tgl.png" alt="logo" width="30px" height="30px"></a>
+                </div>
+            </div>
+            
+
+            <div class="items">
+                <h3>Legal Information</h3>
+            <ul>
+                <li><a id="myBtn1" href="#">Terms</a></li>
+              
+                <li><a id="myBtn2" href="#">Privacy Policy</a></li>
+              
+                <li><a id="mybtn3" href="#">Cookie Policy</a></li>
+                <div id="myModal3" class="modal3"></div>
+             
+            
+            </ul>
+           
+
+        </div>
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+    
+
+  
+  
+
+
+  <script>
+
+var icon =document.getElementById("icon");
+icon.onclick= function(){
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")){
+    icon.src= "/assets/images/light2.png";
+    img.src="/assets/images/image1.png";
+    meklog.src="/assets/images/logo3.png";
+    fbl.src="/assets/images/fbll.png";
+    twl.src="/assets/images/twll.png";
+    tgl.src="/assets/images/tgll.png";
+    ytl.src="/assets/images/ytll.png";
+    logofoot.src="/assets/images/logo4.png";
+  } else{
+    icon.src="/assets/images/dark2.png";
+    img.src="/assets/images/image.png";
+    meklog.src="/assets/images/logo.png";
+    fbl.src="/assets/images/fbl.png";
+    twl.src="/assets/images/twi.png";
+    tgl.src="/assets/images/tgl.png";
+    ytl.src="/assets/images/ytl.png";
+    logofoot.src="/assets/images/logo2.png";
+  }
+
+}
+
+  </script>
+  </body>
+</html>

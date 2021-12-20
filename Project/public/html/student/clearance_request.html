@@ -1,0 +1,186 @@
+<!--Joshua Tadesse  ATR/7514/11-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student</title>
+    <link rel="stylesheet" href="/assets/css/student/clearance_request.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+  </head>
+  <body>
+    
+    <header class="header">
+      <img id="meklog" class="logo" src="/assets/images/logo.png" alt="logo" >
+      <nav class="nav_links">
+        
+        
+        <div class="dropdown">
+            <button><a href="financialAid.html" class="home"><h4>Home</h4> </a></button>
+            <div class="financial_aid">
+              <button><h4>Financial Aid</h4></button> <h4></h4>
+              
+            </div>
+            <div class="staff">
+             <button><h4>Staff</h4></button>
+              <ul class="hide">
+                <li><a href="staffEvaluation.html"><h4>Staff Evaluation</h4></a></li>
+                <li><a href="contactInstructor.html"><h4>Contact instructor</h4></a></li>
+                <li><a href="contactDepHead.html"><h4>Contact Dep. Head</h4> </a></li>
+                <li><a href="makeupExam.html"><h4>Makeup Exam Request</h4></a></li>
+                <li><a href="assignmentSubmission.html"><h4>Assignment Submission</h4></a></li>
+                
+              </ul>
+            </div>
+
+              <div class="counsel">
+                <button><h4>Counsel</h4></button>
+                <ul class="hide">
+                  <li><a href="#"><h4>Counsel Info.</h4></a></li>
+                  <li><a href="#"><h4>Counsel Election</h4></a></li>
+                </ul>
+              </div>
+
+              <div class="clubs">
+                <button><h4>Clubs</h4></button>
+                <ul class="hide">
+                  <li><a href="#"><h4>Create</h4></a></li>
+                  <li><a href="#"><h4>View</h4></a></li>
+                </ul>
+              </div>
+
+              
+              <div class="grade">
+                <button><h4>Grade</h4></button>
+                <ul class="hide">
+                  <li><a href="#"><h4>Grade Report & Assesment</h4></a></li>
+                  <li><a href="#"><h4>Grade Change Petition</h4></a></li>
+                </ul>
+              </div>
+
+              
+              <div class="course">
+                <button><h4>Course</h4></button>
+                <ul  class="hide">
+                  <li><a href="Course Checklist.html"><h4>Check List</h4></a></li>
+                  <li><a href="Course Registration.html"><h4>Registration</h4></a></li>
+                  <li><a href="addAndDrop.html"><h4>Add / Drop</h4></a></li>
+                </ul>
+              </div>
+
+              <div class="schedule">
+                <button><h4>Schedule</h4></button>
+                <ul class="hide">
+                  <li><a href="Course_Schedule_Checking.html"><h4>Course Schedule</h4></a></li>
+                  <li><a href="Event_Schedule_Checking.html"><h4>Event Schedule</h4></a></li>
+                 </ul>
+              </div>
+
+
+              <div class="student_service">
+                <button><h4>Sevices</h4></button>
+                <ul class="hide">
+                  <li><a href="dormitory_application.html"><h4>Dormitory</h4></a></li>
+                  <li><a href="cost_sharing_account_information.html"><h4>Cost Sharing</h4></a></li>
+                  <li><a href="placement_check.html"><h4>Placement Check</h4></a></li>
+                </ul>
+              </div>
+
+              <div class="other">
+                <button><h4>Other</h4></button>
+                <ul class="hide">
+                  <li><a href="intratransfer_application.html"><h4>Intra Transfer</h4></a></li>
+                  <li><a href="clearance_request.html"><h4>Clearance Form</h4></a></li>
+                  <li><a href="withdrawal_request.html"><h4>Withdrawal</h4></li>
+                  <li><a href="lost_id_request.html"><h4>Lost ID</h4></a></li>
+                  <li><a href="#"><h4>Change Password</h4></a></li>
+                  <li><a  href="#"><h4>Change Profile</h4> </a></li>
+                  <li><a id="icon" href="#"><h4>Change Theme</h4> </a></li>
+                  
+                </ul>
+              </div>
+
+              <div class="logout">
+                <button><h4>Logout</h4></button>
+                
+              </div>
+             
+          </div>
+
+          
+      </nav>
+     
+    </header>
+  <section class="section">
+      <h1><pre>       Clearance Request</pre></h1><br>						<!--main function of page-->
+      <p><pre>             Fill in this form to request clearance:</pre></p><br><br>
+      <div id="div_a">
+      <form action="somewebsite.php">
+        <label for="fname">First Name:</label>		                             	<!--first name information-->
+           <input type="text" id="fname" name="fname" value="" required ><br><br>
+        <label for="date">Date of Birth:</label>		                              	<!--date of birth information-->
+           <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" required><br><br>
+        <label for="sex">Sex:</label>			        	                              <!--Sex information-->
+           <input type="text" id="sex" name="sex" value="" required><br><br><br>
+        <textarea rows = "15" cols = "45" name = "rfc">
+                Reason for Clearance
+             </textarea><br>
+      </div>
+      <div id="div_b">
+        <label for="mname">Middle Name:</label>		                   	<!--middle name information-->	
+           <input type="text" id="mname" name="mname" value="" required><br><br>
+        <label for="id">ID:</label>				                   	<!--ID information-->
+           <input type="text" id="id" name="id" value="" required><br><br><br>
+        <label for="ye">Current Year:</label>						<!--dropdown to choose year -->
+             <select name="Year " id="Year" required>
+                 <option value="y1">Year 1</option>
+                 <option value="y2">Year 2</option>
+                 <option value="y3">Year 3</option>
+                 <option value="y4">Year 4</option>
+                 <option value="y4">Year 5</option>
+             </select><br><br><br><br>
+        
+      </div>
+      <div id="div_c">
+        <label for="lname">Last Name:</label>			<!--last name information-->
+            <input type="text" id="lname" name="lname" value="" required><br><br><br><br>
+            <label for="myfile">Upload scanned clearance document:</label>		<!--Upload Clearance doc-->
+             <input type="file" id="myfile" name="myfile" required /><br><br><br><br><br><br><br><br><br>
+        <input type="submit" value="Submit">				<!--submit button-->
+      </div>           
+      </form>
+    </div>
+  </section>
+
+    <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+
+
+
+    <script>
+
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+          meklog.src="/assets/images/logo3.png";
+        
+        } else{
+          meklog.src="/assets/images/logo.png";
+          
+        }
+      
+      }
+      
+        </script>
+  </body>
+</html>

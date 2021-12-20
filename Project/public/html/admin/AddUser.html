@@ -1,0 +1,165 @@
+
+<!--Natnael Tedros - ATR/0119/11-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add User</title>
+    <link rel="stylesheet" href="/assets/css/admin/HeaderFooter.css">
+    <link rel="stylesheet" href="/assets/css/admin/AddUser.css">
+
+  </head>
+  <body>
+    <div>
+    <header class="header">
+      <img id="meklog" class="logo" src="/assets/images/logo.png" alt="logo">
+      <nav class="nav_links">
+        
+        
+        <div class="dropdown">
+          <button><a href="admin.html" class="home"><h4>Home<h4></a></button>
+          <div class="account">
+            <button><h4>Account<h4></button>
+            <ul class="hide">
+              <li><a href="AccountActivation.html"><h4>Activation</h4></a></li>
+              <li><a href="AddUser.html"><h4>Add User</h4></a></li>
+              
+            </ul>
+          </div>
+          <div class="approve">
+            <button><h4>Approve</h4></button>
+            <ul class="hide">
+              <li><a href="GradeReportApproval.html"><h4>Grade</h4></a></li>
+              <li><a href="Clubs.html"><h4>Clubs</h4></a></li>
+              <li><a href="LostId.html"><h4>Lost ID</h4></a></li>
+              <li><a href="ClearanceApproval.html"><h4>Clearance</h4></a></li>
+              <li><a href="Dormitory.html"><h4>Dormitory</h4></a></li>
+              
+            </ul>
+          </div>
+
+            
+
+              
+
+              <div class="other">
+                <button><h4>Other<h4></button> 
+                <ul class="hide">
+                  <li><a id="icon" href="#"><h4>Change Theme</h4></a></li>
+                  <li><a href="#"><h4>Change Password</h4></a></li>
+                </ul>
+              </div>
+
+              
+              <button><a class="logout" href="#"><h4>Logout<h4> </a> </button>
+                
+            
+
+          </div>
+
+
+      </nav>
+     
+    </header>
+
+    <div class="body">
+        <h1>Create Account For User</h1>
+        <form>
+        <article><h2>Input the information in the space provided</h2><br>
+            
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text">             &nbsp;            
+                <label for="id">Id Number:</label>
+                <input type="text"><br><br>
+                <label for="password">Password:</label>
+                <input type="password">          &nbsp;
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password"><br><br>
+                <input type="radio" name="occupation"> <label for="">Student</label>  &nbsp;
+                <input type="radio" name="occupation"> <label for="">Instructor</label>  &nbsp;
+                <input type="radio" name="occupation"> <label for="">Administrator</label>
+            </form>
+
+        </article><br>
+        
+        <article><h2>For Student:</h2><br>
+        
+            <label for="yearLevel">Year Level:</label>
+            <select name="yearLevel" id="">
+                <option value="1">Year 1</option>
+                <option value="2">Year 2</option>
+                <option value="3">Year 3</option>
+                <option value="4">Year 4</option>
+                <option value="5">Year 5</option>
+            </select>
+            <label for="Department">Department:</label>
+            <select name="deps" id="">
+                <option value="SECE">Electrical</option>
+                <option value="SME">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="biomed">Biomed</option>
+                <option value="soft">Software</option>
+            </select>
+        
+        </article><br>
+        <article>
+            <h2>For Instructor:</h2><br>
+            
+                <label for="educationLevel">Education Level:</label>
+                <select name="degree" id="">
+                    <option value="bach">Bachelors</option>
+                    <option value="SME">Masters</option>
+                    <option value="Civil">PhD</option>
+                </select>
+            
+        </article><br>
+        <article><h2>For Administrator:</h2><br>
+            
+                <label for="responsibility">Responsibility:</label>
+                <select name="responsibility" id="">
+                    <option value="resp1">Dean of Department</option>
+                    <option value="resp2">Chariman of Stream</option>
+                    <option value="resp3">Executive Director</option>
+                </select>
+            
+        </article><br>
+        <input class="submit" type="submit">
+    </form>
+    </div>
+
+   
+
+    <script>
+
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+          meklog.src="/assets/images/logo3.png";
+          landinglogo.src="/assets/images/logo4.png";
+
+        
+        } else{
+          meklog.src="/assets/images/logo.png";
+          landinglogo.src="/assets/images/logo2.png";
+          
+        }
+      
+      }
+      
+        </script>
+  
+  </body>
+  <footer class="footer">
+      
+    <div class="container">
+      
+      <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+      
+  </div>
+    
+  
+  </footer>
+</html>
