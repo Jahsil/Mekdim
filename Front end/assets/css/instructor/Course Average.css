@@ -61,7 +61,7 @@ body{
 button{
   padding: 15px 35px;
   font-size:20px;
-  background-color: #2b6677;
+  background-color: var(--primary-color);
   color: black;
   border: none;
   border-radius: 10px;
@@ -529,6 +529,12 @@ border-radius: 10px;
   float: none;
   
 }
+.section, .CA
+{
+  color: var(--primary-color);
+
+}
+
 
 
 
