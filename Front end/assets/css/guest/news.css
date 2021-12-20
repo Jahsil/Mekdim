@@ -1,3 +1,5 @@
+/*Lealem Kinfe |  ETR/5704/11 | News Page */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@300&display=swap');
 
@@ -379,3 +381,14 @@ a {
   text-decoration: none;
 }
   
+
+
+.mylink h2{
+
+  position: absolute;
+  left: 15vh;
+  color: var(--primary-color);
+  
+width: auto;
+
+}

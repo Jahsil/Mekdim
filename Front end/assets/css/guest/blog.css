@@ -1,0 +1,107 @@
+/*Lealem Kinfe |  ETR/5704/11 | blog Page */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+  --primary-color:#266777 ;
+  --secondary-color:#52ab98;
+  --tertiary-color:#c8d8e4;
+  --quaternary-color:#f2f2f2;
+  --quinary-color:#ffffff;
+  
+}
+
+.dark-theme{
+  --primary-color:#f0f0f0 ;
+  --secondary-color:#929292;
+  --tertiary-color:#a7a7a7;
+  --quaternary-color:#121212;
+  --quinary-color:#323232;
+}
+
+
+body{
+	font-family: Arial;
+	margin:0;
+	padding:20px;
+	background-color: var(--quaternary-color);
+}
+*{
+	box-sizing: border-box;
+}
+.row:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+header{
+	background-color: var(--quinary-color);
+	padding:25px;
+}
+header h1{
+	text-align: center;
+	font-size:60px;
+	color:var(--quinary-color);
+	margin:1.5 0px;
+}
+
+h2{
+	color:var(--primary-color);
+margin:1.5 0px;	
+}
+
+
+.left-column{
+float: left;
+width: 75%;	
+}
+
+.right-column{
+    position: absolute;
+ width: 25%;
+right: 0px;
+top: 25vh;
+}
+.card p{
+	padding: 20px;
+	background-color: var(--quinary-color);
+ margin-top:20px;
+ color: var(--primary-color);
+}
+
+.card h5{
+    color: var(--primary-color);
+}
+
+.card img{
+	width: 100%;
+}
+
+
+.right-column .card img{
+	margin-bottom: 10px;
+}
+
+.footer_bottom{
+    position: absolute;
+    top: 115vh;
+    left: 70vh;
+    
+  }
+
+  .footer_bottom{
+      color: var(--primary-color);
+  }
+
+
+/*responsive */
+
+@media(max-width:800px){
+	.left-column,.right-column{
+    width: 100%;
+    padding: 0px;
+	}
+}
+
