@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+#club {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+  margin : auto;
+}
+
+
+#club td, #club th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#club tr:nth-child(even){background-color: #f2f2f2;}
+
+#club tr:hover {background-color: #ddd;}
+
+#club th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+p
+{
+    color:red;
+    text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<table id="club">
+   <tr>
+     <th>Club Name</th>
+     <th>status</th>
+     <th>Foundation Date</th>
+     <th>Email</th>
+     <th>Goal</th>
+     <th>Vission</th>
+     <th>Mission</th>
+     <th> Admin approval </th>
+   </tr>
+   
+   <% if (club !== 0) { %>
+      <% club.forEach( club => { %>
+      <tr>
+        <td> <%= club.ClubName %>  </td>
+        <td> <%= club.Status %>  </td>
+        <td> <%= club.FoundationDate %>  </td>
+        <td> <%= club.Email %>  </td>
+        <td> <%= club.Goal %>  </td>
+        <td> <%= club.Vision%>  </td>
+        <td> <%= club.Mission%>  </td>
+        <td><a href="approval/<%= club.ClubName %>">approve</a></td> 
+      
+      </tr>
+      <% }) %>
+    </table>
+    <% } else { %>
+    </table>
+    <p> There is no club in the university at the moment </p>
+   
+    <%  } %>
+ 
+</table>
+
+</body>
+</html>
+
+
