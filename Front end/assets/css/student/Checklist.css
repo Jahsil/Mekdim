@@ -3,7 +3,7 @@
 .wrapper{/*it divided the whole page into three rows and 12 columns*/
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows:  100px 1000px 60px;
+  grid-template-rows:  100px 560px 60px;
 }
 :root{
   --primary-color:#266777 !important;
@@ -42,6 +42,7 @@
   grid-column: span 9;
   background-color: var(--quinary-color);
   text-align: center;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
 .footer{/*Describes the footer Property of the page*/
 grid-column: span 12;
