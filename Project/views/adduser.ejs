@@ -3,15 +3,88 @@
   <head>
     <meta charset="utf-8">
     <title>Add User</title>
+    <link rel="stylesheet" href="../../assets/css/admin/HeaderFooter.css">
+    <link rel="stylesheet" href="../../assets/css/admin/AddUser.css">
+    <style>
+      h1 {
+    text-align: center;
+}
 
-    <link rel="stylesheet" href="/admin/adduser.css">
+article {
+    width: 60%;
+    height: 20%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type=button], input[type=submit]{
+    width: 15%;
+    text-align: center;
+
+}
+.submit {
+    display: grid;
+    margin: auto;
+}
+
+    </style>
 
   </head>
   <body>
-        <div class="body">
+    <header class="header">
+      <img class="logo" src="../../assets/images/logo.png" alt="logo" >
+      <nav class="nav_links">
+        
+        
+        <div class="dropdown">
+            <button><a href="admin.html" class="home">Home</a></button>
+            <div class="account">
+              <button>Account</button>
+              <ul>
+                <li><a href="AccountActivation.html">Activation</a></li>
+                <li><a href="AddUser.html">Add User</a></li>
+                
+              </ul>
+            </div>
+            <div class="approve">
+              <button>Approve</button>
+              <ul>
+                <li><a href="GradeReportApproval.html">Grade</a></li>
+                <li><a href="Clubs.html">Clubs</a></li>
+                <li><a href="LostId.html">Lost ID</a></li>
+                <li><a href="ClearanceApproval.html">Clearance</a></li>
+                <li><a href="Dormitory.html">Dormitory</a></li>
+                
+              </ul>
+            </div>
+
+              <div class="other">
+                <button>Other</button>
+                <ul>
+                  <li><a href="#">Change Theme</a></li>
+                  <li><a href="#">Change Password</a></li>
+                </ul>
+              </div>
+
+              <div class="logout">
+                <button>Log Out</button>
+                
+              </div>
+
+          </div>
+
+
+      </nav>
+     
+    </header>
+
+    <div class="body">
         <h1>Create Account For User</h1>
+        
         <article><h2>Input the information in the space provided</h2><br>
-        <form action="/admin/adduser", method='POST'>
+            
+            <form action="/adduser", method='POST'>
+
                 <label for="name" >Name:</label>
                 <input type="text" name="username">             &nbsp;            
                 <label for="id" >Id Number:</label>
@@ -66,6 +139,9 @@
             
         </article><br>
         <input class="submit" type="submit">
+        <% if(error2) { %>
+          <p id="wrong">Trying to fill the same data twice</p>
+      <% } %>
     </form>
     </div>
 
