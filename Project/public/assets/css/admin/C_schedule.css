@@ -1,0 +1,165 @@
+/*Done By Mery Terefe*/
+/*This CSS implement the schedule format  */
+.wrapper{/*it divided the whole page into three rows and 12 columns*/
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:  100px 1000px 60px;
+}
+:root{
+--primary-color:#266777 !important;
+--secondary-color:#52ab98 !important;
+--tertiary-color:#c8d8e4 !important;
+--quaternary-color:#f2f2f2 !important;
+--quinary-color:#ffffff !important;
+
+}
+
+.dark-theme{/*Dark theme*/
+--primary-color:#c4c4c4 !important;
+--secondary-color:#929292 !important;
+--tertiary-color:#484848 !important;
+--quaternary-color:#121212 !important;
+--quinary-color:#323232 !important;
+}
+
+:root{
+--primary: var(--primary-color);
+}
+
+.header{/*The header property is shown here*/
+  grid-column: span 12;
+  text-align: center;
+  background-color: var(--primary-color);
+}  
+.menu{/* The Menu property is shown here*/
+  grid-column: span 3;
+  text-align: left;
+  font-style: bold;
+  background-color: var(--quinary-color);
+}
+
+.content{/* IT shows the property of Content*/
+  grid-column: span 9;
+  background-color: var(--quinary-color);
+  text-align: center;
+}
+.footer{/*Describes the footer Property of the page*/
+grid-column: span 12;
+color: var(--primary-color);
+bottom: 0vh;
+right: 0vh;
+left: 0vh;
+padding: 10px;
+}
+
+@media  screen and(max-width:480px){/*Describe the property of the page when the max width is equal to 480px*/
+  .header{
+      grid-column: span6;
+  }
+  .menu{
+      grid-row: 1;
+      grid-column: span 12;
+  }
+  .content{
+      grid-column:span 12 ;
+  }
+}
+body{/*The property of the body is shown here*/
+  background-color: var(--quaternary-color);
+  margin: 0;
+}
+#mdescribe {/*The property of the description textarea is shown here*/
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
+  border: 2px solid  ;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+  resize: none;
+}
+input[type=text], select, textarea {/*Property of the input of text and select, textarea */
+  width: 50%;
+  padding: 12px;
+  border: 1px solid var(--quaternary-color);
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=date],input[type=time] {/*Property of the input when it is time and date*/
+  width: 50%;
+  padding: 12px;
+  border: 1px solid var(--quaternary-color);
+  border-radius: 4px;
+  resize: vertical;
+}
+label {/* Propert of the label*/
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=submit] {/*Property of submit button*/
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=reset] {/*property of the reset button*/
+  background-color: var(--quaternary-color);
+  color: var(--secondary-color);
+  padding: 12px 20px;
+  border: var(--tertiary-color);
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+}
+input[type=reset]:hover {/*property of the reset button when cursor hover over it*/
+  background-color: var(--primary-color);}
+input[type=submit]:hover {/*propert of the submit button when the cursor hover over it*/
+  background-color: var(--primary-color);}
+  .Course_schedule {/*The property of the course schedule class*/
+      border-radius: 5px;
+      background-color: var(--quinary-color);
+      padding: 20px;
+    }
+    
+    .col-25 {/*The property of the left column in the content*/
+      text-align: left;
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {/*The property of the right column in the content*/
+      text-align: left;
+      float: left;
+      width: 65%;
+      margin-top: 6px;
+    }
+    .row:after {/*Property of the row in the content*/
+      content: "";
+      display: table;
+      clear: both;
+    }
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 75%;
+        margin-top: 0;
+      }}
+table {/*Property of the table */
+      border-collapse: collapse;
+      width: 65%;
+      height: 200px;
+    }
+    th {/*property of header table*/
+    background-color: var(--secondary-color);
+    color: var(--quinary-color);
+  }
+    th, td {/*property of the table content*/
+      text-align: left;
+      padding: 8px;
+      width: 120px;
+    }

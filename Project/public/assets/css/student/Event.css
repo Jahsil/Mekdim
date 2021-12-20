@@ -1,0 +1,117 @@
+/*Done By Merry Terefe*/
+/*Implement the event page's css*/
+.wrapper{/*it divided the whole page into three rows and 12 columns*/
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:  100px 1000px 60px;
+}
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+
+}
+
+.dark-theme{
+  --primary-color:#c4c4c4 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+:root{
+  --primary: var(--primary-color);
+}
+.header{/*The header property is shown here*/
+  grid-column: span 12;
+  text-align: center;
+  background-color: var(--quaternary-color);
+}  
+.menu{/* The Menu property is shown here*/
+  grid-column: span 3;
+  text-align: left;
+  font-style: bold;
+  background-color: var(--quinary-color);
+}
+
+.content{/* IT shows the property of Content*/
+  grid-column: span 9;
+  background-color: var(--quinary-color);
+  text-align: center;
+}
+.footer{/*Describes the footer Property of the page*/
+grid-column: span 12;
+color: var(--primary-color);
+bottom: 0vh;
+right: 0vh;
+left: 0vh;
+padding: 10px;
+}
+
+@media  screen and(max-width:480px){/*Describe the property of the page when the max width is equal to 480px*/
+  .header{
+      grid-column: span6;
+  }
+  .menu{
+      grid-row: 1;
+      grid-column: span 12;
+  }
+  .content{
+      grid-column:span 12 ;
+  }
+}
+body{/*The property of the body is shown here*/
+  background-color: var(--quaternary-color);
+  margin: 0;
+}
+  .meeting_content{/*Property of the meeting content*/
+    border-radius: 5px;
+    background-color: var(--quinary-color);
+    padding: 20px;
+    text-align: left;
+    width: 25%;
+    margin-top: 6px;
+ }
+ .exam_content{/*property of the exam content */
+    border-radius: 5px;
+    background-color: var(--quinary-color);
+    padding: 20px;
+    text-align: left;
+    width: 25%;
+    margin-top: 6px;
+ }
+ .prelude{/*Property of the prelude class*/
+    border-radius: 5px;
+    background-color: var(--quinary-color);
+    padding: 20px;
+    margin: auto;
+}
+input[type=submit] {/*property of submit button*/
+    background-color: var(--secondary-color);
+    color: var(--quinary-color);
+    padding: 12px 20px;
+    border: var(--quinary-color);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {/*property of the submit button when the cursor hver over it*/
+    background-color: var(--primary-color);}
+#d_event{/*property of the d_event id*/
+    padding: auto;
+    width: 25%;
+    height:15%;
+    margin-top: 6px;
+}
+input[type=button] {/*property of input button*/
+    background-color: var(--quinary-color);
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    border: var(--tertiary-color);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=button]:hover {/*property of the input button when the cursor hover over it */
+    background-color: var(--primary-color);}

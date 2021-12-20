@@ -1,0 +1,404 @@
+/*Inherited form main page*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+body{
+  background-color: var(--quaternary-color);
+}
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+
+}
+
+.dark-theme{
+  --primary-color:#c4c4c4 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+:root{
+  --primary: var(--primary-color);
+}
+.header{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0em 10%;
+  background-color:var(--primary-color);
+}
+.logo{
+  cursor: pointer;
+  position: fixed;
+  left: 10vh;
+}
+.nav_links {
+  list-style: none;
+}
+.nav_links li{
+  display: inline-block;
+  padding: 10px 20px;
+}
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+  color: var(--secondary-color); transition: all 0.3s ease 0s;
+}
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, alpha);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: var(--secondary-color);
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: var(--secondary-color);
+  position: fixed;
+  height: 50%;
+  overflow: auto;
+}
+
+.menu li a {
+  display: block;
+  color: var(--quinary-color);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.menu li a.active {
+  background-color:var(--primary-color);
+  color: var(--quinary-color);
+}
+.menu li a:hover:not(.active) {
+  background-color:var(--tertiary-color);
+  color: var(--quinary-color);}
+
+footer{
+  position: absolute;
+  bottom: 0vh;
+  right: 0vh;
+  left: 0vh;
+  padding: 10px;
+  
+  color: var(--primary-color);
+  
+}
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  
+  margin: 0 auto;
+  
+}
+hr{
+  opacity: .3;
+}
+.footer .end{
+  font-family: Roboto;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.footer_bottom{
+  position: absolute;
+  bottom: 0vh;
+  left: 50vh;
+  
+}
+
+
+/* This is the student type */
+
+
+  
+  .dropdown {
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+  }
+
+  
+ .home, .financial_aid, .staff, .counsel, 
+ .clubs, .grade, .course, .schedule,
+  .student_service,.other, .logout {
+    position: relative;
+    left: 15vh;
+  }
+  
+  
+    .other ul,
+  .logout ul
+ {
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    height: 300px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+  
+
+  
+  
+  .staff ul {
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    height: 250px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .financial_aid ul,
+   .student_service ul {
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 250px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .schedule ul{
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .student_service ul{
+    margin-top: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .course ul{
+    margin-top: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 110px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+   .counsel ul{
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .grade ul{
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 125px;
+    height: 100px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .clubs ul{
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: var(--quinary-color);
+    left: 0px;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .other li,
+  .logout li
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: var(--quinary-color);
+    border-radius: 10px;
+  }
+
+  
+ 
+ 
+  .financial_aid li,
+  .staff li, .counsel li, .course li, .clubs li,
+  .grade li, .schedule li, .student_service li  {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: var(--quinary-color);
+    border-radius: 10px;
+  }
+  
+  .other li:hover,
+  .logout li:hover
+  .financial_aid li:hover,
+  .staff li:hover, .counsel li:hover, .course li:hover,
+   .clubs li:hover,
+  .grade li:hover, .schedule li:hover, 
+  .student_service li:hover {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+   
+    
+  }
+  
+  .student_service a,
+  .staff a, .financial_aid a, .counsel a, .course a,
+  .grade a, .schedule a, .student_service a,
+   .other a, .clubs a,
+  .logout a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+
+
+  
+  .dropdown button,
+  .home {
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: var(--quinary-color);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .financial_aid button:focus + ul,
+  .counsel button:focus + ul,
+  .clubs button:focus + ul,
+  .course button:focus + ul,
+  .grade button:focus + ul,
+  .student_service button:focus + ul,
+  .staff button:focus + ul,
+  .other button:focus + ul,
+  .logout button:focus + ul,
+  .schedule button:focus + ul
+    {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+  }
+  

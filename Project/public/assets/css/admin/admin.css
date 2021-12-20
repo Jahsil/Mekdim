@@ -1,0 +1,73 @@
+
+/* Natnael Tedros - ATR/0119/11 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+  
+}
+
+.dark-theme{
+  --primary-color:#f0f0f0 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+
+
+.right{
+  position: absolute;
+  padding: 3em 5em;
+  text-align: center;
+  top: 65%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 35%;
+  background:var(--quinary-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.left{
+  position: absolute;
+  padding: 3em 5em;
+  text-align: center;
+  top: 65%;
+  left: 25%;
+  height: 35%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  background:var(--quinary-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.left img{
+  width: 70%;
+}
+.body h1{
+  font-size: 50px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.left h1{
+  font-size: 30px;
+}
+.right p{
+  color: var(--primary-color);
+
+}
+.right h1{
+  font-size: 30px;
+  color: var(--secondary-color);
+}
+

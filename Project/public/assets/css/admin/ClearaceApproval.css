@@ -1,0 +1,86 @@
+
+/* Natnael Tedros - ATR/0119/11*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+  
+}
+
+.dark-theme{
+  --primary-color:#f0f0f0 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+
+
+.body{
+    padding: 20px;
+    background-color: var(--quinary-color);
+    width: auto;
+    height: auto;
+    margin: 20px 20px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.body h1{
+    color: var(--secondary-color);
+    font-style: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+table, th, td {
+    background-color: var(--quinary-color);
+    border: 1px solid var(--secondary-color);
+    
+    border-collapse: collapse;
+    padding: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+th {
+    color: var(--secondary-color);
+    font-style: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+td {
+    color: var(--secondary-color);
+    font-style: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.body input[type=submit]{
+    width: 10%;
+    text-align: center;
+    margin: auto;
+
+}
+.body a{
+    color: var(--secondary-color);
+     
+}
+.body a:hover{
+    color: black;
+}

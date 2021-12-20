@@ -1,0 +1,52 @@
+/* Abdennasir Taju ATR/4057/11 */
+
+:root{
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
+  
+}
+
+.dark-theme{
+  --primary-color:#c4c4c4 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
+}
+.body h1 {
+    color: #52ab98;
+    font-style: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+input[type=submit]{
+    width: 8%;
+    height: 11%;
+    text-align: center;
+    left: 46%;
+
+}
+
+  .dropdown {
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+  }
+
+    #message[type = text]
+  {
+
+     maxlength: 200;
+      height: 100px;
+      width:27%;
+  }
