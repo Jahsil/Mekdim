@@ -42,7 +42,7 @@ CREATE TABLE `administrator` (
 
 LOCK TABLES `administrator` WRITE;
 /*!40000 ALTER TABLE `administrator` DISABLE KEYS */;
-INSERT INTO `administrator` VALUES ('AGF/4342/05','Holden Tudicks','Male','Hodde',NULL,NULL,NULL);
+INSERT INTO `administrator` VALUES ('AGF/4342/05','Nahom Behailu','Male','55555',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `administrator` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,7 +188,7 @@ CREATE TABLE `clearance` (
 
 LOCK TABLES `clearance` WRITE;
 /*!40000 ALTER TABLE `clearance` DISABLE KEYS */;
-INSERT INTO `clearance` VALUES ('Nathan','Zelalem','Kebede','11/11/2001','Atr/1111/11','Male','2011','I am awesome',''),('Nathan','Zelalem','ff','11/11/2001','Atr/1131/11','Male','2011','Awesomes','');
+INSERT INTO `clearance` VALUES ('','','','dd/mm/yyyy','','','','','415-4151459_glass-marble-ball-orb-bubble-blue-black-blue.png'),('Nathan','Zelalem','Kebede','11/11/2001','Atr/1111/11','Male','2011','I am awesome',''),('Nathan','Zelalem','ff','11/11/2001','Atr/1131/11','Male','2011','Awesomes','');
 /*!40000 ALTER TABLE `clearance` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -277,7 +277,7 @@ CREATE TABLE `council` (
 
 LOCK TABLES `council` WRITE;
 /*!40000 ALTER TABLE `council` DISABLE KEYS */;
-INSERT INTO `council` VALUES ('4 kilo council','+251-118-2147','4 kilo','14/08/2002','4kilo@gmail.com'),('6 kilo council','+251-118-3652','5kilo','01/05/2000','6kilo@gmail.com');
+INSERT INTO `council` VALUES ('4 kilo council','+251-118-2147','4 kilo','14/08/2002','4kilo@gmail.com'),('5 kilo council','+251-118-2143','5 kilo','14/08/2002','5kilo@gmail.com'),('6 kilo council','+251-118-3652','6 kilo','01/05/2000','6kilo@gmail.com');
 /*!40000 ALTER TABLE `council` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -843,7 +843,7 @@ CREATE TABLE `lostid` (
 
 LOCK TABLES `lostid` WRITE;
 /*!40000 ALTER TABLE `lostid` DISABLE KEYS */;
-INSERT INTO `lostid` VALUES ('Atr/1111/11','mike','2011','111','11/11/11','NOT APPROVED'),('Atr/1112/12','mike12','akldf','kljasdf','akljf',''),('Atr/1212/11','mike','akldf','kljasdf','akljf',''),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy',''),('ATR/3333/11','nati nati','2011','Elec','11/11/2001','NOT APPROVED');
+INSERT INTO `lostid` VALUES ('Atr/1111/11','mike','2011','111','11/11/11','approved'),('Atr/1112/12','mike12','akldf','kljasdf','akljf',''),('Atr/1212/11','mike','akldf','kljasdf','akljf','approved'),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy','approved'),('ATR/3333/11','nati nati','2011','Elec','11/11/2001','approved');
 /*!40000 ALTER TABLE `lostid` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1094,4 +1094,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-19 23:57:33
+-- Dump completed on 2021-12-20 13:00:15
