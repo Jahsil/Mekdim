@@ -16,9 +16,9 @@ router.get("/makeuprequestinst", authentication.isInstructorLoggedIn,(req, res) 
   var sql = "SELECT * FROM makeupexamrequest  WHERE InstructorRequest = '"+req.userData.FullName+"'";
       connection.query(sql, (err, result) => {
         if (result !== undefined && result.length > 0) {
-          res.render("makeuprequestinst", { students: result , page: false, error: false, succes:false});
+          res.render("instructor/makeuprequestinst", { students: result , page: false, error: false, succes:false});
         } else {
-          res.render("makeuprequestinst", { students: 0,  page: false, error: false, succes:false});
+          res.render("instructor/makeuprequestinst", { students: 0,  page: false, error: false, succes:false});
         }
       });
 });
@@ -34,11 +34,11 @@ router.post("/makeuprequestinst", authentication.isInstructorLoggedIn, (req, res
         //returning the resul of the database fetach as "form" to the frontend
         if (result !== undefined && result.length > 0) {
           //console.log(result)
-          res.render("makeuprequestinst", { form: result, students: 0, page: true, error: false, succes:false});
+          res.render("instructor/makeuprequestinst", { form: result, students: 0, page: true, error: false, succes:false});
           
         } else {
           //console.log(result)
-          res.render("makeuprequestinst", { form: 0,students: 0, page: false, error: false , succes:false});
+          res.render("instructor/makeuprequestinst", { form: 0,students: 0, page: false, error: false , succes:false});
         }
       });
   });        
@@ -53,19 +53,19 @@ router.post("/end",authentication.isInstructorLoggedIn, (req, res) => {
       
       if (err) {
         console.log("error with database")
-        res.render("makeuprequestinst", { form: result, students: 0, page: false, error: true, succes:false});
+        res.render("instructor/makeuprequestinst", { form: result, students: 0, page: false, error: true, succes:false});
         
       } 
       else{
         console.log("database updated")
-        res.render("makeuprequestinst", { form: result, students: 0, page: false, error: false, succes:true});
+        res.render("instructor/makeuprequestinst", { form: result, students: 0, page: false, error: false, succes:true});
       } 
     });
   }
   //if the teacher hit disapprove no need changing the status since it is already status denied by default
   else{
     console.log("not approved")
-    res.render("makeuprequestinst", { form: result, students: 0, page: false, error: false, succes:true});
+    res.render("instructor/makeuprequestinst", { form: result, students: 0, page: false, error: false, succes:true});
   }
 });
 
