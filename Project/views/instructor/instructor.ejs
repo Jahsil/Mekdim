@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>instructor</title>
+    <link rel="stylesheet" href="/assets/css/instructor/instructor.css">
+
+  </head>
+  <body>
+    <header class="header">
+      <img id="meklog" class="logo" src="/assets/images/logo.png" alt="logo" >
+      
+        
+        
+        <div class="dropdown">
+            <button><a href="#" class="home"><h4>Home</h4></a></button>
+            <div class="grade">
+              <button><h4>Grade</h4></button>
+              <ul class="hide">
+                <li><a href="Grade Submit and Change 1.htm"><h4>Grade Change</h4></a></li>
+                <li><a href="Grade Submit and Change 1.htm"><h4>Submit Grade</h4></a></li>
+                
+              </ul>
+            </div>
+            <div class="course">
+              <button><h4>Course</h4></button>
+              <ul class="hide">
+                <li><a href="Course average 1.htm"><h4>Average</h4></a></li>
+                <li><a href="Number of students display 1.htm"><h4>Students</h4></a></li>
+              </ul>
+            </div>
+
+            
+
+              <div class="assignment">
+                <button><h4>Assignment & Project</h4></button>
+                <ul class="hide">
+                  <li><a href="PA 1 Inbox.htm"><h4>Inbox</h4></a></li>
+                  <li><a href="PA 4 Upload.htm"><h4>Upload</h4></a></li>
+                </ul>
+              </div>
+
+              <div class="other">
+                <button><h4>Other</h4></button>
+                <ul class="hide">
+                  <li><a id="icon" href="#"><h4>Change Theme</h4></a></li>
+                  <li><a href="#"><h4>Change Password</h4></a></li>
+                </ul>
+              </div>
+
+            
+                <button><h4>Logout</h4></button>
+                
+              </div>
+
+          </div>
+
+          
+      
+     
+    </header>
+
+    
+    <div class="body"><br>
+      <h1>Welcome, Instructor!</h1>
+      <div class="left">
+        <img id="landinglogo" src="/assets/images/logo2.png" alt=""><br><br>
+        <h1>"ኑ ትምህርት እንቅሰም"</h1>
+      </div>
+      <div class="right">
+        <h1>What you can do:</h1><br>
+        <p>In this page, you can access and edit your students grades, get information details about the courses you conduct, view and upload assignments.</p>
+      </div>
+
+    </div>
+
+
+    <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+
+
+
+
+
+    
+
+    <script>
+
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+        
+          meklog.src="/assets/images/logo3.png";
+          img.src="/assets/images/teacher1.png";
+          
+        
+        } else{
+          meklog.src="/assets/images/logo.png";
+          
+        }
+      
+      }
+      
+        </script>
+
+  </body>
+</html>
