@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grades</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/grade/Grade.css"/>
+</head>
+<body>
+<div id="#main-container">
+	<svg class="Rectangle_1095_j">
+		<linearGradient id="Rectangle_1095_j" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="0.767">
+			<stop offset="0" stop-color="#52ab98" stop-opacity="1"></stop>
+			<stop offset="1" stop-color="#1affcc" stop-opacity="1"></stop>
+		</linearGradient>
+		<rect id="Rectangle_1095_j" rx="0" ry="0" x="0" y="0" width="1358" height="768">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1096">
+		<rect id="Rectangle_1096" rx="46" ry="46" x="0" y="0" width="1090" height="762">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1094">
+		<rect id="Rectangle_1094" rx="0" ry="0" x="0" y="0" width="1366" height="768">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1097">
+		<rect id="Rectangle_1097" rx="0" ry="200" x="0" y="0" width="206" height="62">
+		</rect>
+	</svg>
+	<div id="Grades">
+		<a id = "mainlink" href ="Grade.ejs">Grades</a>
+	</div>
+	<img id="grade" src="/grade/grade.png" srcset="/grade/grade.png 1x, /grade/grade@2x.png 2x">
+		
+	<div id="Grade_Report2">
+		<a class = "sublink" href ="gradereport">Grade Report</a>
+	</div>
+	<div id="Grade_Change">
+		<a class = "sublink" href ="gradechange">Grade Change</a>
+	</div>
+	<div id="Forward_arrow_small">
+		<svg class="Path_36" viewBox="0 0 14.4 9.1">
+			<path id="Path_36" d="M 7.200000286102295 9.100001335144043 L 0 2.088524580001831 L 2.144680976867676 0 L 7.200000286102295 4.922950744628906 L 12.25531959533691 0 L 14.39999961853027 2.088524580001831 L 7.200000286102295 9.100001335144043 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Forward_arrow_small2">
+		<svg class="Path_36" viewBox="0 0 14.4 9.1">
+			<path id="Path_36" d="M 7.200000286102295 9.100001335144043 L 0 2.088524580001831 L 2.144680976867676 0 L 7.200000286102295 4.922950744628906 L 12.25531959533691 0 L 14.39999961853027 2.088524580001831 L 7.200000286102295 9.100001335144043 Z">
+			</path>
+		</svg>
+	</div>
+    <div class ="table-head">Grade Report</div>
+    <div ><table class ="grades-table">
+       <thead><tr>
+          <th>No</th>
+          <th>Credit Hour</th>
+          <th>ECTS</th>
+          <th>Grade</th>
+          <!-- <th>Assesment</th> -->
+        </tr></thead>
+      <tbody> 
+        <% if (report!== 0) { %>
+          <% report.forEach( report=> { %>
+        <tr>
+          <td><%= report.NAME%></td>
+          <td><%= report.CreditHour%></td>
+          <td><%= report.ECTS%></td>
+          <td><%= report.result%></td>
+          <!-- <td><a href = "/assesment"><button type="button" class = "button">Assesment</button></a></td> -->
+        </tr>
+        <% }) %>
+        </tbody>
+      </table>   <% } else { %>
+      </table>
+      <p> There is no club in the university at the moment </p>
+     
+      <%  } %>
+      </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<!--This code implement Course checklist-->
+
+<head>
+  <title>Course Checklist</title>
+  <link rel="stylesheet" href="/checklist/checklist.css">
+</head>
+<body>
+  <header>
+    <h1>MEKDEM</h1>
+    <p>Student Portal</p>
+  </header>
+  <nav>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </nav>
+  <section>
+    <article>
+      <h2>Student Course Checklist</h2>
+      <section>
+         <p>Name: <span><%= fName %></span>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p>ID Number: <span><%= sID %></span>&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+           <p>Year: <span><%= year %></p>
+      </section>
+      <table>
+        <tr>
+          <th>Course Id</th>
+          <th>Course Name</th>
+          <th>Course ECTS</th>
+        </tr>
+        <tr>
+          <td><%- locals.moddelname1||'  '%></td>
+          <td><%- locals.name1||'  '%></td>
+          <td><%- locals.ects1||'  '%></td>
+        </tr>
+        <tr>
+          <tr>
+            <td><%- locals.moddelname2||'  '%></td>
+            <td><%- locals.name2||'  '%></td>
+            <td><%- locals.ects2||'  '%></td>
+          </tr>
+        </tr>
+        <tr>
+          <td><%- locals.moddelname3||'  '%></td>
+          <td><%- locals.name3||'  '%></td>
+          <td><%- locals.ects3||'  '%></td>
+        </tr>
+        <tr>
+          <td><%- locals.moddelname4||'  '%></td>
+          <td><%- locals.name4||'  '%></td>
+          <td><%- locals.ects4||'  '%></td>
+        </tr>
+      </table>
+    </article>
+    <aside>
+      <ul>
+        <li><a class="active" href="CourseChecklist.html">Course Checklist</a></li>
+        <li><a href="CourseRegistration.html">Course Registration</a></li>
+        <li><a href="CourseMaterial.html">Course Material</a></li>
+        <li><a href="Add_and_Drop.html">ADD and Drop</a></li>
+      </ul>
+    </aside>
+  </section>
+  <footer>
+    <p>Copyright © 2021 by Mekdim. All rights reserved</p>
+  </footer>
+</body>
+</html>

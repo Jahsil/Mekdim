@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <header>
+        <h1>MEKDEM</h1>
+        <p>Student Portal</p>
+    </header>
+    <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+    <section>
+        <article>
+            <h2>Welcome To Course Registration </h2>
+            <p>Please select the courses for registration</p>
+            <div class="table_decorator">
+			<form action = "/registration" method="POST" >
+                <table id="Table1" cellspacing=>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Course Title</th>
+                        <th>Course Code</th>
+                        <th>ECTS</th>
+                        <th>Credit Hours</th>
+                        <th>Module Name</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Code1" value="['Code1','Title1',5,3,'Module1']"  /></td>
+                        <td>Title1</td>
+                        <td>Code1</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Module1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Code2" alue="['Code2','Title2',5,3,'Module2']"  /></td>
+                        <td>Title2</td>
+                        <td>Code2</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Module2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Code3" value="['Code3','Title3',5,3,'Module3']"  /></td>
+                        <td>Title3</td>
+                        <td>Code3</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Module3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Code4" value="['Code4','Title4',5,3,'Module4']"  /></td>
+                        <td>Title4</td>
+                        <td>Code4</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Module4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Code5" value="['Code5','Title5',5,3,'Module5']" /></td>
+                        <td>Title5</td>
+                        <td>Code5</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Module5</td>
+                    </tr>
+                </table>
+                
+                    <input type="submit" value="Submit"/>
+					</form>
+            
+            </div>
+        </article>
+        <aside>
+            <ul>
+                <li><a class="active" href="Course Registration.html">Course Registration</a></li>
+                <li><a href="Course Checklist.html">Course Checklist</a></li>
+                <li><a href="Course Material.html">Course Material</a></li>
+                <li><a href="Add and Drop.html">ADD and Drop</a></li>
+            </ul>
+        </aside>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+
+</html>
