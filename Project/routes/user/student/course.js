@@ -17,7 +17,7 @@ router.get('/CourseChecklist' , authentication.isStudentLoggedIn ,(req , res)=> 
     connection.query(sql , (error , result) => {
         if (result !==undefined && result.length > 0 ) {
             console.log(result);
-                res.render('CourseChecklist' , {moddelname1: result[0].ModuleName,name1:result [0].NAME,
+                res.render('student/CourseChecklist' , {moddelname1: result[0].ModuleName,name1:result [0].NAME,
                     ects1: result[0].ECTS,
                     moddelname2: result[1].ModuleName,name2:result [1].NAME,
                     ects2: result[1].ECTS,moddelname3: result[2].ModuleName,name3:result [2].NAME,
@@ -32,7 +32,7 @@ router.get('/CourseChecklist' , authentication.isStudentLoggedIn ,(req , res)=> 
         else 
         { 
             console.log("result err")
-            res.render('CourseChecklist' , {CourseChecklist:0});
+            res.render('student/CourseChecklist' , {CourseChecklist:0});
         }
      });
 
@@ -43,7 +43,7 @@ router.get('/CourseChecklist' , authentication.isStudentLoggedIn ,(req , res)=> 
 
 //PETROS
 router.get('/registration' , (req , res)=> {
-    res.render('registration' , {error: false });
+    res.render('student/registration' , {error: false });
 });
 
 //PETROS

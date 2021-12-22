@@ -19,11 +19,11 @@ router.get('/evaluation' , authentication.isStudentLoggedIn , (req , res)=> {
     connection.query(sql , (error , result) => {
         global = result;
         if (result !==undefined && result.length > 0 ) {
-        res.render('staff' , {instructor: result , message:0})
+        res.render('student/staff' , {instructor: result , message:0})
         }
         else 
         {
-            res.render('staff' , {instructor : 0 , message:0});
+            res.render('student/staff' , {instructor : 0 , message:0});
         }
      });
 });
@@ -35,7 +35,7 @@ router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {
     connection.query(sql , (error , result) => {   
         if(result == undefined)
         {
-            res.render('staff' , {instructor : global , message: 1});
+            res.render('student/staff' , {instructor : global , message: 1});
         }
         else
         {
@@ -43,7 +43,7 @@ router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {
             connection.query(sql , (error , result) => {   
                  if(result)
                    {
-                    res.render('staff' , {instructor : global , message: 2});
+                    res.render('student/staff' , {instructor : global , message: 2});
                  }
              });
         }
@@ -52,7 +52,7 @@ router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {
 
 //NATNAEL MINWUYELET ATR/4004/11
 router.get('/contactInstructor' ,authentication.isStudentLoggedIn , ( req , res)=> {
-    res.render('contactInstructor' , {address:0});
+    res.render('student/contactInstructor' , {address:0});
 });
 
 //NATNAEL MINWUYELET ATR/4004/11
@@ -65,10 +65,10 @@ router.post('/contactInstructor' , authentication.isStudentLoggedIn , (req , res
              Email:result[0].Email,
              department:result[0].InstructorDepartment
          }
-         res.render('contactInstructor' , {address:address });
+         res.render('student/contactInstructor' , {address:address });
    
      } else {
-         res.render('contactInstructor' , {address: 1 });
+         res.render('student/contactInstructor' , {address: 1 });
       }
   });
 });
@@ -76,7 +76,7 @@ router.post('/contactInstructor' , authentication.isStudentLoggedIn , (req , res
 
 //KALAB YIBELTAL  ATR/5464/11
 router.get("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
-    res.render("contactdephead", { error: false});
+    res.render("student/contactdephead", { error: false});
     });
 
 //KALAB YIBELTAL  ATR/5464/11
@@ -84,7 +84,7 @@ router.post("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
     //inserting into contactdephead tablestudent name(from userData.FullName)and
     //  ( department, subject and body) from the form
       connection.query('insert into student contactdephead (NULL,"'+req.userData.FullName+'" , "'+namereq.body.department+'" ,"'+namereq.body.subject+'", "'+namereq.body.bodyy+'"', (error , result) =>{
-        res.render("contactdephead", { error: true}); 
+        res.render("student/contactdephead", { error: true}); 
       })
     /* we can send the students note directly to the department head email
         however nor email or yahoo allow such acces to their platform but 
@@ -127,9 +127,9 @@ router.post("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
     connection.query(sql, (err, result) => {
       if (result !== undefined && result.length > 0) {
         // the courses the student take are sent as "courses" array
-        res.render("makeuprequest", { courses: result, error: false });
+        res.render("student/makeuprequest", { courses: result, error: false });
       } else {
-        res.render("makeuprequest", { courses: 0 , error: false});
+        res.render("student/makeuprequest", { courses: 0 , error: false});
       }
     });
    
@@ -153,7 +153,7 @@ router.post('/makeuprequest',authentication.isStudentLoggedIn,(req,res)=>{
         fs.rename(oldpath, newpath, function (err) {
           if (err) return console.log(err.message);
           console.log('File uploaded!');
-          res.render('makeuprequest',{courses: 0, error: false })
+          res.render('student/makeuprequest',{courses: 0, error: false })
         });
         console.log(fields);//field is the equivalent of req in fs file parser
        var sql='insert into makeupexamrequest values (NULL , "'+id+'" ,"'+fields.course+'", "'+fields.instname+'", "'+fields.reason+'" ,"'+newpath+'" ,"'+fields.date+'","denied")'
@@ -161,7 +161,7 @@ router.post('/makeuprequest',authentication.isStudentLoggedIn,(req,res)=>{
         if(error){
             console.log(error)
             //if error happend reloading the page and printing in the front end to fill the form again
-            res.render("makeuprequest", { error: true});   
+            res.render("student/makeuprequest", { error: true});   
         }
       });
         
@@ -193,11 +193,11 @@ router.get('/projectandassigmnet' , authentication.isStudentLoggedIn, (req , res
                   // console.log("sending assignments ...");
                   // console.log(temp);
                   if(temp.length == 0){
-                      res.render("projectandassigmnet", {msg: null});
+                      res.render("student/projectandassigmnet", {msg: null});
                       return;
                   }
                   // console.log(temp);
-                  res.render('projectandassigmnet', {msg: temp});
+                  res.render('student/projectandassigmnet', {msg: temp});
               }
 
           });
@@ -226,11 +226,11 @@ router.get("/projandassSubmition", authentication.isStudentLoggedIn, (req, res) 
               if (i == result.length - 1){
                   
                   if(temp.length == 0){
-                      res.render("submitpage", {msg: null});
+                      res.render("student/submitpage", {msg: null});
                       return;
                   }
                  
-                  res.render('submitpage', {msg: temp});
+                  res.render('student/submitpage', {msg: temp});
               }
 
           });
