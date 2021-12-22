@@ -1,0 +1,23 @@
+<body>
+    <form method="POST" action="/assign" enctype="multipart/form-data">
+    <div>
+        <label for="courses" >Name:</label>
+        <input type="text" name="course">             &nbsp;
+        <label>Select your file:</label>
+        <input type="file" name="assigm" required>
+    </div>
+    <div>
+        <input type="submit" name="btn_upload_profile_pic" value="Upload"  />
+    </div>
+    <!-- <% if(err) { %>
+        <p>please check again</p>
+    <% } %> -->
+    <% if(err) { %>
+        <p>File upload completed</p>
+    <% } %>
+    <% if(!err) { %>
+        <p>Please upload file</p>
+    <% } %>
+
+</form>
+</body>
