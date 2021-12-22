@@ -14,22 +14,49 @@ app.use(express.static('public'));
 
 
 //Routes to be imported
-const authRoutes = require('./routes/authRoutes');
+
 const admin = require('./routes/user/administrator/accounts');
-const extracurricular = require('./routes/user/student/extracurricular');
-const staff = require('./routes/user/student/staff');
+
 const other = require('./routes/user/student/other');
 const schedule = require('./routes/user/student/schedule');
 const studentService = require('./routes/user/student/studentService');
 
+const authRoutes = require('./routes/authRoutes');
+
+const AdminAccount= require('./routes/user/administrator/accounts');
+const AdminApprove = require('./routes/user/administrator/approve');
+
+const StudentExtracurricular = require('./routes/user/student/extracurricular');
+const StudentCourse = require('./routes/user/student/course');
+const StudentStaff = require('./routes/user/student/staff');
+const StudentGrade = require('./routes/user/student/grade');
+
+const InstructorCourse = require('./routes/user/instructor/courses');
+const InstructorassignmentsAndProjejects = require('./routes/user/instructor/assignmentsAndProjejects');
+
 //Routes
-app.use(authRoutes);
+
 app.use(admin);
-app.use(extracurricular);
-app.use(staff);
+
 app.use(other);
 app.use(schedule);
 app.use (studentService);
+
+
+app.use(authRoutes);
+
+
+app.use(AdminAccount);
+app.use(AdminApprove);
+
+app.use(StudentExtracurricular);
+app.use(StudentStaff);
+app.use(StudentCourse);
+app.use(StudentGrade);
+
+
+app.use(InstructorCourse);
+app.use(InstructorassignmentsAndProjejects);
 
 
 app.listen(3000 , ()=>console.log("server running on port 3000"));
@@ -37,26 +64,29 @@ app.listen(3000 , ()=>console.log("server running on port 3000"));
 //Example pages 
 app.get('/home' , authentication.isStudentLoggedIn ,(req , res)=> {
     console.log(req.userData);
-    res.render('home' , { user : req.userData });
+    res.render('student/student' , { user : req.userData });
 });
 
 //sample page after instructor logged in - to be deleted
 app.get('/instructor/home' , authentication.isInstructorLoggedIn ,(req , res)=> {
     console.log(req.userData);
-    res.render('home' , { user : req.userData  });
+    res.render('instructor/instructor' , { user : req.userData  });
 });
 
 //sample page after Admin logged in - to be deleted
 app.get('/admin/home' , authentication.isAdminLoggedIn ,(req , res)=> {
     console.log(req.userData);
-    res.render('home' , { user : req.userData  });
+    res.render('administrator/admin' , { user : req.userData  });
 });
 
 
 
 /***********************START YOUR CODE HERE******************************/
 
-
+//uploadProfile    Name : Mekete Tafesse  ID: Atr/8212/11   added file iside router and view
+// app.get('./routes/user/student/uploadProfile', uploadProfile.index); //call for main index page
+// app.post('./routes/user/student/uploadProfile', uploadProfile.index);//call for signup post 
+//app.get('/profile/:id',routes.profile);
 
 
 
