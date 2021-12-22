@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Account Activation
+        </title>
+        <style>
+            h1 {
+    text-align: center;
+
+}
+h2 {
+    text-align: center;
+
+}
+form {
+    text-align: center;
+    
+}
+table, th, td {
+    background-color: beige;
+    border: 1px solid black;
+    text-align: left;
+    border-collapse: collapse;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+input[type=button]{
+    width: 8%;
+    
+}
+        </style>
+    </head>
+    <body>
+        <h1>Account Activation</h1><br><br>
+        <h2>Search for the Account</h2><br>
+        
+        
+        <form action="/admin/account"   method="POST">
+            <label for="occupation">Occupation:</label>
+            <select name="occupation" id="cars">
+                <option value="Student">Student</option>
+            </select>
+            <label for="">Id Number:</label>
+            <input type="textfield" name="id" >
+            <input type="Submit" name="Submit">
+        </form>
+
+        <%if (result) { %>
+        <h2>Profile:</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>ID Number</th>
+                <th>Status</th>
+                <th>Admin Active</th>
+                <th>Admin Deactivate</th>
+               
+            </tr>
+            <tr>
+                <td>    <%=  result[0].FullName     %>     </td>
+                <td>    <%=  result[0].StudentID    %>     </td>
+                <td>    <%=  result[0].IDStatus    %>     </td>
+                <td>  <a href="account/activate/<%=  result[0].FullName %>"> active</a> </td>
+                <td>  <a href="account/deactivate/<%= result[0].FullName %>"> deactive</a> </td>
+
+            </tr>
+        </table><br><br>
+        <% } %>
+    </body>
+</html>
