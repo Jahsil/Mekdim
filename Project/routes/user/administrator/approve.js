@@ -9,7 +9,7 @@ const router = Router();
 router.get('/admin/club/approval' , authentication.isAdminLoggedIn  , (req , res) => {
     let sql = ` select * from clubs where status = "Not approved" `;
     connection.query(sql , (error , result)=>{  
-         res.render('club/clubapproval' , { club : result}); 
+         res.render('administrator/clubapproval' , { club : result}); 
     }); 
 });
 
@@ -27,7 +27,7 @@ router.get('/admin/club/approval/:ClubName' , authentication.isAdminLoggedIn  , 
 router.get('/approval/lostid' ,  authentication.isAdminLoggedIn , (req , res) => {
     let sql = ` select * from lostid where status = "Not approved" `;
     connection.query(sql , (error , result)=>{  
-         res.render('lostid' , { result : result}); 
+         res.render('administrator/lostid' , { result : result}); 
     }); 
 });
 
