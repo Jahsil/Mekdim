@@ -7,7 +7,7 @@ const router = Router();
 
 //BEREKET LINGEREW
 router.get('/Grade' , authentication.isStudentLoggedIn , (req , res)=> {
-    res.render('Grade');
+    res.render('student/Grade');
 });
 
 //BEREKET LINGEREW
@@ -24,11 +24,11 @@ router.get('/gradereport' , authentication.isStudentLoggedIn ,(req , res)=> {
      
             // console.log("Bereket")
          
-                res.render('gradereport' , {report: result})     
+                res.render('student/gradereport' , {report: result})     
         }
         else 
         {
-            res.render('gradereport' , {report:0});
+            res.render('student/gradereport' , {report:0});
         }
      });
    
@@ -38,7 +38,7 @@ router.get('/gradereport' , authentication.isStudentLoggedIn ,(req , res)=> {
 router.get('/GradeReportApproval' , authentication.isStudentLoggedIn ,(req , res)=> {
 
     console.log(req.userData);
-    res.render('GradeReportApproval' , { student: req.userData });
+    res.render('student/GradeReportApproval' , { student: req.userData });
 });
 //BEREKET LINGEREW
 router.post('/GradeReportApproval' , authentication.isStudentLoggedIn, (req , res) => { 
@@ -53,7 +53,7 @@ where course.name= "${req.body.CourseName}" `;
         if (result) {
      
                 
-                res.render('GradeReportApproval' , {student0: result[0].FullName, rslt0: result[0].result,
+                res.render('student/GradeReportApproval' , {student0: result[0].FullName, rslt0: result[0].result,
                     approve0: result[0].ApprovalStatus,
                     student1: result[1].FullName, rslt1: result[1].result,
                     approve1: result[1].ApprovalStatus})
@@ -72,7 +72,7 @@ where course.name= "${req.body.CourseName}" `;
 
 //BEREKET LINGEREW
 router.get('/gradechange' ,  authentication.isStudentLoggedIn ,(req , res)=> {
-    res.render('gradechange');
+    res.render('student/gradechange');
 });
 
 //BEREKET LINGEREW
