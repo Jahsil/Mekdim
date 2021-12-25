@@ -1,42 +1,83 @@
-<html>
-  <head> </head>
-<body>
+<!--Joshua Tadesse  ATR/7514/11-->
 
-  <h1>Intratransfer Application</h1>						<!--main function of page-->
-  <h2>Students Name</h2>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student</title>
+    <link rel="stylesheet" href="../../assets/css/student/intratransfer_application.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-  <form action="/intraTransferReq" method="post">
-  	<label for="fname"><sub>First Name:</sub></label>			<!--first name information-->
- 	    <input type="text" id="fname" name="fname" value="">
 
-	<label for="mname"><sub>Middle Name:</sub></label>			<!--middle name information-->	
- 	    <input type="text" id="mname" name="mname" value="">
+  </head>
+  <body>
+    
+    <header class="header">
+      <%- include('NavBar') %>
+     
+    </header>
+  <section class="section">
+        <h1><pre>       Intratransfer Application</pre></h1><br>						<!--main function of page-->
+        <p><pre>             Fill in this form to apply for intercollege transfer:</pre></p><br><br>
+        <div id="div_a">
+        <form action="/intraTransferReq" method="post">
+          <label for="fname">First Name:</label>		                             	<!--first name information-->
+             <input type="text" id="fname" name="fname" value=""required><br><br>
+          <label for="date">Date of Birth:</label>		                              	<!--date of birth information-->
+             <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" required><br><br>
+          <label for="sex">Sex:</label>			        	                              <!--Sex information-->
+             <input type="text" id="sex" name="sex" value="" required><br><br>
+          <label for="depfrom">Department from:</label>	                       	<!--department from information-->
+             <input type="text" id="depfrom" name="depfrom" value="" required><br><br>
+          <label for="egy">Expected Graduation Year:</label>		                      <!--graduation year information-->
+             <input type="text" id="egy" name="egy" value="" required><br><br>
+        </div>
+        <div id="div_b">
+          <label for="mname">Middle Name:</label>		                   	<!--middle name information-->	
+             <input type="text" id="mname" name="mname" value="" required><br><br>
+          <label for="id">ID:</label>				                   	<!--ID information-->
+             <input type="text" id="id" name="id" value="" required><br><br>
+          <label for="cgpa">CGPA:</label>			                 	<!--cgpa information-->
+             <input type="text" id="cgpa" name="cgpa" value="" required><br><br>
+          <label for="depto">Department to:</label>		             	<!--department to information-->
+             <input type="text" id="depto" name="depto" value="" required><br><br>
+        </div>
+        <div id="div_c">
+          <label for="lname">Last Name:</label>			<!--last name information-->
+              <input type="text" id="lname" name="lname" value="" required><br><br><br><br><br><br><br><br><br><br><br>
+          <input type="submit" value="Submit">				<!--submit button-->
+        </div>           
+        </form>
+      </div>
+  </section>
 
-        <label for="lname"><sub>Last Name:</sub></label>			<!--last name information-->
-            <input type="text" id="lname" name="lname" value=""><br><br>
+    <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
 
-        <label for="date"><sub>Date of Birth:</sub></label>			<!--date of birth information-->
- 	    <input type="text" id="date" name="date" value="dd/mm/yyyy">
 
-        <label for="id"><sub>ID:</sub></label>					<!--ID information-->
- 	    <input type="text" id="id" name="id" value=""><br><br>
-	
-        <label for="sex"><sub>Sex:</sub></label>				<!--Sex information-->
- 	    <input type="text" id="sex" name="sex" value="">
 
-        <label for="cgpa"><sub>CGPA:</sub></label>				<!--cgpa information-->
- 	    <input type="text" id="cgpa" name="cgpa" value=""><br><br>
+    <script>
 
-        <label for="egy"><sub>Expected Graduation Year:</sub></label>		<!--graduation year information-->
- 	    <input type="text" id="egy" name="egy" value=""><br><br>
-
-        <label for="depfrom"><sub>Department from:</sub></label>		<!--department from information-->
- 	    <input type="text" id="depfrom" name="depfrom" value="">
-
-        <label for="depto"><sub>Department to:</sub></label>			<!--department to information-->
- 	    <input type="text" id="depto" name="depto" value=""><br><br>
-            <input type="submit" value="Submit">				<!--submit button-->
-  </form>
-
-</body>
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+          meklog.src="../../assets/images/logo3.png";
+        
+        } else{
+          meklog.src="../../assets/images/logo.png";
+          
+        }
+      
+      }
+      
+        </script>
+  </body>
 </html>

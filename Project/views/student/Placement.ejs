@@ -1,34 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+<!--Joshua Tadesse  ATR/7514/11-->
 
-  <h1>Dormitory Placement</h1><br><br>				<!--main purpose of page-->
-  <a action="/dormApplication" href="dormApplication.ejs">Dormitory Application</a><br><br>				<!--link to access the first option-->
-  <a action="/dormPlacement" href="dormPlacement.ejs">Dormitory Placement</a><br><br>				<!--link to access the second option-->
-  <div>
-    <% if (placement != null) { %>
-      <% if (placement.dormStatus === "approved") {%>
-        <p>This will be your Dormitory for this semester. If you have any question please contact your proctor.</p>
-        <div>
-          <h3>Block Number</h3>
-          <p>#<%= placement.blockNumber %></p>
-        </div>
-        <div>
-          <h3>Dorm Number</h3>
-          <p>#<%= placement.roomNumber %></p>
-        </div>
-        <!-- <div>
-          <h3>Roommates</h3>
-        </div> -->
-      <%} else {%>
-        <p>Your dormitory request is being processed.</p>
-      <% } %>
-    <% } else { %>
-      <p>No Dormitory information available.</p>
-    <% } %>
-  </div>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student</title>
+    <link rel="stylesheet" href="../../assets/css/student/placement_check.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+  </head>
+  <body>
+    
+    <header class="header">
+      <%- include('NavBar') %>
+     
+    </header>
+  <section class="section">
+      <h1>Placement Check</h1><br>
+      <p>This is your dormitory placement information:</p>			<!--main purpose of page-->
+      <div>
+        <% if (placement != null) { %>
+          <% if (placement.dormStatus === "approved") {%>
+            <p>This will be your Dormitory for this semester. If you have any question please contact your proctor.</p>
+            <div>
+              <h3>Block Number</h3>
+              <p>#<%= placement.blockNumber %></p>
+            </div>
+            <div>
+              <h3>Dorm Number</h3>
+              <p>#<%= placement.roomNumber %></p>
+            </div>
+            <!-- <div>
+              <h3>Roommates</h3>
+            </div> -->
+          <%} else {%>
+            <p>Your dormitory request is being processed.</p>
+          <% } %>
+        <% } else { %>
+          <p>No Dormitory information available.</p>
+        <% } %>
+      </div>
+  </section>
+
+    <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+
+
+
+    <script>
+
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+          meklog.src="../../assets/images/logo3.png";
+        
+        } else{
+          meklog.src="../../assets/images/logo.png";
+          
+        }
+      
+      }
+      
+        </script>
+  </body>
 </html>
