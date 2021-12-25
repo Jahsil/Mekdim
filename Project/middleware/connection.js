@@ -3,8 +3,8 @@ const mysql = require('mysql2');
 //Create mysql connection
 const connection = mysql.createConnection({
     host: "localhost" , 
-    user: "geek" ,
-    password: "1560" ,
+    user: "root" ,
+    password: "*password" ,
     database: "mekdemschoolportal"
 });
 
