@@ -40,7 +40,7 @@ app.use(admin);
 
 app.use(other);
 app.use(schedule);
-app.use (studentService);
+app.use(studentService);
 
 
 app.use(authRoutes);
@@ -63,19 +63,19 @@ app.listen(3000 , ()=>console.log("server running on port 3000"));
 
 //Example pages 
 app.get('/home' , authentication.isStudentLoggedIn ,(req , res)=> {
-    console.log(req.userData);
+    // console.log(req.userData);
     res.render('student/student' , { user : req.userData });
 });
 
 //sample page after instructor logged in - to be deleted
 app.get('/instructor/home' , authentication.isInstructorLoggedIn ,(req , res)=> {
-    console.log(req.userData);
+    // console.log(req.userData);
     res.render('instructor/instructor' , { user : req.userData  });
 });
 
 //sample page after Admin logged in - to be deleted
 app.get('/admin/home' , authentication.isAdminLoggedIn ,(req , res)=> {
-    console.log(req.userData);
+    // console.log(req.userData);
     res.render('administrator/admin' , { user : req.userData  });
 });
 
@@ -87,11 +87,3 @@ app.get('/admin/home' , authentication.isAdminLoggedIn ,(req , res)=> {
 // app.get('./routes/user/student/uploadProfile', uploadProfile.index); //call for main index page
 // app.post('./routes/user/student/uploadProfile', uploadProfile.index);//call for signup post 
 //app.get('/profile/:id',routes.profile);
-
-
-
-
-
-
-
-

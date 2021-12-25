@@ -1,73 +1,58 @@
-<!--Joshua Tadesse  ATR/7514/11-->
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Student</title>
-    <link rel="stylesheet" href="/assets/css/student/cost_sharing_home_address.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<head>
+	<meta charset="utf-8">
+	<title>Student</title>
+	<link rel="stylesheet" href="/assets/css/student/cost_sharing_home_address.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 
-  </head>
-  <body>
-    
-    <header class="header">
-      <%- include('NavBar') %>
-     
-    </header>
-    <h2><pre>          Cost Sharing<pre></h2><br>
-  <section class="section">
-      <div id="div_a">
-        <br><br><button><a href="/costSharing/accountInfo">Account Information</a></button><br><br>
-				<button><a href='/costSharing/homeadr'><pre>      Home Address     <pre></a></button><br><br>
-					<button><a href="https://pr2tat2.w3spaces.com/costt_sharing/costt_sharing_payment_methods.html"><pre>Payment<pre></a></button>
-      </div>
-      
-      <div id="div_b">
-        <form action="/costSharing/homeadr" method="post">
-         <h3>Home Address</h3><br>
-             <label for="city">City</label><br>
-            <input type="text" id="city" name="city" value="" required><br><br>
-            <label for="scity">Subcity</label><br>
-            <input type="text" id="scity" name="scity" value="" required><br><br>
-           <label for="woreda">Woreda</label><br>
-           <input type="text" id="woreda" name="woreda" value="" required><br><br>
-           <label for="hnum">House Number</label><br>
-           <input type="text" id="hnum" name="hnum" value=""><br><br>
-           <input type="submit" value="Save Changes">
-       </form>
-      </div>
-       
-  </section>
+</head>
+<body>
+<%- include('NavBar') %>
+	<h2><pre>          Cost Sharing</pre></h2><br>
+<section class="section">
+	<div id="div_a">
+		<br><br><button><a href=/costSharing/accountInfo>Account Information</a></button><br><br>
+		<button><a href=/costSharing/homeadr><pre>     Home Address     </pre></a></button>
+	</div>
 
-    <footer class="footer">
-      
-      <div class="container">
-        
-        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
-        
-    </div>
-      
-    </footer>
+	<div id="div_b">
+		<form action="/costSharing/homeadr" method="post">
+			<h3>Home Address</h3><br>
+			<label for="city">City</label><br>
+			<input type="text" id="city" name="city" value="" required><br><br>
+			<label for="scity">Subcity</label><br>
+			<input type="text" id="scity" name="scity" value="" required><br><br>
+			<label for="woreda">Woreda</label><br>
+			<input type="text" id="woreda" name="woreda" value="" required><br><br>
+			<label for="hnum">House Number</label><br>
+			<input type="text" id="hnum" name="hnum" value=""><br><br>
+			<input type="submit" value="Save Changes">
+		</form>
+	</div>
 
+</section>
 
+<footer class="footer">
+	<div class="container">
+		<div class="footer_bottom">
+			<small class="end">
+				Copyright © 2021 by Mekdim. All rights reserved.
+			</small>
+		</div>
+	</div>
+</footer>
 
-    <script>
+<script>
+	const icon = document.getElementById("icon");
+	icon.onclick= function(){
+		document.body.classList.toggle("dark-theme");
+		if (document.body.classList.contains("dark-theme")){
+			meklog.src="/assets/images/logo3.png";
 
-      var icon =document.getElementById("icon");
-      icon.onclick= function(){
-        document.body.classList.toggle("dark-theme");
-        if (document.body.classList.contains("dark-theme")){
-          meklog.src="/assets/images/logo3.png";
-        
-        } else{
-          meklog.src="/assets/images/logo.png";
-          
-        }
-      
-      }
-      
-        </script>
-  </body>
+		} else meklog.src="/assets/images/logo.png";
+	}
+</script>
+</body>
 </html>

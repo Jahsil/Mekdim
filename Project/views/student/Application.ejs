@@ -1,89 +1,71 @@
-<!--Joshua Tadesse  ATR/7514/11-->
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Student</title>
-    <link rel="stylesheet" href="../../assets/css/student/dormitory_application.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student</title>
+	<link rel="stylesheet" href="/assets/css/student/dormitory_application.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<%- include('NavBar') %>
 
+<section class="section">
+	<br><h1>Dormitory Application</h1><br>
+	<p><b>Choose dormitory location in order of your preferences:</b></p><br>				<!--main purpose of page-->
+	<div id="div_d">
+		<form action="/dormitory/Application" method="post">
+		<div id="div_a">									<!--action that happens when submit is pressed-->
+			<label for="dorm1">Choose your first option:</label>						<!--dropdown to choose first dorm choice-->
+			<select name="dorm1" id="dorm1">
+				<option value="dorm_a">Dorm A</option>
+				<option value="dorm_b">Dorm B</option>
+				<option value="dorm_c">Dorm C</option>
+				<option value="dorm_d">Dorm D</option>
+			</select>
+		</div><br><br>
+		<div id="div_b">
+			<label for="dorm2">Choose your second option:</label>						<!--dropdown to choose second dorm choice-->
+			<select name="dorm2" id="dorm2">
+				<option value="dorm_a">Dorm A</option>
+				<option value="dorm_b">Dorm B</option>
+				<option value="dorm_c">Dorm C</option>
+				<option value="dorm_d">Dorm D</option>
+			</select>
+		</div><br><br>
+		<div id="div_c">
+			<label for="dorm3">Choose your third option:</label>						<!--dropdown to choose third dorm choice-->
+			<select name="dorm3" id="dorm3">
+				<option value="dorm_a">Dorm A</option>
+				<option value="dorm_b">Dorm B</option>
+				<option value="dorm_c">Dorm C</option>
+				<option value="dorm_d">Dorm D</option>
+			</select>
+		</div><br><br><br><br>
+			<% if (msg != null){%>
+				<p>PROBLEM!</p>
+			<%}%>
+		<input type="submit" value="Submit">									<!--submit button-->
+		</form>
+	</div>
+</section>
 
-  </head>
-  <body>
-    
-    <header class="header">
-
-      <%- include('NavBar') %>
-     
-    </header>
-  <section class="section">
-      <br><h1>Dormitory Application</h1><br>
-      <p><b>Choose dormitory location in order of your preferences:</b></p><br>				<!--main purpose of page-->
-      <div id="div_d">
-      <form action="/dormitory/Application" method="post">
-       <div id="div_a">									<!--action that happens when submit is pressed-->
-         <label for="dorms">Choose your first option:</label>						<!--dropdown to choose first dorm choice-->
-       <select name="dorm1" id="dorm1">
-           <option value="dorm_a">Dorm A</option>
-           <option value="dorm_b">Dorm B</option>
-           <option value="dorm_c">Dorm C</option>
-           <option value="dorm_d">Dorm D</option>
-       </select>
-       </div><br><br>
-       <div id="div_b">
-         <label for="dorms">Choose your second option:</label>						<!--dropdown to choose second dorm choice-->
-       <select name="dorm1" id="dorm1">
-           <option value="dorm_a">Dorm A</option>
-           <option value="dorm_b">Dorm B</option>
-           <option value="dorm_c">Dorm C</option>
-           <option value="dorm_d">Dorm D</option>
-       </select>
-         </div><br><br>
-       <div id="div_c">
-         <label for="dorms">Choose your third option:</label>						<!--dropdown to choose third dorm choice-->
-       <select name="dorm1" id="dorm1">
-           <option value="dorm_a">Dorm A</option>
-           <option value="dorm_b">Dorm B</option>
-           <option value="dorm_c">Dorm C</option>
-           <option value="dorm_d">Dorm D</option>
-       </select>
-       <% if (msg != null){%>
-        <p>PROBLEM!</p>
-      <%}%>
-       </div><br><br><br><br>
-       <input type="submit" value="Submit">									<!--submit button-->
-     </form>
-     </div>
-  </section>
-
-    <footer class="footer">
-      
-      <div class="container">
-        
-        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
-        
-    </div>
-      
-    </footer>
-
-
-
-    <script>
-
-      var icon =document.getElementById("icon");
-      icon.onclick= function(){
-        document.body.classList.toggle("dark-theme");
-        if (document.body.classList.contains("dark-theme")){
-          meklog.src="../../assets/images/logo3.png";
-        
-        } else{
-          meklog.src="../../assets/images/logo.png";
-          
-        }
-      
-      }
-      
-        </script>
-  </body>
+<footer class="footer">
+	<div class="container">
+		<div class="footer_bottom">
+			<small class="end">
+				Copyright © 2021 by Mekdim. All rights reserved.
+			</small>
+		</div>
+	</div>
+</footer>
+<script>
+	const icon = document.getElementById("icon");
+	icon.onclick= function(){
+		document.body.classList.toggle("dark-theme");
+		if (document.body.classList.contains("dark-theme")){
+			meklog.src="../../assets/images/logo3.png";
+		} else meklog.src="../../assets/images/logo.png";
+	}
+</script>
+</body>
 </html>

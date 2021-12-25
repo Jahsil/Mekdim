@@ -1,75 +1,52 @@
-<!--Joshua Tadesse  ATR/7514/11-->
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
     <title>Student</title>
-    <link rel="stylesheet" href="../../assets/css/student/placement_check.css">
+    <link rel="stylesheet" href="/assets/css/student/placement_check.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
 
+<body>
+<%- include('NavBar') %>
 
-  </head>
-  <body>
-    
-    <header class="header">
-      <%- include('NavBar') %>
-     
-    </header>
-  <section class="section">
-      <h1>Placement Check</h1><br>
-      <p>This is your dormitory placement information:</p>			<!--main purpose of page-->
-      <div>
-        <% if (placement != null) { %>
-          <% if (placement.dormStatus === "approved") {%>
+<section class="section">
+    <h1>Dormitory Placement</h1><br>
+    <% if (placement != null) { %>
+        <% if (placement.dormStatus === "approved") {%>
             <p>This will be your Dormitory for this semester. If you have any question please contact your proctor.</p>
-            <div>
-              <h3>Block Number</h3>
-              <p>#<%= placement.blockNumber %></p>
+            <div id="div_a">
+                <p>Block Number #<%= placement.blockNumber %></p>
+                <p>Dorm Number #<%= placement.roomNumber %></p>
             </div>
-            <div>
-              <h3>Dorm Number</h3>
-              <p>#<%= placement.roomNumber %></p>
-            </div>
-            <!-- <div>
-              <h3>Roommates</h3>
-            </div> -->
-          <%} else {%>
+
+        <%} else {%>
             <p>Your dormitory request is being processed.</p>
-          <% } %>
-        <% } else { %>
-          <p>No Dormitory information available.</p>
         <% } %>
-      </div>
-  </section>
+    <% } else { %>
+        <p>No Dormitory information available.</p>
+    <% } %>
+    <button><a href=/home>Okay</a></button><br>
 
-    <footer class="footer">
-      
-      <div class="container">
-        
-        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
-        
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer_bottom">
+            <small class="end">
+                Copyright © 2021 by Mekdim. All rights reserved.
+            </small>
+        </div>
     </div>
-      
-    </footer>
+</footer>
 
-
-
-    <script>
-
-      var icon =document.getElementById("icon");
-      icon.onclick= function(){
+<script>
+    const icon = document.getElementById("icon");
+    icon.onclick= function(){
         document.body.classList.toggle("dark-theme");
         if (document.body.classList.contains("dark-theme")){
-          meklog.src="../../assets/images/logo3.png";
-        
-        } else{
-          meklog.src="../../assets/images/logo.png";
-          
-        }
-      
-      }
-      
-        </script>
-  </body>
+            meklog.src="../../assets/images/logo3.png";
+        } else meklog.src="../../assets/images/logo.png";
+    }
+</script>
+</body>
 </html>
