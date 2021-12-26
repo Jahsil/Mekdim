@@ -23,6 +23,23 @@ router.get('/admin/club/approval/:ClubName' , authentication.isAdminLoggedIn  , 
 });
 
 
+//Nigus Getif  ATR/9975/11
+router.get('/admin/dorm/approval' , authentication.isAdminLoggedIn  , (req , res) => {
+    let sql = ` select * from dormitory where RequestStatus = "pending" `;
+    connection.query(sql , (error , result)=>{  
+         res.render('administrator/dormapproval' , { dorm : result}); 
+    }); 
+});
+
+//Nigus Getif  ATR/9975/11
+router.get('/admin/dorm/approval/:dormId' , authentication.isAdminLoggedIn  , (req , res) => {
+    let sql =  ` UPDATE dormitory SET RequestStatus ="approved" WHERE ID = "${req.params.dormId}" `;
+    connection.query(sql , (error , result) => {  
+        res.redirect('/admin/dorm/approval');
+    });
+});
+
+
 //NATNAEL MINWUYELET ATR/4004/11
 router.get('/approval/lostid' ,  authentication.isAdminLoggedIn , (req , res) => {
     let sql = ` select * from lostid where status = "Not approved" `;
@@ -39,6 +56,41 @@ router.get('/approval/lostid/:name'  , authentication.isAdminLoggedIn ,(req , re
     });
     
 });
+
+//BEREKET LINGEREW
+router.get('/GradeReportApproval' , authentication.isAdminLoggedIn , (req , res)=> {
+
+    res.render('administrator/GradeReportApproval' , { student: req.userData });
+});
+//BEREKET LINGEREW
+router.post('/GradeReportApproval' , authentication.isAdminLoggedIn , (req , res) => { 
+let sql=`select student.FullName, grade.result, grade.ApprovalStatus
+from grade 
+INNER join student
+on student.StudentID=grade.StudentIDs
+INNER join course
+on course.CourseID=grade.CourseIDs
+where course.name= "${req.body.CourseName}" `;
+     connection.query(sql , (error , result) => {
+        if (result) {
+     
+                
+                res.render('administrator/GradeReportApproval' , {student0: result[0].FullName, rslt0: result[0].result,
+                    approve0: result[0].ApprovalStatus,
+                    student1: result[1].FullName, rslt1: result[1].result,
+                    approve1: result[1].ApprovalStatus})
+           
+        } 
+        else {
+            console.log("Another");
+        }
+        
+     });
+
+    });
+
+
+
 
 
 module.exports = router;
