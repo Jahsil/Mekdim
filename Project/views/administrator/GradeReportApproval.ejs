@@ -1,0 +1,67 @@
+
+<!--Natnael Tedros - ATR/0119/11-->>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grade Report Approval</title>
+
+    <link rel="stylesheet" href="/nav/adminNav.css">
+
+    <link rel="stylesheet" href="/assets/css/admin/GradeReportApproval.css">
+
+  
+  </head>
+  <body>
+    <%- include('../partials/adminnav') %>
+    <div class="body">
+      <div class="courseSearch">
+        <h1>Student Grade Report</h1><br>
+          <p>Input the course name:</p><br>
+        
+          <form action = "/GradeReportApproval" method="POST">
+            <label for="">CourseName:</label>
+            
+            <input type="text"  name="CourseName" required><br><br>
+            
+            <input class="submit" type="submit" id="submit1">
+          </form>
+        <br>
+      </div>
+      <div class="gradeList">
+        <h2>Grades of Students:</h2><br>
+        <p>List of students and their corresponding grades for the course inputted:</p><br>
+        <form action="/GradeReportApproval" method="post">
+          <table id="listTable">
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Status</th>
+                <th>Approve...Disapprove</th>
+            </tr>
+            <tr>
+               
+                <td><%- locals.student0||'   ' %></td>
+                <td><%- locals.rslt0||'   ' %></td>
+                <td><%- locals.approve0||'   ' %></td>
+                <td><input type="radio" name="apCb1" id="appr" value="approve">.....................<input type="radio" name="apCb1" value="disapprove"></td>
+
+            </tr>
+            <tr>
+              <td><%- locals.student1||'   ' %></td>
+              <td><%- locals.rslt1||'   ' %></td>
+              <td><%- locals.approve1||'   ' %></td>
+              <td><input type="radio" name="apCb2" id="appr" value="approve"> ....................<input type="radio" name="apCb2" value="disapprove"></td>
+            </tr>
+              </table><br>
+              <input class="submit" type="submit">
+        </form>
+      </div>
+        
+    </div>
+
+
+    
+  </body>
+</html>

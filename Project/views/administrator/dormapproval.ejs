@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="/nav/adminNav.css">
+<style>
+
+
+#dorm {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+  margin : auto;
+}
+
+
+#dorm td, #dorm th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#dorm tr:nth-child(even){background-color: #f2f2f2;}
+
+#dorm tr:hover {background-color: #ddd;}
+
+#dorm th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+p
+{
+    color:red;
+    text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<%- include('../partials/adminnav') %>
+
+<table id="dorm">
+   <tr>
+     <th> ID</th>
+     <th> Student ID </th>
+     <th> Compound</th>
+     <th> Block Number</th>
+     <th> Room Number</th>
+     <th> RequestStatus </th>
+     <th> Admin approval </th>
+   </tr>
+   
+   <% if (dorm !== 0) { %>
+      <% dorm.forEach( dorm => { %>
+      <tr>
+        <td> <%= dorm.ID %>  </td>
+        <td> <%= dorm.StudentD %>  </td>
+        <td> <%= dorm.compound %>  </td>
+        <td> <%= dorm.blockNumber %>  </td>
+        <td> <%= dorm.roomNumber %>  </td>
+        <td> <%= dorm.RequestStatus%>  </td>
+        <td><a href="approval/ <%= dorm.ID %> ">approve</a></td> 
+      
+      </tr>
+      <% }) %>
+    </table>
+    <% } else { %>
+    </table>
+    <p> There is no dorm request at the moment </p>
+   
+    <%  } %>
+ 
+</table>
+
+</body>
+</html>
+
+
