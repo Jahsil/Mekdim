@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static('public'));
 
-
+const port = 3000;
 //Routes to be imported
 
 const admin = require('./routes/user/administrator/accounts');
@@ -59,7 +59,7 @@ app.use(InstructorCourse);
 app.use(InstructorassignmentsAndProjejects);
 
 
-app.listen(3000 , ()=>console.log("server running on port 3000"));
+app.listen(port , ()=>console.log("server running on port ", port));
 
 //Example pages 
 app.get('/home' , authentication.isStudentLoggedIn ,(req , res)=> {

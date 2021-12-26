@@ -17,17 +17,19 @@ router
     let adr3 = req.body.foods;
     let adr4 = req.body.dorms;
     let adr5;
-    if(adr3 == undefined && adr4 == undefined) adr5 = "none";
-    else if(adr3 != undefined && adr4 == undefined) adr5 = "Food";
-    else if(adr3 == undefined && adr4 != undefined) adr5 = "Dorm";
+    if(adr3 === undefined && adr4 === undefined) adr5 = "none";
+    else if(adr3 !== undefined && adr4 === undefined) adr5 = "Food";
+    else if(adr3 === undefined && adr4 !== undefined) adr5 = "Dorm";
     else adr5 = "FoodAndDorm";
-    console.log(adr5);
     let x = false;
     let sql = `INSERT INTO costsharing (StudentCostSharing, AccountNumber, ServiceChoice) VALUES ("${adr}", "${adr1}", "${adr5}")`;
     connection.query(sql, (err, result) => {
-        if(err) x = true;
+        if(err){
+            x = true;
+            return console.log(err.message);
+        }
     });
-    res.render('student/accountInfo', {msg: x});
+    res.redirect("/costSharing/homeadr");
 });
 
 router
@@ -75,8 +77,6 @@ router
 
 router
 .get('/dormitory/placement' , authentication.isStudentLoggedIn, (req , res)=> {
-    //req.userData.StudentID   holds the current logged in student id which is a string
-    //req.userData.FullName    holds the current logged in student full name
     let adr = req.userData.StudentID;
     let sql =  `select * from dormitory WHERE StudentD = "${adr}"`;
     connection.query(sql , (error , result) => {
@@ -86,13 +86,13 @@ router
             const adr1 = result[0].roomNumber;
             const adr2 = result[0].RequestStatus;
             if (adr2 !== "denied"){
-                if (adr2 == "approved"){
+                if (adr2 === "approved"){
                     if(adr0 == null || adr1 == null) r = null;
                     else {
                         // the roommate feature feature
                         var sql0 = `select * from dormitory WHERE blockNumber = ${adr0} AND roomNumber = ${adr1}`;
                         connection.query(sql0, (error, result) => {
-                            if (err) console.log(err.message);
+                            if (err) return console.log(err.message);
                         });
                         r = {
                             dormStatus: adr2,
