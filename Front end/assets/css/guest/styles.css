@@ -189,6 +189,11 @@ hr{
   font-style: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.left h1 {
+  color: var(--secondary-color);
+  font-style: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 .center h1{
   text-align: center;
   padding: 20px 0;
