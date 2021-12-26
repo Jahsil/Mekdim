@@ -529,7 +529,7 @@ border-radius: 10px;
   float: none;
   
 }
-.section, .CA
+.section, .CA, .dark
 {
   color: var(--primary-color);
 
