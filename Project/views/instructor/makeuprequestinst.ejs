@@ -3,61 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>instrator</title>
-    <link rel="stylesheet" href="../../assets/css/instructor.css">
+
+   
+    <link rel="stylesheet" href="/nav/instructorNav.css">
+
+    <link rel="stylesheet" href="/assets/css/instructor/instructor.css">
 
   </head>
   <body>
-    <header class="header">
-      <img class="logo" src="../../assets/images/logo.png" alt="logo" >
-      <nav class="nav_links">
-        
-        
-        <div class="dropdown">
-            <button><a href="#" class="home">Home</a></button>
-            <div class="grade">
-              <button>Grade</button>
-              <ul>
-                <li><a href="#">Grade Change</a></li>
-                <li><a href="#">Submit Grade</a></li>
-                
-              </ul>
-            </div>
-            <div class="course">
-              <button>Course</button>
-              <ul>
-                <li><a href="#">Average</a></li>
-                <li><a href="#">Students</a></li>
-              </ul>
-            </div>
+ 
+    <%- include('../partials/instructornav') %>
 
-            
-
-              <div class="assignment">
-                <button>Assignment & Project</button>
-                <ul>
-                  <li><a href="#">Inbox</a></li>
-                  <li><a href="#">Upload</a></li>
-                </ul>
-              </div>
-
-              <div class="other">
-                <button>Other</button>
-                <ul>
-                  <li><a href="#">Change Theme</a></li>
-                  <li><a href="#">Change Password</a></li>
-                </ul>
-              </div>
-
-              <div class="logout">
-                <button>Log Out</button>
-                
-              </div>
-
-          </div>
-
-
-      </nav>
-    </header><br>
     <div class="body"><br>
         
       <div class= "body"  align = "center" ><h1>Makeup Exam Request Student Applications</h1> </div>
@@ -130,22 +86,11 @@
       <div align = "center" > <input  name= "sub"  value ="Disapprove" type = "submit"> </div>
       </form>
   
-      
-      <footer class="footer">
-        
-            
+  
           
     </header>
 
 
-    <footer class="footer">
-      
-      <div class="container">
-        
-        <div align = "center" class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
-        
-    </div>
-      
-    </footer>
+  
   </body>
 </html>
