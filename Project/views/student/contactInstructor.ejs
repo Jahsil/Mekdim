@@ -4,44 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Contact Instructor </title>
-	<style>
-		body
-		{
-			font-size:20px;
-		}
-	.class1 {
-    width: 50%;
-    height: 20%;
-    margin-right: auto;
-    margin-left: auto;
-         }
-   .class2 {
-    width: 30%;
-    height: 40%;
-    margin-right: auto;
-    margin-left: auto;
-    }
-	h2{
-		text-align: center;
-	}
-	button
-	{
-		margin:10px;
-		background-color:rgb(22, 172, 164) ;
-		font-size:17px;
-		color:white;
-	}
-	#red
-	{
-		color:red;
-	}
-	</style>
+	<link rel="stylesheet" href="/nav/studentNav.css">
+	<link rel="stylesheet" href="/assets/css/student/contactInstructor.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/student.css">
+  <link rel="stylesheet" href="/assets/css/student/HeaderFooter.css">
+
+</head>
+	
 </head>
 <body>
-	<h2>Get  Instructor  Address</h2>
+	<%- include('../partials/studentnav') %>
+	<br>
+	<div align = "center" class="body"><h1> Get Instructor Address </h1> </div><br>
 	<form action="/contactInstructor" method="POST">
 		<div align = "center" class= "class1">Instructor Name <input type="text" placeholder="Search.." name="Search"> </div>
 		<div align = "center" class= "class2"> 
+		<br>
 	<% if (address ==1 ) { %>
 		<p id="red"> No Instructor found by this name </p>
 	<%  } else if(address){ %>

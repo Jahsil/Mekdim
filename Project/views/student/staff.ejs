@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Staff Evaluation</title>
+  <link rel="stylesheet" href="/nav/studentNav.css">
+	<link rel="stylesheet" href="/assets/css/student/staffEvaluation.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/student.css">
+	<link rel="stylesheet" href="/assets/css/student/HeaderFooter.css">
+</head>
 <style>
 
 
@@ -25,7 +33,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #2b6777;
   color: white;
 }
 
@@ -84,6 +92,9 @@ button{
 </style>
 </head>
 <body>
+  <%- include('../partials/studentnav') %>
+     <br>
+     <div class = "body"><h1 align = "center"> Staff Evaluation</h1></div> <br>
 <form action="/evaluation" method = "POST">
 
     <p> Select the instructor here </p>
@@ -179,9 +190,19 @@ button{
          <p id="green">Your form has been submitted</p>
     <% }  %>
 
-
-     <button type="submit" class="type">Submit</button>
+    <br>
+    <input  name= "submit" value ="submit" type = "submit"> </br>
   </form>
+
+  <footer class="footer">
+      
+    <div class="container">
+      
+      <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+      
+  </div>
+    
+  </footer>
 </body>
 </html>
 

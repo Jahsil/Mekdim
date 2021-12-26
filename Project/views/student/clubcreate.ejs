@@ -1,66 +1,85 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="/assets/css/student/student.css">
+    <link rel="stylesheet" href="/assets/css/student/creat club.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <title>Register</title>
 
+  </head>
+  <body>
+    
+    <%- include('../partials/studentnav') %>
 
-</head>
+    <div class="registerclub">
+        <h2>Create new club</h2><br><br>
+        <p>Please fill out the following form with appropriate information</p><br>
+        <form class="m-t" role="form" action="/clubcreate"  method = "POST">
+          <!-- <h3 style="color: green;">Club Detail</h3> -->
+          Club name: <br>
+             <input type="text" name="club name" id="clubname" ><br><br>
+             club Email: <br>
+                <input type="email" name="club email" placeholder="@gmail.com"><br><br>
 
-<body class="gray-bg">
+                <label > <strong> Goal of club:</strong><br>
+                <textarea name="goal" id="goal" cols="40" rows="10"></textarea>
+                </label>
+                <br>
+                <label > <strong> Vision:</strong><br>
+                <textarea name="vision" id="vision" cols="40" rows="10"></textarea>
+                </label>
+                <br>
+                <label > <strong> Mission:</strong><br>
+                <textarea name="mission" id="mission" cols="40" rows="10"></textarea>
+                </label><br>
 
-    <div class="middle-box text-center loginscreen   animated fadeInDown">
-        <div>
-            <p>Thank you for your intrest to creat new club in our school.</p>
-            <p>pleas fill out the following form with approprate information.</p>
-            <form class="m-t" role="form" action="/clubcreate"  method = "POST">
-                <!-- <h3 style="color: green;">Club Detail</h3> -->
-                Club Name:<br>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Peace club"  name = "name"  required>
-                </div>
-                Club Email:<br>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="peaceClub@gmail.com"  name="email"  required>
-                </div>
-                Goal of club:<br>
-             <textarea name="goal" rows="5" cols="40">Describe club goal here
-             </textarea>
-             Vision:<br>
-             <textarea name="vision" rows="5" cols="40">DescribeClub vision here
-             </textarea>
-             Mission:<br>
-             <textarea name="mission" rows="5" cols="40">Describe CLub Mission here
-             </textarea>
-
-                    
-               <% if (message == 1 ) { %>
-                         <p>New club request sent successfuly</p>
-               <% } %>
               
-               <%if (message == 2 ) { %>
-                       <p>New club request denied</p>
-                <% }  %>
-  
-
-
-                <button type="submit" class="btn btn-primary block full-width m-b">submit</button> -->
-                
-            </form>
+         <% if (message == 1 ) { %>
+                   <p>New club request sent successfuly</p>
+         <% } %>
         
-        </div>
+         <%if (message == 2 ) { %>
+                 <p>New club request denied</p>
+          <% }  %>
+
+
+
+          <button type="submit" class="btn btn-primary block full-width m-b">submit</button> -->
+          
+      </form>          </p>
+        </p>
     </div>
 
-    
-   
-  
 
-  
-   
-</body>
+    <footer class="footer">
+      
+      <div class="container">
+        
+        <!-- <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div> -->
+        
+    </div>
+      
+    </footer>
 
+
+
+    <script>
+
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+          meklog.src="/assets/images/logo3.png";
+        
+        } else{
+          meklog.src="/assets/images/logo.png";
+          
+        }
+      
+      }
+      
+        </script>
+  </body>
 </html>
