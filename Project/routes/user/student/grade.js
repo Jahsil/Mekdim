@@ -18,7 +18,7 @@ router.get('/gradereport' , authentication.isStudentLoggedIn ,(req , res)=> {
     on student.StudentID=grade.StudentIDs
     INNER join course
     on course.CourseID=grade.CourseIDs
-    where student.StudentID= "${nameo}" `;
+    where student.StudentID= "${req.userData.StudentID}" `;
     connection.query(sql , (error , result) => {
         if (result !==undefined && result.length > 0 ) {
      
@@ -33,40 +33,6 @@ router.get('/gradereport' , authentication.isStudentLoggedIn ,(req , res)=> {
      });
    
 });
-
-//BEREKET LINGEREW
-router.get('/GradeReportApproval' , authentication.isStudentLoggedIn ,(req , res)=> {
-
-    console.log(req.userData);
-    res.render('student/GradeReportApproval' , { student: req.userData });
-});
-//BEREKET LINGEREW
-router.post('/GradeReportApproval' , authentication.isStudentLoggedIn, (req , res) => { 
-let sql=`select student.FullName, grade.result, grade.ApprovalStatus
-from grade 
-INNER join student
-on student.StudentID=grade.StudentIDs
-INNER join course
-on course.CourseID=grade.CourseIDs
-where course.name= "${req.body.CourseName}" `;
-     connection.query(sql , (error , result) => {
-        if (result) {
-     
-                
-                res.render('student/GradeReportApproval' , {student0: result[0].FullName, rslt0: result[0].result,
-                    approve0: result[0].ApprovalStatus,
-                    student1: result[1].FullName, rslt1: result[1].result,
-                    approve1: result[1].ApprovalStatus})
-           
-        } 
-        else {
-            console.log("Another");
-        }
-        
-     });
-
-    });
-
 
 
 
