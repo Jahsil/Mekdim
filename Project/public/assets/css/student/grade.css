@@ -18,7 +18,7 @@
 	box-sizing: border-box;
 	border: none;
 }
-/* #main-container {
+#main-container {
 	position: absolute;
 	width: 1366px;
 	height: 768px;
@@ -28,15 +28,15 @@
 	--web-scale-on-resize: true;
 	--web-actual-size-on-double-click: true;
 	--web-enable-deep-linking: true;
-} */
-/* #Rectangle_1095_j {
+}
+#Rectangle_1095_j {
 	fill: url(#Rectangle_1095_j);
 	stroke: rgba(112,11,112,1);
 	stroke-width: 1px;
 	stroke-linejoin: miter;
 	stroke-linecap: butt;
 	stroke-miterlimit: 4;
-	shape-rendering: auto; */
+	shape-rendering: auto;
 }
 .Rectangle_1095_j {
 	position: absolute;
@@ -67,13 +67,13 @@
 	stroke-miterlimit: 4;
 	shape-rendering: auto;
 }
-/* .Rectangle_1094 {
+.Rectangle_1094 {
 	position: absolute;
 	overflow: visible;
 	width: 1366px;
 	height: 768px;
 	left: 0px;
-	top: 0px; */
+	top: 0px;
 }
 #Rectangle_1097 {
 	fill: rgba(255,255,255,1);
@@ -285,7 +285,7 @@
           
 }
 .grades-table thead tr {
-	background-color: #266777;
+	background-color:#52ab98;
 	color:white;
 	text-align:left ;
 	font-family: Montserrat;
@@ -303,7 +303,7 @@
 	background-color:#f3f3f3;
 } 
 .grades-table tbody tr:last-of-type{
-	border-bottom:2px solid #266777;
+	border-bottom:2px solid #52ab98;
 }
 .button{
 
@@ -311,7 +311,7 @@
 	border-radius:5px 5px 0 0;
 	box-shadow:0 0 20px rgba(0,0,0,0.15);
 	color: white;
-	background-color: #266777;
+	background-color: #6fe7cd;
 	padding: 5px 7px;
 	text-align: center;
 	text-decoration: none;
@@ -338,7 +338,7 @@
 	  
 }
 .grades-table2 thead tr {
-background-color: #266777;
+background-color:#52ab98;
 color:white;
 text-align:left ;
 font-family: Montserrat;
@@ -356,7 +356,7 @@ border-bottom:1px solid #dddddd;
 background-color:#f3f3f3;
 } 
 .grades-table2 tbody tr:last-of-type{
-border-bottom:2px solid #266777;
+border-bottom:2px solid #52ab98;
 }
 .Ass-table{
 		background-color: #dddddd;
@@ -376,7 +376,7 @@ border-bottom:2px solid #266777;
 
 }
 .Ass-table thead tr {
-	background-color:#266777;
+	background-color:#52ab98;
 	color:white;
 	text-align:left ;
 	font-family: Montserrat;
@@ -394,8 +394,8 @@ border-bottom:2px solid #266777;
 	background-color:#f3f3f3;
 	} 
 	.Ass-table tbody tr:last-of-type{
-	border-bottom:2px solid #266777;
-	background-color: #266777;
+	border-bottom:2px solid #52ab98;
+	background-color: #52ab98;
 	color:white;
 	}
 	.petition-box{
