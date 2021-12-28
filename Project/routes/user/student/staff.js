@@ -83,7 +83,7 @@ router.get("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
 router.post("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
     //inserting into contactdephead tablestudent name(from userData.FullName)and
     //  ( department, subject and body) from the form
-      connection.query('insert into student contactdephead (NULL,"'+req.userData.FullName+'" , "'+namereq.body.department+'" ,"'+namereq.body.subject+'", "'+namereq.body.bodyy+'"', (error , result) =>{
+      connection.query('insert into contactdephead (NULL,"'+req.userData.FullName+'" , "'+req.body.department+'" ,"'+req.body.subject+'", "'+req.body.bodyy+'"', (error , result) =>{
         res.render("student/contactdephead", { error: true}); 
       })
     /* we can send the students note directly to the department head email
