@@ -1,0 +1,213 @@
+<!--Lealem Kinfe |  ETR/5704/11 | Calendar Main Page-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Academic Calendar</title>
+    <link rel="stylesheet" href="/nav/guestNav.css">
+    <link rel="stylesheet" href="/assets/css/guest/calendar.css">
+
+  </head>
+  <body>
+    
+    <%- include('../partials/guestnav') %>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>June 2021</th>
+          <th></th>
+          <th></th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="passive">
+          <td> JUN 7</td>
+          <td>Monday</td>
+          <td>First day of classes for regular summer session.</td>
+          
+        </tr>
+        <tr class="active-row">
+          <td>JUN 8</td>
+          <td>Tuesday</td>
+          <td>CAP Grades Meeting.</td>
+          
+        </tr>
+        <tr class="passive">
+          <td>JUN 9</td>
+          <td>Wednesday</td>
+          <td>CAP Grades Meeting.</td>
+        
+          
+        </tr>
+
+        <tr class="active-row">
+          <td>JUN 11</td>
+          <td>Friday</td>
+          <td>	
+            Degree application deadline for September SB and advanced degrees. $50  late fee after this date ($85 after July 9). <br>
+            
+            Summer Registration deadline. Registration for all students must be  submitted by this date. $50 late fee after this date.</td>
+          
+        </tr>
+        <tr class="passive">
+          <td>JUN 15</td>
+          <td>Tuesday</td>
+          <td>	
+            Deadline for doctoral students to submit application, signed by department, to the Office of Graduate Education, <br> Room 3-138, for fall term non-resident status.</td>
+        
+          
+        </tr>
+
+        <tr class="active-row">
+          <td>JUN 16</td>
+          <td>Wednesday</td>
+          <td>CAP Grades Meeting.</td>
+          
+        </tr>
+        <tr class="passive">
+          <td>JUN 17</td>
+          <td>Thursday</td>
+          <td>	
+            Fall pre-registration deadline. Continuing students must initiate online pre-registration by this date ($85 late fee after August 26). <br>
+            <br>
+            Deadline for continuing students to select preferences for fall CI-H/HW subjects. <br>
+            <br>
+            CAP Deferred Action Meetings.</td> <br>
+        
+          
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    
+    <table class="content-table2">
+      <thead>
+        <tr>
+          <th>July 2021</th>
+          <th></th>
+          <th></th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="passive">
+          <td> JUL 9</td>
+          <td>Monday</td>
+          <td>Half way througn classes for regular summer session.</td>
+          
+        </tr>
+        <tr class="active-row">
+          <td>JUL 8</td>
+          <td>Tuesday</td>
+          <td> Degree application deadline for September SB and advanced degrees. $50  late fee after this date ($85 after July 9). <br>
+            
+            Summer Registration deadline. Registration for all students must be  submitted by this date. $50 late fee after this date.</td></td>
+          
+        </tr>
+        <tr class="passive">
+          <td>JUL 11</td>
+          <td>Wednesday</td>
+          <td>CAP Grades Meeting.</td>
+        
+          
+        </tr>
+
+        <tr class="active-row">
+          <td>JUL 13</td>
+          <td>Friday</td>
+          <td>CAP Grades Meeting.</td>
+           
+          
+        </tr>
+        <tr class="passive">
+          <td>JUL 17</td>
+          <td>Tuesday</td>
+          <td>	
+            Deadline for doctoral students to submit application, signed by department, to the Office of Graduate Education, <br> Room 3-138, for fall term non-resident status.</td>
+        
+          
+        </tr>
+
+        <tr class="active-row">
+          <td>JUL 18</td>
+          <td>Wednesday</td>
+          <td>CAP Grades Meeting.</td>
+          
+        </tr>
+        <tr class="passive">
+          <td>JUL 19</td>
+          <td>Thursday</td>
+          <td>	
+            Fall pre-registration deadline. Continuing students must initiate online pre-registration by this date ($85 late fee after August 26). <br>
+            <br>
+            Deadline for continuing students to select preferences for fall CI-H/HW subjects. <br>
+            <br>
+            CAP Deferred Action Meetings.<br></td> 
+
+            <tr class="active-row">
+              <td>JUL 30</td>
+              <td>Wednesday</td>
+              <td>Class End</td>
+              
+            </tr>
+        
+          
+        </tr>
+      </tbody>
+    </table>
+    
+
+      
+  
+
+
+    <footer class="footer">
+      
+      
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+    
+
+  
+  
+
+
+  <script>
+
+var icon =document.getElementById("icon");
+icon.onclick= function(){
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")){
+    icon.src= "/assets/images/light2.png";
+    img.src="/assets/images/image1.png";
+    meklog.src="/assets/images/logo3.png";
+    fbl.src="/assets/images/fbll.png";
+    twl.src="/assets/images/twll.png";
+    tgl.src="/assets/images/tgll.png";
+    ytl.src="/assets/images/ytll.png";
+    logofoot.src="/assets/images/logo4.png";
+  } else{
+    icon.src="/assets/images/dark2.png";
+    img.src="/assets/images/image.png";
+    meklog.src="/assets/images/logo.png";
+    fbl.src="/assets/images/fbl.png";
+    twl.src="/assets/images/twi.png";
+    tgl.src="/assets/images/tgl.png";
+    ytl.src="/assets/images/ytl.png";
+    logofoot.src="/assets/images/logo2.png";
+  }
+
+}
+
+  </script>
+  </body>
+</html>
