@@ -42,7 +42,7 @@ CREATE TABLE `administrator` (
 
 LOCK TABLES `administrator` WRITE;
 /*!40000 ALTER TABLE `administrator` DISABLE KEYS */;
-INSERT INTO `administrator` VALUES ('AGF/4342/05','Nahom Behailu','Male','55555',NULL,NULL,NULL);
+INSERT INTO `administrator` VALUES ('AGF/1111/11','Nahom Hailu','Male','1111',NULL,NULL,NULL),('AGF/4342/05','Nahom Behailu','Male','55555',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `administrator` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +93,7 @@ CREATE TABLE `assignments` (
   KEY `InstructorID_idx` (`InstructorID`),
   CONSTRAINT `Course` FOREIGN KEY (`Course`) REFERENCES `course` (`CourseID`),
   CONSTRAINT `InstructorID` FOREIGN KEY (`InstructorID`) REFERENCES `instructor` (`InstructorID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +131,7 @@ CREATE TABLE `assignmentsubmission` (
 
 LOCK TABLES `assignmentsubmission` WRITE;
 /*!40000 ALTER TABLE `assignmentsubmission` DISABLE KEYS */;
-INSERT INTO `assignmentsubmission` VALUES (1,'Atr/1111/11','C:/Users/Omen/Downloads/justtring/Mekdim.zip','emf'),(2,'Atr/1111/11','C:/Users/Omen/Downloads/justtring/SRS.rtf','emf');
+INSERT INTO `assignmentsubmission` VALUES (1,'atr/1111/11','C:/Users/Omen/Downloads/justtring/Mekdim.zip','emf'),(2,'atr/1111/11','C:/Users/Omen/Downloads/justtring/SRS.rtf','emf');
 /*!40000 ALTER TABLE `assignmentsubmission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,8 +177,7 @@ CREATE TABLE `clearance` (
   `sex` varchar(45) NOT NULL,
   `cyear` varchar(45) NOT NULL,
   `myfile` varchar(45) NOT NULL,
-  `ClearanceReason` varchar(200) NOT NULL,
-  PRIMARY KEY (`ID`)
+  `ClearanceReason` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -188,7 +187,7 @@ CREATE TABLE `clearance` (
 
 LOCK TABLES `clearance` WRITE;
 /*!40000 ALTER TABLE `clearance` DISABLE KEYS */;
-INSERT INTO `clearance` VALUES ('','','','dd/mm/yyyy','','','','','415-4151459_glass-marble-ball-orb-bubble-blue-black-blue.png'),('Nathan','Zelalem','Kebede','11/11/2001','Atr/1111/11','Male','2011','I am awesome',''),('Nathan','Zelalem','ff','11/11/2001','Atr/1131/11','Male','2011','Awesomes','');
+INSERT INTO `clearance` VALUES ('','','','dd/mm/yyyy','','','','','415-4151459_glass-marble-ball-orb-bubble-blue-black-blue.png'),('Nathan','Zelalem','Kebede','11/11/2001','Atr/1111/11','Male','2011','I am awesome',''),('Nathan','Zelalem','ff','11/11/2001','Atr/1131/11','Male','2011','Awesomes',''),('Lillian','Zelalem','Kebede','11/11/3000','Atr/6567/56','Female','2011','Magnificence','you suck.txt'),('Nathan','Zelalem','Kebede','11/11/2002','Atr/6567/56','Male','2011','Magnificence','you suck.txt'),('Lillian','Alehegn','Kebede','11/11/2002','Atr/6567/56','Male','undefined','My awesomeness scares me             ','you suck.txt');
 /*!40000 ALTER TABLE `clearance` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -217,8 +216,34 @@ CREATE TABLE `clubs` (
 
 LOCK TABLES `clubs` WRITE;
 /*!40000 ALTER TABLE `clubs` DISABLE KEYS */;
-INSERT INTO `clubs` VALUES ('Red Cross','Valid','11-11-11',NULL,NULL,NULL,NULL);
+INSERT INTO `clubs` VALUES ('Red Cross','Approved','11-11-11',NULL,NULL,NULL,NULL),('What','approved','11-11-11',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `clubs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contactdephead`
+--
+
+DROP TABLE IF EXISTS `contactdephead`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `contactdephead` (
+  `primaryid` int NOT NULL AUTO_INCREMENT,
+  `studentname` varchar(45) NOT NULL,
+  `department` varchar(45) NOT NULL,
+  `subject` varchar(200) NOT NULL,
+  `body` varchar(300) NOT NULL,
+  PRIMARY KEY (`primaryid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contactdephead`
+--
+
+LOCK TABLES `contactdephead` WRITE;
+/*!40000 ALTER TABLE `contactdephead` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contactdephead` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -336,6 +361,7 @@ CREATE TABLE `course` (
 
 LOCK TABLES `course` WRITE;
 /*!40000 ALTER TABLE `course` DISABLE KEYS */;
+INSERT INTO `course` VALUES ('ECEG','Micro',12,3,'ESE');
 /*!40000 ALTER TABLE `course` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -481,7 +507,7 @@ CREATE TABLE `course_student` (
 
 LOCK TABLES `course_student` WRITE;
 /*!40000 ALTER TABLE `course_student` DISABLE KEYS */;
-INSERT INTO `course_student` VALUES (1,'Atr/1111/11','java','f'),(2,'Atr/1111/11','emf','c');
+INSERT INTO `course_student` VALUES (1,'Atr/1111/11','ECEG','f');
 /*!40000 ALTER TABLE `course_student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -607,7 +633,7 @@ CREATE TABLE `dormitory` (
 
 LOCK TABLES `dormitory` WRITE;
 /*!40000 ALTER TABLE `dormitory` DISABLE KEYS */;
-INSERT INTO `dormitory` VALUES (1,'Atr/1111/11',NULL,NULL,NULL,'denied'),(2,'Atr/1212/12','B',NULL,NULL,'pending'),(3,'ATR/3333/11','A','103','008','approved');
+INSERT INTO `dormitory` VALUES (1,'Atr/1111/11',NULL,NULL,NULL,'pending'),(2,'Atr/1212/12','B',NULL,NULL,'pending'),(3,'ATR/3333/11','A','103','008','pending');
 /*!40000 ALTER TABLE `dormitory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -637,7 +663,7 @@ CREATE TABLE `dormitoryreq` (
 
 LOCK TABLES `dormitoryreq` WRITE;
 /*!40000 ALTER TABLE `dormitoryreq` DISABLE KEYS */;
-INSERT INTO `dormitoryreq` VALUES (1,'Atr/1212/12','A','B','C'),(3,'Atr/1111/11','dorm_b','dorm_a','dorm_c'),(7,'ATR/3333/11','dorm_a','dorm_a','dorm_a');
+INSERT INTO `dormitoryreq` VALUES (1,'Atr/1212/12','A','B','C'),(7,'ATR/3333/11','dorm_a','dorm_a','dorm_a');
 /*!40000 ALTER TABLE `dormitoryreq` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -667,7 +693,7 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
-INSERT INTO `events` VALUES ('Blood Donation','Red Cross','Valid','11-11-11','AAiT','2:30');
+INSERT INTO `events` VALUES ('Blood Donation','Red Cross','Approved','11-11-11','AAiT','2:30');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -815,7 +841,7 @@ CREATE TABLE `instructor` (
 
 LOCK TABLES `instructor` WRITE;
 /*!40000 ALTER TABLE `instructor` DISABLE KEYS */;
-INSERT INTO `instructor` VALUES ('IDR/1111/11','Kebede Abebe','Male','Kebed',NULL,NULL,'E-123','ElecEng',''),('IDR/5433/03','Abebe Abebe','Male','11111',NULL,NULL,'E-123','ElecEng','');
+INSERT INTO `instructor` VALUES ('IDR/1111/11','Kebede Abebe','Male','1111',NULL,NULL,'E-123','ElecEng',''),('IDR/5433/03','Abebe Abebe','Male','11111',NULL,NULL,'E-123','ElecEng','');
 /*!40000 ALTER TABLE `instructor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -868,7 +894,7 @@ CREATE TABLE `makeupexamrequest` (
   KEY `CourseRequest_idx` (`CourseRequest`),
   CONSTRAINT `CourseRequest` FOREIGN KEY (`CourseRequest`) REFERENCES `course` (`CourseID`),
   CONSTRAINT `StudentRequest` FOREIGN KEY (`StudentRequest`) REFERENCES `student` (`StudentID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -877,6 +903,7 @@ CREATE TABLE `makeupexamrequest` (
 
 LOCK TABLES `makeupexamrequest` WRITE;
 /*!40000 ALTER TABLE `makeupexamrequest` DISABLE KEYS */;
+INSERT INTO `makeupexamrequest` VALUES (7,'Atr/1111/11','ECEG','dddd','111','.//here.png','11/11/2002','denied'),(8,'Atr/1111/11','ECEG','dddd','111','.//images.jpg','11/11/2001','denied'),(9,'Atr/1111/11','ECEG','dddd','undefined','.//images.jpg','11/11/3000','denied');
 /*!40000 ALTER TABLE `makeupexamrequest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -962,7 +989,7 @@ CREATE TABLE `staffevaluation` (
 
 LOCK TABLES `staffevaluation` WRITE;
 /*!40000 ALTER TABLE `staffevaluation` DISABLE KEYS */;
-INSERT INTO `staffevaluation` VALUES ('Strongly agree','Agree','Agree','Neutral','Diagree','Neutral','Diagree','Atr/1111/11','Kebede Abebe');
+INSERT INTO `staffevaluation` VALUES ('Strongly agree','Agree','Agree','Neutral','Diagree','Neutral','Diagree','Atr/1111/11','Kebede Abebe'),('Strongly agree','Agree','Neutral','Diagree','Strongly diagree','Diagree','Diagree','Atr/1111/11','Kebede Abebe'),('Strongly agree','Agree','Agree','Agree','Neutral','Diagree','Strongly diagree','Atr/1111/11','Kebede Abebe'),('Strongly agree','Agree','Strongly agree','Agree','Agree','Agree','Agree','Atr/1111/11','Kebede Abebe'),('Strongly agree','Strongly agree','Strongly agree','Strongly agree','Strongly agree','Strongly agree','Strongly agree','Atr/1111/11','Kebede Abebe'),('Strongly diagree','Strongly diagree','Strongly diagree','Strongly diagree','Strongly diagree','Strongly diagree','Strongly diagree','Atr/1111/11','Abebe Abebe');
 /*!40000 ALTER TABLE `staffevaluation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -998,7 +1025,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2011-11-11','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7');
+INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1054,6 +1081,7 @@ CREATE TABLE `transferrequest` (
 
 LOCK TABLES `transferrequest` WRITE;
 /*!40000 ALTER TABLE `transferrequest` DISABLE KEYS */;
+INSERT INTO `transferrequest` VALUES ('Atr/1111/11','fff','Alehegn','Kebede','11/11/2002','Female','2011','3.3','wwwww','undefined');
 /*!40000 ALTER TABLE `transferrequest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1081,7 +1109,7 @@ CREATE TABLE `withdrawalrequest` (
 
 LOCK TABLES `withdrawalrequest` WRITE;
 /*!40000 ALTER TABLE `withdrawalrequest` DISABLE KEYS */;
-INSERT INTO `withdrawalrequest` VALUES ('Atr/1111/11','teddy','male','elec','gobez negn beye selemaseb ');
+INSERT INTO `withdrawalrequest` VALUES ('Atr/1111/11','tttttt','Male','Elec','                     \r\nI am awesome\r\n          ');
 /*!40000 ALTER TABLE `withdrawalrequest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1094,4 +1122,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-20 13:00:15
+-- Dump completed on 2021-12-28 16:58:19
