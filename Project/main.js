@@ -22,6 +22,8 @@ const schedule = require('./routes/user/student/schedule');
 const studentService = require('./routes/user/student/studentService');
 
 const authRoutes = require('./routes/authRoutes');
+const guest = require('./routes/guest');
+
 
 const AdminAccount= require('./routes/user/administrator/accounts');
 const AdminApprove = require('./routes/user/administrator/approve');
@@ -44,6 +46,7 @@ app.use(studentService);
 
 
 app.use(authRoutes);
+app.use(guest);
 
 
 app.use(AdminAccount);
@@ -78,12 +81,3 @@ app.get('/admin/home' , authentication.isAdminLoggedIn ,(req , res)=> {
     // console.log(req.userData);
     res.render('administrator/admin' , { user : req.userData  });
 });
-
-
-
-/***********************START YOUR CODE HERE******************************/
-
-//uploadProfile    Name : Mekete Tafesse  ID: Atr/8212/11   added file iside router and view
-// app.get('./routes/user/student/uploadProfile', uploadProfile.index); //call for main index page
-// app.post('./routes/user/student/uploadProfile', uploadProfile.index);//call for signup post 
-//app.get('/profile/:id',routes.profile);
