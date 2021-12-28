@@ -1,76 +1,78 @@
+/*Lealem Kinfe |  ETR/5704/11 | Transafer Page */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 :root{
-  --primary-color:#266777 ;
-  --secondary-color:#52ab98;
-  --tertiary-color:#c8d8e4;
-  --quaternary-color:#f2f2f2;
-  --quinary-color:#ffffff;
+  --primary-color:#266777 !important;
+  --secondary-color:#52ab98 !important;
+  --tertiary-color:#c8d8e4 !important;
+  --quaternary-color:#f2f2f2 !important;
+  --quinary-color:#ffffff !important;
   
 }
 
 .dark-theme{
-  --primary-color:#c4c4c4 ;
-  --secondary-color:#929292;
-  --tertiary-color:#484848;
-  --quaternary-color:#121212;
-  --quinary-color:#323232;
+  --primary-color:#f0f0f0 !important;
+  --secondary-color:#929292 !important;
+  --tertiary-color:#484848 !important;
+  --quaternary-color:#121212 !important;
+  --quinary-color:#323232 !important;
 }
+
+
 
 body{
   background-color: var(--quaternary-color);
- 
 }
 :root{
   --primary: var(--primary-color);
 }
 
-.header{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color:var(--primary-color);
 
-}
-
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4em 10%;
-  background-color: var(--primary-color);
-}
-.logo{
-  cursor: pointer;
-}
-.nav_links {
-  list-style: none;
-}
-.nav_links li{
-  display: inline-block;
-  padding: 10px 20px;
-}
-.nav_links li a{
-  transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover{
- color: var(--secondary-color); transition: all 0.3s ease 0s;
-}
 button{
-  padding: 9px 25px;
-  background-color: rgba(0, 136, 169, alpha);
+  padding: 15px 35px;
+  font-size:20px;
+  background-color: var(--primary-color);
+  color: black;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
 button:hover{
-  background-color: var(--secondary-color);
+   background-color:  var(--primary-color);
 }
 
+.section{
+  align-items: left;
+  margin-top:20px;
+  width:100%;
+  font-family:"Roboto";
+  text-align:left;
+  color: var(--primary-color);
+  font-size:25px;
+}
+#div_a {
+  float:left;
+  width:35%;
+  text-align:right;
 
+}
 
+#div_b {
+  float:left;
+  width:25%;
+  text-align:right;
+  margin-left:100px;
+}
+#div_c {
+  float:right;
+  width:25%;
+  text-align:right;
+  margin-right:100px;
+}
 footer{
   position: absolute;
   bottom: 0vh;
@@ -121,7 +123,7 @@ a{
 .social a{
   height: 30px;
   width: 30px;
-  background-color:  var(--secondary-color);
+  background: var(--secondary-color);
   border-radius: 5px;
   margin:10px 5px;
   text-align: center;
@@ -179,7 +181,6 @@ hr{
   background:var(--quinary-color);
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
-  background-color: var(--quinary-color);
 }
 .right h1{
   color: var(--secondary-color);
@@ -208,7 +209,6 @@ form .txt_field{
   border: none;
   background: none;
   outline: none;
-  color: var(--primary-color);
 }
 .txt_field label{
   position: absolute;
@@ -238,7 +238,6 @@ form .txt_field{
 .txt_field input:focus ~ span::before,
 .txt_field input:valid ~ span::before{
   width: 100%;
-  
 }
 .pass{
   margin: -5px 0 20px 5px;
@@ -249,23 +248,31 @@ form .txt_field{
   text-decoration: underline;
 }
 input[type="submit"]{
-  width: 100%;
+  width: 60%;
   height: 50px;
-  border: 1px solid;
-  background: var(--secondary-color);
-  border-radius: 25px;
+  border:none;
+  background: var(--quinary-color);
+  border-radius: 10px;
   font-size: 18px;
-  color:var(--quaternary-color);
+  color: var(--secondary-color);
   font-weight: 700;
   cursor: pointer;
   outline: none;
 }
 input[type="submit"]:hover{
   border-color: var(--primary-color);
+  background:var(--primary-color);
+  color: var(--quinary-color);
   transition: .5s;
 }
-
-
+input[type=text] {
+  width:250px;
+  padding:12px;
+  border: 2px solid var(--quinary-color);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  margin: 3px;
+}
 
 .left{
   position: absolute;
@@ -276,7 +283,6 @@ input[type="submit"]:hover{
   background:var(--quaternary-color);
   border-radius: 10px;
  
- 
 }
 
 
@@ -285,40 +291,24 @@ input[type="submit"]:hover{
 
 
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

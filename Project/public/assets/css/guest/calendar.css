@@ -1,3 +1,5 @@
+/*Lealem Kinfe |  ETR/5704/11 | Caledar Page */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 :root{
@@ -10,9 +12,9 @@
 }
 
 .dark-theme{
-  --primary-color:#c4c4c4 ;
+  --primary-color:#f0f0f0 ;
   --secondary-color:#929292;
-  --tertiary-color:#484848;
+  --tertiary-color:#a7a7a7;
   --quaternary-color:#121212;
   --quinary-color:#323232;
 }
@@ -76,6 +78,7 @@ footer{
   bottom: 0vh;
   right: 0vh;
   left: 0vh;
+  
   padding: 10px;
   
   color: var(--primary-color);
@@ -143,8 +146,8 @@ hr{
 
 .footer_bottom{
   position: absolute;
-  bottom: 0vh;
-  left: 50vh;
+  top: 70vh;
+  left: 70vh;
   
 }
 
@@ -285,40 +288,145 @@ input[type="submit"]:hover{
 
 
 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Calendar Type*/
+
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  position: absolute;
+  left: 15vh;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+
+.content-table thead tr {
+  background-color: var(--secondary-color);
+  color: var(--quinary-color);
+  text-align: left;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid var(--quinary-color);
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: var(--quaternary-color);
+}
+
+
+.content-table tbody tr:nth-of-type(odd) {
+  background-color: var(--quinary-color);
+  color: var(--quinary-color);
+
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px var(--secondary-color);
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.content-table tbody tr.passive {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-table2 {
+  border-collapse: collapse;
+  margin: 25px 0;
+  position: absolute;
+  left: 15vh;
+  top:90vh;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.content-table2 thead tr {
+  background-color: var(--secondary-color);
+  color: var(--quinary-color);
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table2 th,
+.content-table2 td {
+  padding: 12px 15px;
+}
+
+.content-table2 tbody tr {
+  border-bottom: 1px solid var(--quinary-color);
+}
+
+.content-table2 tbody tr:nth-of-type(even) {
+  background-color: var(--quaternary-color);
+}
+
+
+.content-table2 tbody tr:nth-of-type(odd) {
+  background-color: var(--quinary-color);
+  color: var(--quinary-color);
+
+}
+.content-table2 tbody tr:last-of-type {
+  border-bottom: 2px var(--secondary-color);
+}
+
+.content-table2 tbody tr.active-row {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.content-table2 tbody tr.passive {
+  font-weight: bold;
+  color: var(--primary-color);
 }
