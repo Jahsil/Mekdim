@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
     <title>Student</title>
 	<link rel="stylesheet" href="/nav/studentNav.css">
-    <link rel="stylesheet" href="/assets/css/student/student.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" id="applicationStylesheet" href="/assets/css/student/grade.css">
 </head>
@@ -12,31 +11,10 @@
 	
 <%- include('../partials/studentnav') %>
 	
-<div id="#main-container">
-	<svg class="Rectangle_1095_j">
-		<linearGradient id="Rectangle_1095_j" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="0.767">
-			<stop offset="0" stop-color="#52ab98" stop-opacity="1"></stop>
-			<stop offset="1" stop-color="#1affcc" stop-opacity="1"></stop>
-		</linearGradient>
-		<rect id="Rectangle_1095_j" rx="0" ry="0" x="0" y="0" width="1358" height="768">
-		</rect>
-	</svg>
-	<svg class="Rectangle_1096">
-		<rect id="Rectangle_1096" rx="46" ry="46" x="0" y="0" width="1090" height="762">
-		</rect>
-	</svg>
-	<svg class="Rectangle_1094">
-		<rect id="Rectangle_1094" rx="0" ry="0" x="0" y="0" width="1366" height="768">
-		</rect>
-	</svg>
-	<svg class="Rectangle_1097">
-		<rect id="Rectangle_1097" rx="0" ry="200" x="0" y="0" width="206" height="62">
-		</rect>
-	</svg>
-	<div id="Grades">
-		<a id = "mainlink" href ="Grade.ejs">Grades</a>
-	</div>
-	<img id="grade" src="/grade/grade.png" srcset="/grade/grade.png 1x, /grade/grade@2x.png 2x">
+
+	
+	
+	
 		
 	<div id="Grade_Report2">
 		<a class = "sublink" href ="gradereport">Grade Report</a>
@@ -44,26 +22,15 @@
 	<div id="Grade_Change">
 		<a class = "sublink" href ="gradechange">Grade Change</a>
 	</div>
-	<div id="Forward_arrow_small">
-		<svg class="Path_36" viewBox="0 0 14.4 9.1">
-			<path id="Path_36" d="M 7.200000286102295 9.100001335144043 L 0 2.088524580001831 L 2.144680976867676 0 L 7.200000286102295 4.922950744628906 L 12.25531959533691 0 L 14.39999961853027 2.088524580001831 L 7.200000286102295 9.100001335144043 Z">
-			</path>
-		</svg>
-	</div>
-	<div id="Forward_arrow_small2">
-		<svg class="Path_36" viewBox="0 0 14.4 9.1">
-			<path id="Path_36" d="M 7.200000286102295 9.100001335144043 L 0 2.088524580001831 L 2.144680976867676 0 L 7.200000286102295 4.922950744628906 L 12.25531959533691 0 L 14.39999961853027 2.088524580001831 L 7.200000286102295 9.100001335144043 Z">
-			</path>
-		</svg>
-	</div>
-    <div class ="table-head">Grade Report</div>
+	
+    
     <div ><table class ="grades-table">
        <thead><tr>
           <th>No</th>
           <th>Credit Hour</th>
           <th>ECTS</th>
           <th>Grade</th>
-          <!-- <th>Assesment</th> -->
+          <th>Assesment</th>
         </tr></thead>
       <tbody> 
         <% if (report!== 0) { %>
@@ -83,7 +50,24 @@
      
       <%  } %>
       </div>
-</div>
+
+	  <script>
+
+		var icon =document.getElementById("icon");
+		icon.onclick= function(){
+		  document.body.classList.toggle("dark-theme");
+		  if (document.body.classList.contains("dark-theme")){
+			meklog.src="/assets/images/logo3.png";
+		  
+		  } else{
+			meklog.src="/assets/images/logo.png";
+			
+		  }
+		
+		}
+		
+		  </script>
+
 </body>
 
 </html>
