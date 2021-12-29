@@ -82,7 +82,7 @@ button:hover{
   align-items:center;
   margin-top:20px;
   width:100%;
-  font-family:"Roboto";
+  font-family: "Roboto", serif;
   text-align:center;
   color: var(--primary-color);
   font-size:25px;
@@ -138,6 +138,7 @@ a{
   color: var(--quinary-color);
 }
 .footer-content{
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -176,7 +177,7 @@ hr{
   opacity: .3;
 }
 .footer .end{
-  font-family: Roboto;
+  font-family: Roboto, serif;
   text-align: center;
   padding: 20px 0 0 0;
 }
@@ -190,7 +191,6 @@ hr{
 
 .form{
   position:absolute;
-  right: 0vh;
   padding: 0;
   border: 100vh;
   right: 50vh;
@@ -203,7 +203,7 @@ hr{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
 }
 
 .items a{
