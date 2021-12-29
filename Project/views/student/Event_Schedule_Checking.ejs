@@ -3,30 +3,27 @@
 <html>
 
 <head>
-    <title>
+   
         <title>Event Schedule Checking</title>
+       
         <link rel="stylesheet" href="/nav/studentNav.css">
         <link rel="stylesheet" href="/assets/css/student/Event.css">
+        
         <!--This link the the html with css file-->
-        <link rel="stylesheet" href="/assets/css/student/HeaderOFCourse.css">
-        <!--This link the the html with css file-->
-    </title>
+        
+    
 </head>
  
 
 
 <body>
     <%- include('../partials/studentnav') %>
-    <header>
-        <h1>MEKDEM</h1>
-        <p>Student Portal</p>
-    </header>
     
-    <section>
-        <article>
-            <h2>Welcome to Event Schedule Checking</h2>
+    <section class="section">
+     
+        <h1><pre>       Event Schedule Checking</pre></h1><br>						
+        <p><pre>             Please provide the date you are looking for an event:</pre></p><br><br>
 
-            <p>Please provide the date you are looking for an event</p>
            
             <form action="/eventschedulechecking" method="post">
 
@@ -74,7 +71,7 @@
               
              
             </form>
-        </article>
+       
         <aside>
             <!-- <ul>
                 <li><a class="active" href="Event_Schedule_Checking.html">Event Schedule</a></li>
