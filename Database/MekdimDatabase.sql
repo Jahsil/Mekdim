@@ -88,11 +88,7 @@ CREATE TABLE `assignments` (
   `InstructorID` varchar(45) NOT NULL,
   `AssignmentPath` varchar(200) NOT NULL,
   `Course` varchar(45) NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `CourseID_idx` (`Course`),
-  KEY `InstructorID_idx` (`InstructorID`),
-  CONSTRAINT `Course` FOREIGN KEY (`Course`) REFERENCES `course` (`CourseID`),
-  CONSTRAINT `InstructorID` FOREIGN KEY (`InstructorID`) REFERENCES `instructor` (`InstructorID`)
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,7 +98,7 @@ CREATE TABLE `assignments` (
 
 LOCK TABLES `assignments` WRITE;
 /*!40000 ALTER TABLE `assignments` DISABLE KEYS */;
-INSERT INTO `assignments` VALUES (1,'Mike Litories','IDR/5433/03','C:/Users/Omen/Downloads/justtring/html_tutorial.pdf','emf');
+INSERT INTO `assignments` VALUES (1,'Mike Litories','IDR/5433/03','C:/Users/Omen/Downloads/justtring/html_tutorial.pdf','ECEG'),(2,'Kebede Abebe','IDR/1111/11','.//4168.jpg','ECEA'),(3,'Kebede Abebe','IDR/1111/11','C:Files/AssignmentsUploaded/git-cheat-sheet-education.pdf','SRS');
 /*!40000 ALTER TABLE `assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +118,7 @@ CREATE TABLE `assignmentsubmission` (
   KEY `StudentID_idx` (`Student`),
   KEY `Assignment_idx` (`Assignment`),
   CONSTRAINT `Student` FOREIGN KEY (`Student`) REFERENCES `student` (`StudentID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +127,7 @@ CREATE TABLE `assignmentsubmission` (
 
 LOCK TABLES `assignmentsubmission` WRITE;
 /*!40000 ALTER TABLE `assignmentsubmission` DISABLE KEYS */;
-INSERT INTO `assignmentsubmission` VALUES (1,'atr/1111/11','C:/Users/Omen/Downloads/justtring/Mekdim.zip','emf'),(2,'atr/1111/11','C:/Users/Omen/Downloads/justtring/SRS.rtf','emf');
+INSERT INTO `assignmentsubmission` VALUES (1,'atr/1111/11','C:/Users/Omen/Downloads/justtring/Mekdim.zip','emf'),(2,'atr/1111/11','C:/Users/Omen/Downloads/justtring/SRS.rtf','emf'),(3,'Atr/1111/11','C:/ASSIGMENT/Birdy.png','ECEG'),(4,'Atr/1111/11','C:Files/ASSIGNMENT/Birdy.png','ECEG'),(5,'Atr/1111/11','C:Files/ASSIGNMENTS/b1.png','ECEG');
 /*!40000 ALTER TABLE `assignmentsubmission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -771,7 +767,7 @@ CREATE TABLE `grade` (
   KEY `CourseID_idx` (`CourseIDs`),
   CONSTRAINT `CourseIDs` FOREIGN KEY (`CourseIDs`) REFERENCES `course` (`CourseID`),
   CONSTRAINT `StudentIDs` FOREIGN KEY (`StudentIDs`) REFERENCES `student` (`StudentID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -780,6 +776,7 @@ CREATE TABLE `grade` (
 
 LOCK TABLES `grade` WRITE;
 /*!40000 ALTER TABLE `grade` DISABLE KEYS */;
+INSERT INTO `grade` VALUES (1,'Atr/1111/11','ECEG','A','Approved');
 /*!40000 ALTER TABLE `grade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -891,10 +888,8 @@ CREATE TABLE `makeupexamrequest` (
   `Status` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `StudentRequest_idx` (`StudentRequest`),
-  KEY `CourseRequest_idx` (`CourseRequest`),
-  CONSTRAINT `CourseRequest` FOREIGN KEY (`CourseRequest`) REFERENCES `course` (`CourseID`),
   CONSTRAINT `StudentRequest` FOREIGN KEY (`StudentRequest`) REFERENCES `student` (`StudentID`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -903,7 +898,7 @@ CREATE TABLE `makeupexamrequest` (
 
 LOCK TABLES `makeupexamrequest` WRITE;
 /*!40000 ALTER TABLE `makeupexamrequest` DISABLE KEYS */;
-INSERT INTO `makeupexamrequest` VALUES (7,'Atr/1111/11','ECEG','dddd','111','.//here.png','11/11/2002','denied'),(8,'Atr/1111/11','ECEG','dddd','111','.//images.jpg','11/11/2001','denied'),(9,'Atr/1111/11','ECEG','dddd','undefined','.//images.jpg','11/11/3000','denied');
+INSERT INTO `makeupexamrequest` VALUES (7,'Atr/1111/11','ECEG','dddd','111','.//here.png','11/11/2002','denied'),(8,'Atr/1111/11','ECEG','dddd','111','.//images.jpg','11/11/2001','denied'),(9,'Atr/1111/11','ECEG','dddd','undefined','.//images.jpg','11/11/3000','denied'),(11,'Atr/1111/11','undefined','Ababe','Say whaaaaa','C:Files/MakeupExamRequest/MakeupExamRequest.pdf','11/11/2002','denied');
 /*!40000 ALTER TABLE `makeupexamrequest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1025,7 +1020,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7');
+INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','deactive','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','deactive','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1122,4 +1117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-28 16:58:19
+-- Dump completed on 2021-12-30  1:06:48
