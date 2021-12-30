@@ -4,18 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Assignment/ Project Submission</title>
-	<link rel="stylesheet" href="assignmentSubmission.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/assignmentSubmission.css" type="text/css">
+	<link rel="stylesheet" href="/nav/studentNav.css">
+	
 </head>
 <body>
-<h2 align = "center"> Assignment/ Project Submission </h2> 
-<hr>
+	<%- include('../partials/studentnav') %>
 
+	<div class="body" > <h1> Assignment/ Project Submission </h1>  </div>
+            <br>
 <table align = "center">
 <tr>
 	<td>Course</td>
 	<td>Assignment</td>
 	<td>Upload</td>
 </tr>
+<br>
 <a href="" download></a>
 <% if (msg == null){ %>
 </table>
@@ -32,5 +36,34 @@
 
 </table>
 <% } %>
+<br>
+
+
+ <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+	
+	 <script>
+
+      var icon =document.getElementById("icon");
+      icon.onclick= function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")){
+          meklog.src="/assets/images/logo3.png";
+        
+        } else{
+          meklog.src="/assets/images/logo.png";
+          
+        }
+      
+      }
+      
+        </script>
 </body>
 </html>
