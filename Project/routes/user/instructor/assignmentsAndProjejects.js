@@ -21,7 +21,7 @@ router.post('/assign',authentication.isInstructorLoggedIn,(req,res)=>{
         }
         console.log(files.assigm.filepath);
         var oldpath = files.assigm.filepath;
-        var newpath = './/' + files.assigm.originalFilename;
+        var newpath = 'C:Files/AssignmentsUploaded/' + files.assigm.originalFilename;
         fs.rename(oldpath, newpath, function (err) {
           if (err) return res.render('assign',{err: false })
           console.log('File uploaded and moved!');
