@@ -149,7 +149,7 @@ router.post('/makeuprequest',authentication.isStudentLoggedIn,(req,res)=>{
         }
         console.log(files.filen.filepath);
         var oldpath = files.filen.filepath;
-        var newpath = './/' + files.filen.originalFilename;
+        var newpath = 'C:Files/MakeupExamRequest/' + files.filen.originalFilename;
         fs.rename(oldpath, newpath, function (err) {
           if (err) return console.log(err.message);
           console.log('File uploaded!');
@@ -245,7 +245,7 @@ router.post("/projandassSubmition", authentication.isStudentLoggedIn, (req, res)
       if(err) return console.log(err.message);
      
       var oldpath = files.assFile.filepath;
-      var newpath = `C:/ASSIGMENT/${files.assFile.originalFilename}`;
+      var newpath = `C:Files/AssignmentsSubmitted/${files.assFile.originalFilename}`;
       console.log(newpath);
       fs.rename(oldpath, newpath, function (err) {
         if (err) return console.log(err.message);
