@@ -1,0 +1,148 @@
+<!-- Event scheduling by Sherif Ahmed -->
+<!DOCTYPE html>
+<html>
+<!--This Code implements the event scheduling of the portal-->
+
+<head>
+    <title>Event Scheduling</title>
+    <link rel="stylesheet" href="/nav/adminNav.css">
+    <link rel="stylesheet" href="/assets/css/admin/C_schedule.css">
+    
+    <!--This link the the html with css file-->
+</head>
+
+<body>
+    <%- include('../partials/adminnav') %>
+   
+    <div class="menu">
+        <!--The left hand division of the content file-->
+
+    </div>
+            <div class="content">
+                <!--The Content division where the main content of the page is displayed-->
+                <h2>Welcome To Event Scheduling </h2>
+                <!--The Header-->
+                <p>Please provide the required information about the event</p>
+    
+                <div class="Event_schedule">
+                    <!--The Event Schedule division of the content-->
+                
+                <form action="/eventschedule" method="post">
+
+                    <div class="event">
+                        <!--The event division which consists rows and column of different type-->
+                        <div class="row">
+                            <div class="col-25">
+                                <!--The left column of the event division-->
+                                <label for="edate">Event Date</label>
+                            </div>
+                            <div class="col-75">
+                                <!--The right column of the event division-->
+                                <input type="date" id="edate" name="event_date" placeholder="Event date...." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="evenue">Event Venue</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="evenue" name="event_venue" placeholder="Event venue...." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="stime">Starting Time</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="time" id="stime" name="event_start" placeholder="Starting time..." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="etime">End Time</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="time" id="etime" name="event_end" placeholder="End time....." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="cname">Course Name(for exams only)</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="cname" name="course_name" placeholder="Course name...." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="ename">Examiner Name(for exams only)</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="ename" name="examiner_name" placeholder="Examiner name...." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="mtitle">Meeting Title(for Meeting only)</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="mtitle" name="meeting_title" placeholder="Meeting Title...." />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="cname">Meeting Description</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="mdescribe" rows="10" cols="50" name="meeting_description"
+                                    placeholder="Write description here....."></textarea>
+                            </div>
+                        </div>
+                        <% if(error) { %>
+                            <p>The date is already occupied. Please try scheduling on another date!</p>
+                        <% } else {%>
+                        
+                            <p>The Event is scheduled successfully!</p> %>
+                        <% } %>
+                        <div class="row">
+                            <!--The row that contains th submit button-->
+                            <input type="submit" value="Submit">
+                        </div>
+                        <div class="row">
+                            <input type="reset" value="Reset">
+                            <!--The row that contains the reset button-->
+                        </div>
+                        </form>
+                        </div>
+                </form>
+            </div>
+            </div>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "/assets/images/light2.png";
+                meklog.src = "/assets/images/logo3.png";
+
+            } else {
+                icon.src = "/assets/images/dark2.png";
+                meklog.src = "/assets/images/logo.png";
+
+            }
+
+        }
+    </script>
+
+</body>
+<div class="footer">
+    <!--The footer division of the the page -->
+    <div class="container">
+
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights
+                reserved.</small> </div>
+
+    </div>
+
+</div>
+</html>
