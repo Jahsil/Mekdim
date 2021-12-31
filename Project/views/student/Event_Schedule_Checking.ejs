@@ -6,8 +6,9 @@
    
         <title>Event Schedule Checking</title>
        
-        <link rel="stylesheet" href="/nav/studentNav.css">
+       
         <link rel="stylesheet" href="/assets/css/student/Event.css">
+        <link rel="stylesheet" href="/nav/studentNav.css">
         
         <!--This link the the html with css file-->
         
@@ -19,11 +20,12 @@
 <body>
     <%- include('../partials/studentnav') %>
     
-    <section class="section">
-     
-        <h1><pre>       Event Schedule Checking</pre></h1><br>						
-        <p><pre>             Please provide the date you are looking for an event:</pre></p><br><br>
+    <div class="content">
+      <!--The main content of the Page-->
+      <h4>Welcome to Event Schedule Checking</h4>
 
+      <p>Please provide the date you are looking for an event</p>
+      <div class="prelude">
            
             <form action="/eventschedulechecking" method="post">
 
@@ -37,27 +39,34 @@
                     </div>
                 </div>
             </div>
+       
+            
             <table>
+                <% if(msg != 0) { %>
                 <tr>
                   <th>Event Name</th>
-                  <th>Event Date</th>
-                  <th>Event Venue</th>
-                  <th>Event Start</th>
-                  <th>Event End</th>
-                  <th>Event Description</th>
+                  <td> <%= msg.EventName %>  </td>
                 </tr>
-                
-                 <% if(msg != 0) { %>
-                        
-                    <tr>
-                     <td> <%= msg.EventName %>  </td>
-                     <td> <%= msg.Date %>  </td>
-                     <td> <%= msg.eventvenue %>  </td>
-                     <td> <%= msg.Startingtime %>  </td>
-                     <td> <%= msg.Endtime %>  </td>
-                     <td> <%= msg.Eventdescription %>  </td>
-
-                   </tr>
+                <tr>
+                    <th>Event Date</th>
+                    <td> <%= msg.Date %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Venue</th>
+                    <td> <%= msg.eventvenue %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Start</th>
+                    <td> <%= msg.Startingtime %>  </td>
+                </tr>
+                <tr>
+                    <th>Event End</th>
+                    <td> <%= msg.Endtime %>  </td>
+                </tr>
+                <tr>
+                    <th>Event Description</th>
+                    <td> <%= msg.Eventdescription %>  </td>
+                </tr>             
                 </table>
                    <% } else {%>
                    </table>
@@ -72,13 +81,24 @@
              
             </form>
        
-        <aside>
-            <!-- <ul>
-                <li><a class="active" href="Event_Schedule_Checking.html">Event Schedule</a></li>
-                <li><a href="Course_Schedule_Checking.html">Course Schedule</a></li>
-            </ul> -->
-        </aside>
     </section>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+          document.body.classList.toggle("dark-theme");
+          if (document.body.classList.contains("dark-theme")) {
+            icon.src = "/assets/images/light2.png";
+            meklog.src = "/assets/images/logo3.png";
+    
+          } else {
+            icon.src = "/assets/images/dark2.png";
+            meklog.src = "/assets/images/logo.png";
+    
+          }
+    
+        }
+      </script>
 </body>
+
 
 </html>

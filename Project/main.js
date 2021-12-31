@@ -27,6 +27,7 @@ const guest = require('./routes/guest');
 
 const AdminAccount= require('./routes/user/administrator/accounts');
 const AdminApprove = require('./routes/user/administrator/approve');
+const AdminSchedule = require('./routes/user/administrator/schedule');
 
 const StudentExtracurricular = require('./routes/user/student/extracurricular');
 const StudentCourse = require('./routes/user/student/course');
@@ -51,6 +52,7 @@ app.use(guest);
 
 app.use(AdminAccount);
 app.use(AdminApprove);
+app.use(AdminSchedule);
 
 app.use(StudentExtracurricular);
 app.use(StudentStaff);

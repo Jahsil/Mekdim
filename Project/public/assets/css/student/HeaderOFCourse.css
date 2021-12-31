@@ -108,6 +108,29 @@ footer{
   margin: 0 auto;
   
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+li{
+  list-style: none;
+  line-height: 2;
+}
+a{
+  text-decoration: none;
+  color: var(--quinary-color);
+}
+.items li{
+  display: inline-block;
+  padding: 0px 2px;
+  position: relative;
+  bottom: -3vh;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
 hr{
   opacity: .3;
 }
@@ -129,276 +152,397 @@ hr{
 
 
   
-  .dropdown {
-    height: 10vh;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    
-  }
-
   
- .home, .financial_aid, .staff, .counsel, 
- .clubs, .grade, .course, .schedule,
-  .student_service,.other, .logout {
-    position: relative;
-    left: 15vh;
+.dropdown {
+  height: 10vh;
+  left:10vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grade, .financial_aid, .staff, .counsel, .clubs,
+.course , .schedule, .student_service,
+ .other, .logout, .home, .themebutton {
+  position: relative;
+  justify-content: space-between;
+  left: 4em;
+
+}
+
+
+
+
+
+/* This is the OTHER dropdown CSS */
+
+.other{
+height: 50% !important;
+display: flex;
+align-items: center;
+
+} 
+.other ul{
+margin-top: 10px;
+top: 20vh;
+position: absolute;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+align-items: center;
+width: 200px;
+height: 120px;
+background: var(--quinary-color);
+left: 0px;
+list-style: none;
+border-radius: 10px;
+
+}
+
+.hide{
+display: none !important;
+}
+.other:hover  .hide {
+display: flex !important;
+background-color: var(--quinary-color) ;
+border-radius: 10px;
+
+}
+
+
+
+/* This is the STAFF dropdown CSS */
+
+.staff{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+  
+  } 
+  .staff ul{
+  margin-top: 10px;
+  top: 14.3vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 120px;
+  background: var(--quinary-color);
+  left: 0px;
+  list-style: none;
+  border-radius: 10px;
+  
   }
   
+  .hide{
+  display: none !important;
+  }
+  .staff:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
   
-    .other ul,
-  .logout ul
- {
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 180px;
-    height: 300px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
-  
-
-  
-  
-  .staff ul {
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 110px;
-    height: 250px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
   }
 
-  .financial_aid ul,
-   .student_service ul {
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-    height: 250px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
 
-  .schedule ul{
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
+/* This is the GRADE dropdown CSS */
 
-  .student_service ul{
-    margin-top: 35px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
+.grade{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
 
-  .course ul{
-    margin-top: 30px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    height: 110px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
-   .counsel ul{
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
-
-  .grade ul{
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 125px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
-
-  .clubs ul{
-    margin-top: 10px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background: var(--quinary-color);
-    left: 0px;
-    list-style: none;
-    border-radius: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-  }
-
-  .other li,
-  .logout li
-{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    background-color: var(--quinary-color);
-    border-radius: 10px;
-  }
-
-  
+} 
+.grade ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 120px;
+  background: var(--quinary-color);
+  left: 0px;
+  list-style: none;
+  border-radius: 10px;
  
- 
-  .financial_aid li,
-  .staff li, .counsel li, .course li, .clubs li,
-  .grade li, .schedule li, .student_service li  {
-    width: 200%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    background-color: var(--quinary-color);
-    border-radius: 10px;
-  }
+}
+
+.hide{
+  display: none !important;
+}
+.grade:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
   
+}
+
+
+/* This is the COURSE dropdown CSS */
+
+
+.course{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+
+} 
+.course ul{
+  margin-top: 10px;
+  top: 8vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 120px;
+  background: var(--quinary-color);
+  
+  list-style: none;
+  border-radius: 10px;
+ 
+}
+
+.hide{
+  display: none !important;
+}
+.course:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+}
+
+/* This is the COUNSEL dropdown CSS */
+
+
+.counsel{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+
+} 
+.counsel ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 120px;
+  background: var(--quinary-color);
+  
+  list-style: none;
+  border-radius: 10px;
+ 
+}
+
+.hide{
+  display: none !important;
+}
+.counsel:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+}
+
+
+
+/* This is the CLUB dropdown CSS */
+
+
+.clubs{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+
+} 
+.clubs ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 120px;
+  background: var(--quinary-color);
+  
+  list-style: none;
+  border-radius: 10px;
+ 
+}
+
+.hide{
+  display: none !important;
+}
+.clubs:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+}
+
+
+/* This is the SERVICE dropdown CSS */
+
+
+.student_service{
+  height: 30% !important;
+  display: flex;
+  align-items: center;
+
+} 
+.student_service ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 120px;
+  background: var(--quinary-color);
+  
+  list-style: none;
+  border-radius: 10px;
+ 
+}
+
+.hide{
+  display: none !important;
+}
+.student_service:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+}
+
+
+/* This is the SCHEDULE dropdown CSS */
+
+
+.schedule{
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+
+} 
+.schedule ul{
+  margin-top: 10px;
+  top: 5.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 120px;
+  background: var(--quinary-color);
+  
+  list-style: none;
+  border-radius: 10px;
+ 
+}
+
+.hide{
+  display: none !important;
+}
+.schedule:hover  .hide {
+  display: flex !important;
+  background-color: var(--quinary-color) ;
+  border-radius: 10px;
+  
+}
+
+
+/* Hover Effects for the drop downs*/
+
+.grade li,
+.clubs li,
+.student_service li,
+.schedule li,
+.course li,
+.counsel li,
+.assignment li,
+ .other li,
+.logout li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--quinary-color);
+  border-radius: 10px;
+  
+  
+}
+
+.staff li{
+  width: 150%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--quinary-color);
+  border-radius: 10px;
+}
+
+.grade li:hover,
+.clubs li:hover,
+.schedule li:hover,
+.student_service li:hover,
+.counsel li:hover,
+.course li:hover,
+.staff li:hover,
   .other li:hover,
-  .logout li:hover
-  .financial_aid li:hover,
-  .staff li:hover, .counsel li:hover, .course li:hover,
-   .clubs li:hover,
-  .grade li:hover, .schedule li:hover, 
-  .student_service li:hover {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-   
-    
-  }
-  
-  .student_service a,
-  .staff a, .financial_aid a, .counsel a, .course a,
-  .grade a, .schedule a, .student_service a,
-   .other a, .clubs a,
-  .logout a {
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
+.logout li:hover {
+  background-color: var(--primary-color) ;
+  border-radius: 10px;
+  float: none;   
+}
 
 
+.grade a,
+.schedule a,
+.student_service a,
+.clubs a,
+.course a,
+.counsel a,
+.staff a,
+ .other a,
+.logout a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  float: none;
   
-  .dropdown button,
-  .home {
-    background: none;
-    text-decoration: none;
-    border: none;
-    color: var(--quinary-color);
-    font-size: 18px;
-    cursor: pointer;
-  }
+}
+
+
+
+.dropdown button,
+.home {
   
-  .financial_aid button:focus + ul,
-  .counsel button:focus + ul,
-  .clubs button:focus + ul,
-  .course button:focus + ul,
-  .grade button:focus + ul,
-  .student_service button:focus + ul,
-  .staff button:focus + ul,
-  .other button:focus + ul,
-  .logout button:focus + ul,
-  .schedule button:focus + ul
-    {
-    opacity: 1;
-    pointer-events: all;
-    transform: translateY(0px);
-  }
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: var(--quinary-color);
+  font-size: 18px;
+  cursor: pointer;
   
+}
