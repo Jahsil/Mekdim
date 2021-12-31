@@ -74,7 +74,7 @@ router.get("/courseStudent", authentication.isInstructorLoggedIn, (req, res) => 
 });
 router.post("/courseStudent", authentication.isInstructorLoggedIn, (req, res) => {
   let cour = req.body.ccourse;
-  let sql = `SELECT * FROM course_student WHERE CourseChosen = ${cour}`;
+  let sql = `SELECT * FROM course_student WHERE CourseChosen = "${cour}"`;
   connection.query(sql, (error, result) => {
     if (error) return console.log(error.message);
     res.render("instructor/CourseStudent", {isGet: false, msg: result});

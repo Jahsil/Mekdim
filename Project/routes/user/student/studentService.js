@@ -67,12 +67,13 @@ router
             console.error("error: " + error.message);
             res.render("student/Application", {msg: 1});
         }
+        sql = `UPDATE dormitory SET RequestStatus = "pending"`;
+        connection.query(sql, (error, result) => {
+            if(error) return console.log(error.message);
+            console.log("updated the dormitory table.");
+        });
         res.redirect("/dormitory/placement");
      });
-    sql = `UPDATE dormitory SET RequestStatus = "pending"`;
-    connection.query(sql, (error, result) => {
-        if(error) return console.log(error.message);
-    });
 });
 
 router
