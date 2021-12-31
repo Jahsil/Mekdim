@@ -90,9 +90,9 @@ router
                     if(adr0 == null || adr1 == null) r = null;
                     else {
                         // the roommate feature feature
-                        var sql0 = `select * from dormitory WHERE blockNumber = ${adr0} AND roomNumber = ${adr1}`;
+                        const sql0 = `select * from dormitory WHERE blockNumber = ${adr0} AND roomNumber = ${adr1}`;
                         connection.query(sql0, (error, result) => {
-                            if (err) return console.log(err.message);
+                            if (error) return console.log(error.message);
                         });
                         r = {
                             dormStatus: adr2,

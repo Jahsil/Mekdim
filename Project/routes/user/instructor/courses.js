@@ -7,7 +7,6 @@ const fs = require('fs');
 const router = Router();
 
 
-
 //KALAB YIBELTAL  ATR/5464/11
 let id;
 // this is makeup exam request feature from the teacher side
@@ -69,6 +68,18 @@ router.post("/end",authentication.isInstructorLoggedIn, (req, res) => {
   }
 });
 
+// EUAEL MEKONEN ATR/1245/11
+router.get("/courseStudent", authentication.isInstructorLoggedIn, (req, res) => {
+  res.render("instructor/CourseStudent", {isGet: true, msg: null});
+});
+router.post("/courseStudent", authentication.isInstructorLoggedIn, (req, res) => {
+  let cour = req.body.ccourse;
+  let sql = `SELECT * FROM course_student WHERE CourseChosen = ${cour}`;
+  connection.query(sql, (error, result) => {
+    if (error) return console.log(error.message);
+    res.render("instructor/CourseStudent", {isGet: false, msg: result});
+  });
+});
 
 
 module.exports = router;
