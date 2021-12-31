@@ -5,7 +5,7 @@ const authentication = require('../../../middleware/authentication.js');
 const router = Router();
 
 //NIGUS
-router.get('/CourseChecklist' , authentication.isStudentLoggedIn ,(req , res)=> {
+router.get('/CourseChecklist', authentication.isStudentLoggedIn ,(req , res)=> {
     const sql=`select course.ModuleName,course.NAME,course.ECTS, student.StudentID, student.FullName, student.RegistrationYear, student.CurrentYear from course
     join course_student
     on course.CourseID= course_student.CourseChosen
@@ -38,49 +38,48 @@ router.get('/CourseChecklist' , authentication.isStudentLoggedIn ,(req , res)=> 
 
 });
 
-
-
-
-//PETROS
-router.get('/registration' , (req , res)=> {
-    res.render('student/registration' , {error: false });
+//PETROS and GORGE
+router.get('/registration', authentication.isStudentLoggedIn, (req , res)=> {
+    let x = req.userData.StudentID;
+    let sql1 = `SELECT * FROM student WHERE StudentID = "{x}"`;
+    connection.query(sql1, (err, result) => {
+        if (err) return console.log(err.message);
+        let sql = `SELECT * FROM course WHERE semester = "{result[0].semester}"`;
+        connection.query(sql, (error, result1) => {
+            if (error) return console.log(error.message);
+            res.render('student/registration' , {msg: result1});
+        });
+    });;
 });
 
-//PETROS
-router.post('/registration' , (req , res) => { 
- function sendCBs(req) {
-                var cbNames = '';
-                var cbArray = [];
-                var count = 0;
-                for (var i = 0; i < req.elements.length; i++) {
-                    if (req.elements[i].type == 'checkbox') {
-                            if (req.elements[i].checked == true) {
-                                cbNames += req.elements[i].value + ', ';
-                                cbArray.push(req.elements[i].value);
-                                count++;
-                            }
-                        }
-                    }
-                    if(count > 0){
-                        cbNames = cbNames.replace(/,\s*$/, ""); //remove the last comma if 1 or more checkboxes selected
-                    }
-                    else{
-                        return;
-                    }
-						 var sql = `insert into course values ('${cbArray[i]}' , '${cbArray[i+1]}' ,'${cbArray[i+2]}',
-						 '${cbArray[i+3]}', '${cbArray[i+4]}')`;
-  connection.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("Registration successful");
-});
-			}
+//PETROS and GORGE
+router.post('/registration' , (req , res) => {
+
+    var cbNames = '';
+    var cbArray = [];
+    var count = 0;
+
+    for (var i = 0; i < req.elements.length; i++) {
+        console.log("In the for loop.", i);
+        if (req.elements[i].type == 'checkbox') {
+            if (req.elements[i].checked == true) {
+                cbNames += req.elements[i].value + ', ';
+                cbArray.push(req.elements[i].value);
+                count++;
+            }
+        }
+    }
+    if(count > 0)
+        cbNames = cbNames.replace(/,\s*$/, ""); //remove the last comma if 1 or more checkboxes selected
+    else return;
+
+    let sql = `insert into course values ('${cbArray[i]}' , '${cbArray[i+1]}' ,'${cbArray[i+2]}', '${cbArray[i+3]}', '${cbArray[i+4]}')`;
+    connection.query(sql, (err, result) => {
+        if (err) return console.log(err.message);
+        console.log("Registration successful");
+    });
 
 });
-
-
-        
-
-
 
 
 

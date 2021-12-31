@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Course Registration</title>
-    <link rel="stylesheet" href="registration.css">
-</head>
+    <head>
+        <title>Course Registration</title>
+        <link rel="stylesheet" href="/assets/css/student/Registration.css">
+        <!--This link the the html with css file-->
+        <link rel="stylesheet" href="/assets/css/student/HeaderOFCourse.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-<body>
-    <header>
-        <h1>MEKDEM</h1>
-        <p>Student Portal</p>
-    </header>
-    <nav>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-    </nav>
-    <section>
-        <article>
+    </head>
+
+    <body>
+        <%- include('../partials/studentnav') %>
+
+        <div class="content">
+            <!--The main content of the page-->
             <h2>Welcome To Course Registration </h2>
             <p>Please select the courses for registration</p>
-            <div class="table_decorator">
-			<form action = "/registration" method="POST" >
-                <table id="Table1" cellspacing=>
-                    <tr>
-                        <th>&nbsp;</th>
-                        <th>Course Title</th>
-                        <th>Course Code</th>
-                        <th>ECTS</th>
-                        <th>Credit Hours</th>
-                        <th>Module Name</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="Code1" value="['Code1','Title1',5,3,'Module1']"  /></td>
-                        <td>Title1</td>
-                        <td>Code1</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td>Module1</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="Code2" alue="['Code2','Title2',5,3,'Module2']"  /></td>
-                        <td>Title2</td>
-                        <td>Code2</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td>Module2</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="Code3" value="['Code3','Title3',5,3,'Module3']"  /></td>
-                        <td>Title3</td>
-                        <td>Code3</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td>Module3</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="Code4" value="['Code4','Title4',5,3,'Module4']"  /></td>
-                        <td>Title4</td>
-                        <td>Code4</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td>Module4</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="Code5" value="['Code5','Title5',5,3,'Module5']" /></td>
-                        <td>Title5</td>
-                        <td>Code5</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td>Module5</td>
-                    </tr>
-                </table>
-                
-                    <input type="submit" value="Submit"/>
-					</form>
-            
-            </div>
-        </article>
-        <aside>
-            <ul>
-                <li><a class="active" href="Course Registration.html">Course Registration</a></li>
-                <li><a href="Course Checklist.html">Course Checklist</a></li>
-                <li><a href="Course Material.html">Course Material</a></li>
-                <li><a href="Add and Drop.html">ADD and Drop</a></li>
-            </ul>
-        </aside>
-    </section>
-    <footer>
-        <p>Footer</p>
-    </footer>
-</body>
+            <form action="/registration" method="post">
+                <div class="table_decorator">
+                    <table id="Table1">
+                        <tr>
+                            <th> &nbsp; </th>
+                            <th>Course Title</th>
+                            <!--The header row of the table-->
+                            <th>ECTS</th>
+                            <th>Credit Hours</th>
+                            <th>Module Name</th>
+                        </tr>
+                        <%if (msg != null && msg.length !== 0) {%>
+                            <% msg.forEach(cmsg => {%>
+                                <tr>
+                                    <td><input type="checkbox" name="<%= cmsg.NAME%>"/></td>
+                                    <td><%= cmsg.NAME%></td>
+                                    <td><%= cmsg.ECTS%></td>
+                                    <td><%= cmsg.CreditHour%></td>
+                                    <td><%= cmsg.ModuleName%></td>
+                                </tr>
+                            <%})%>
+                        </table>
+                        <%} else {%>
+                        </table>
+                            <p>No course available!</p>
+                        <% } %>
+                </div>
+                <br>
+                <input type="submit" value="Submit">
+                <br><br><br>
+            </form>
 
+            <!--The Submit button-->
+        </div>
+
+        <div class="footer">
+            <!--The footer of the the page-->
+            <div class="container">
+                <div class="footer_bottom">
+                    <small class="end">
+                        Copyright © 2021 by Mekdim. All rights reserved.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick = function () {
+                document.body.classList.toggle("dark-theme");
+                if (document.body.classList.contains("dark-theme")) {
+                    icon.src = "../../assets/images/light2.png";
+                    meklog.src = "../../assets/images/logo3.png";
+
+                } else {
+                    icon.src = "../../assets/images/dark2.png";
+                    meklog.src = "../../assets/images/logo.png";
+
+                }
+
+            }
+        </script>
+    </body>
 </html>
