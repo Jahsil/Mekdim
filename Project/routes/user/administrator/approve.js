@@ -89,14 +89,14 @@ where course.name= "${req.body.CourseName}" `;
 
     });
 
-router.get('/admin/event/approval'   , (req , res) => {
+router.get('/admin/event/approval'  ,  authentication.isAdminLoggedIn   , (req , res) => {
     let sql = ` select * from events where status = "Not approved" `;
     connection.query(sql , (error , result)=>{  
          res.render('administrator/Event_approval' , { event : result}); 
     }); 
 });
 
-router.get('/admin/event/approval/:EventName'  , (req , res) => {
+router.get('/admin/event/approval/:EventName' , authentication.isAdminLoggedIn  , (req , res) => {
     let sql =  `UPDATE events SET status="approved" WHERE EventName = "${req.params.EventName }" `;
     connection.query(sql , (error , result) => {  
         res.redirect('/admin/event/approval');
