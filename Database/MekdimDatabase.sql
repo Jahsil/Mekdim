@@ -212,7 +212,7 @@ CREATE TABLE `clubs` (
 
 LOCK TABLES `clubs` WRITE;
 /*!40000 ALTER TABLE `clubs` DISABLE KEYS */;
-INSERT INTO `clubs` VALUES ('Red Cross','Approved','11-11-11',NULL,NULL,NULL,NULL),('What','approved','11-11-11',NULL,NULL,NULL,NULL);
+INSERT INTO `clubs` VALUES ('Red Cross','approved','11-11-11',NULL,NULL,NULL,NULL),('What','approved','11-11-11',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `clubs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -866,7 +866,7 @@ CREATE TABLE `lostid` (
 
 LOCK TABLES `lostid` WRITE;
 /*!40000 ALTER TABLE `lostid` DISABLE KEYS */;
-INSERT INTO `lostid` VALUES ('Atr/1111/11','mike','2011','111','11/11/11','approved'),('Atr/1112/12','mike12','akldf','kljasdf','akljf',''),('Atr/1212/11','mike','akldf','kljasdf','akljf','approved'),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy','approved'),('ATR/3333/11','nati nati','2011','Elec','11/11/2001','approved');
+INSERT INTO `lostid` VALUES ('Atr/1111/11','mike','2011','111','11/11/11','approved'),('Atr/1112/12','mike12','akldf','kljasdf','akljf','Not approved'),('Atr/1212/11','mike','akldf','kljasdf','akljf','approved'),('Atr/1232/12','mike','2021','elec','dd/mm/yyyy','approved'),('ATR/3333/11','nati nati','2011','Elec','11/11/2001','approved');
 /*!40000 ALTER TABLE `lostid` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1020,8 +1020,34 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','deactive','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','deactive','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7');
+INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('Atr/1131/11','IDR/1111/11','male','2011-11-11','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7'),('Atr/6777/11','NathanZK','male','2011-11-11','6666','1212@gmail.com','09111111','ElecEng','2011','2011','active','4');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student_course_registration`
+--
+
+DROP TABLE IF EXISTS `student_course_registration`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `student_course_registration` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `studentid` varchar(45) NOT NULL,
+  `courseid` varchar(45) NOT NULL,
+  `adminVerdict` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student_course_registration`
+--
+
+LOCK TABLES `student_course_registration` WRITE;
+/*!40000 ALTER TABLE `student_course_registration` DISABLE KEYS */;
+INSERT INTO `student_course_registration` VALUES (3,'Atr/1111/11','ECEB','pending');
+/*!40000 ALTER TABLE `student_course_registration` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1117,4 +1143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-30  1:06:48
+-- Dump completed on 2021-12-31 10:59:28
