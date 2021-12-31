@@ -105,6 +105,23 @@ router.get('/admin/event/approval/:EventName' , authentication.isAdminLoggedIn  
 
 
 
+//MARKOS BEYENE  ATR/1689/11
+router.get('/admin/financial/approval'  , authentication.isAdminLoggedIn , (req , res) => {
+    let sql = ` select * from financialaid where Status = "Not approved" `;
+    connection.query(sql , (error , result)=>{  
+         res.render('administrator/financialapproval' , { finance : result}); 
+    }); 
+});
+
+//MARKOS BEYENE  ATR/1689/11
+router.get('/admin/financial/approval/:id' , authentication.isAdminLoggedIn  , (req , res) => {
+    let sql =  ` UPDATE financialaid SET Status ="approved" WHERE ID = "${req.params.id}" `;
+    connection.query(sql , (error , result) => {  
+        res.redirect('/admin/financial/approval');
+    });
+});
+
+
 
 module.exports = router;
 
