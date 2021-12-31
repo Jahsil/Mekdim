@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Club Creation</title>
+  <link rel="stylesheet" href="/nav/adminNav.css">
+  <link rel="stylesheet" href="/assets/css/admin/Clubs.css">
+
+
+</head>
+<body>
+
+<%- include('../partials/adminnav') %>
+<div class="body">
+  <div class="creationReq">
+    <p>List of Financial requests waiting for an approval:</p>
+<table id="club">
+   <tr>
+     <th>ID</th>
+     <th>Student</th>
+     <th>Reason</th>
+     <th>Admin approval </th>
+   </tr>
+   
+   <% if (finance !== 0) { %>
+      <% finance.forEach( finance => { %>
+      <tr>
+        <td> <%= finance.ID %>  </td>
+        <td> <%= finance.StudentFinanced %>  </td>
+        <td> <%= finance.Reason %>  </td>
+        <td><a href="approval/<%=  finance.ID %>">approve</a></td> 
+      </tr>
+      <% }) %>
+    </table>
+    <% } else { %>
+    </table>
+    <p> There is no Student asked for financia aid </p>
+   
+    <%  } %>
+
+
+ 
+</table>
+</div>
+</div>
+<script>
+
+  var icon =document.getElementById("icon");
+  icon.onclick= function(){
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+      meklog.src="/assets/images/logo3.png";
+      landinglogo.src="/assets/images/logo4.png";
+
+    
+    } else{
+      meklog.src="/assets/images/logo.png";
+      landinglogo.src="/assets/images/logo2.png";
+      
+    }
+  
+  }
+  
+    </script>
+
+</body>
+<footer class="footer">
+      
+  <div class="container">
+    
+    <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+    
+</div>
+  
+
+</footer>
+</html>
+
+
