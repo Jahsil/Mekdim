@@ -1,0 +1,53 @@
+<!-- /* Abdennasir Taju ATR/4057/11 */ -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head> 
+
+<title> Financial Aid</title>
+<meta charset="utf-8"/> 
+<meta name = "view port" content = "width = device-width, initial-scale=1" /> 
+<link rel="stylesheet" href="/assets/css/student.css">
+<link rel="stylesheet" href="/assets/css/student/financialAid.css" type="text/css">
+
+<link rel="stylesheet" href="/assets/css/student/HeaderFooter.css">
+</head>
+
+<body> 
+
+  <%- include('../partials/studentnav') %>
+
+<div align = "center" class="body"><h1> Financial Aid Application </h1> </div>  <br>
+
+<form align ="center"  action="/financial"  method="POST"> 
+<div >  
+
+   <div>Reasons for applying <input name = "reason" type = "text" id= "message"> </div> <br>
+
+   <%  if (msg == 1 )  {  %>
+          <p> Sorry error occured </p>
+   <%  } else if (msg == 2 )  {  %>
+          <p> Your form has been submitted </p>
+   <%  } %>
+
+   <div> <input  name= "submit" value ="submit" type = "submit"> </div> 
+
+</div>
+</form>
+
+ <footer class="footer">
+      
+      <div class="container">
+        
+        <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+        
+    </div>
+      
+    </footer>
+</body>
+
+
+
+</html>
