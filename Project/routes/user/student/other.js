@@ -119,5 +119,29 @@ router
 
 
 
+//MARKOS BEYENE ATR/1689/11
+router.get('/financial' , authentication.isStudentLoggedIn ,(req , res)=> {
+     res.render('student/financialAid' , {msg:0});        
+});
+
+//MARKOS BEYENE ATR/1689/11
+router.post('/financial', authentication.isStudentLoggedIn , (req , res) => { 
+    let sql = `INSERT INTO financialaid (StudentFinanced  , Reason , Status ) VALUES ('${req.userData.StudentID}', '${req.body.reason}', 'Not approved') `;
+   
+    connection.query(sql , (err , result) => {
+     if (err) {
+           console.log(err);
+           res.render('student/financialAid',  {msg:1}); 
+     } else {
+         res.render('student/financialAid' , {msg:2 }); 
+      }
+  });
+});
+
+
+
+
+
+
 
 module.exports = router;
