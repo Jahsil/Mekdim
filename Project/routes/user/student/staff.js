@@ -76,7 +76,17 @@ router.post('/contactInstructor' , authentication.isStudentLoggedIn , (req , res
 
 //KALAB YIBELTAL  ATR/5464/11
 router.get("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
-    res.render("student/contactdephead", { error: false});
+    var contentr
+    var authorr
+    //adding 'quote of the day' to attract the user
+    fetch("https://api.quotable.io/random")
+    .then((data) => data.json())
+    .then((item) => {
+      contentr = item.content;
+      authorr = item.author;
+      res.render("student/contactdephead", { content: contentr, author:authorr, page:true, error: false});
+    });
+    
     });
 
 //KALAB YIBELTAL  ATR/5464/11
