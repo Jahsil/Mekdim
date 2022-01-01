@@ -38,6 +38,47 @@ router.get('/CourseChecklist', authentication.isStudentLoggedIn ,(req , res)=> {
 
 });
 
+
+
+//KALAB YIBELTAL  ATR/5464/11
+router.get("/adddrop", authentication.isStudentLoggedIn,(req, res) => {
+    var sql = "SELECT * FROM course";
+      //fetching the available courses from database and sending to the front end
+      connection.query(sql, (err, result) => {
+        if (result !== undefined && result.length > 0) {
+          res.render("student/adddrop", { courses: result , page: true});
+        } else {
+          res.render("student/adddrop", { courses: 0,  page: true});
+        }
+      });
+    });
+  router.post("/adddrop", authentication.isStudentLoggedIn,(req, res)=>{
+    if(req.body.sub=="ADD"){
+      //Adding the course to the student while the approval is pending from admin
+      var sql='INSERT into student_course_registration VALUES (NULL,"'+req.userData.StudentID+'", "'+req.body.course+'" ,"pending")';
+      connection.query(sql, (err, result) => {
+        if (result !== undefined && result.length > 0) {
+          res.render("student/adddrop", { courses: result , page: false});
+          console.log("added");
+        } else {
+          res.render("student/adddrop", { courses: 0,  page: false});
+        }
+      });
+    }
+    else if(req.body.sub=="DROP"){
+      //deleting the student from a course
+      var sql="delete from student_course_registration where studentid ='"+req.userData.StudentID+"' and courseid='"+req.body.course+"'";
+      connection.query(sql, (err, result) => {
+        if (result !== undefined && result.length > 0) {
+          console.log("drroped");
+          res.render("student/adddrop", { courses: result , page: false, error: false});
+        } else {
+          res.render("student/adddrop", { courses: 0,  page: false, error: false});
+        }
+      });
+    }
+  })
+
 //PETROS and GORGE
 router.get('/registration', authentication.isStudentLoggedIn, (req , res)=> {
     let x = req.userData.StudentID;
