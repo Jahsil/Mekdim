@@ -69,6 +69,7 @@ CREATE TABLE `assessments` (
 
 LOCK TABLES `assessments` WRITE;
 /*!40000 ALTER TABLE `assessments` DISABLE KEYS */;
+INSERT INTO `assessments` VALUES ('Atr/1111/11','45','23','12','22','100');
 /*!40000 ALTER TABLE `assessments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -730,7 +731,7 @@ CREATE TABLE `financialaid` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `StudentFinanced` varchar(45) NOT NULL,
   `Reason` varchar(200) NOT NULL,
-  `SupportingFilePath` varchar(100) NOT NULL,
+  `Status` varchar(100) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `StudentFinanced_idx` (`StudentFinanced`),
   CONSTRAINT `StudentFinanced` FOREIGN KEY (`StudentFinanced`) REFERENCES `student` (`StudentID`)
@@ -1166,4 +1167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-02  1:21:25
+-- Dump completed on 2022-01-02  1:55:25
