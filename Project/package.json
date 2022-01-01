@@ -9,7 +9,7 @@
     "start": "node main"
   },
   "keywords": [],
-  "author": "",
+  "author": "Students of 4th year Electrical and computer engineering, AAiT",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
