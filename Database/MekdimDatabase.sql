@@ -54,15 +54,12 @@ DROP TABLE IF EXISTS `assessments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `assessments` (
-  `AssessmentName` varchar(45) NOT NULL,
-  `Students` varchar(45) NOT NULL,
-  `Courses` varchar(45) NOT NULL,
-  `Result` double NOT NULL,
-  PRIMARY KEY (`AssessmentName`),
-  KEY `StudentID_idx` (`Students`),
-  KEY `Courses_idx` (`Courses`),
-  CONSTRAINT `Courses` FOREIGN KEY (`Courses`) REFERENCES `course` (`CourseID`),
-  CONSTRAINT `Students` FOREIGN KEY (`Students`) REFERENCES `student` (`StudentID`)
+  `studentId` varchar(45) NOT NULL,
+  `assessment1` varchar(45) DEFAULT NULL,
+  `assessment2` varchar(45) DEFAULT NULL,
+  `assessment3` varchar(45) DEFAULT NULL,
+  `assessment4` varchar(45) DEFAULT NULL,
+  `evaluaionGrade` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -597,7 +594,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES ('ElecEng','ElectricalEngineering','ERT13');
+INSERT INTO `department` VALUES ('biomed','Biomed','BRT13'),('Civil','Civil','CRT13'),('ElecEng','ElectricalEngineering','ERT13'),('SME','Mechanical','MRT13'),('soft','Software','SRT13');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -718,7 +715,7 @@ CREATE TABLE `eventschedule` (
 
 LOCK TABLES `eventschedule` WRITE;
 /*!40000 ALTER TABLE `eventschedule` DISABLE KEYS */;
-INSERT INTO `eventschedule` VALUES (' bfbaf ','2021-12-01','bdakjbdj','15:51','15:51','hgfhg'),(' exam ','2021-12-20','hall','00:00','15:04','no busy'),(' final exam ','2021-12-29','new','15:59','16:59','check 123'),(' gyyr ','2021-12-03','bdakjbdj','15:51','15:51','hgfhg'),(' SE mid exam ','2021-12-16','E118 Hall','19:30','22:00','none'),(' SE mid exam2 ','2021-12-17','nb','15:21','18:21','desc'),(' SE mid exam3 ','2021-12-22','nb2','20:30','16:00','not necessary');
+INSERT INTO `eventschedule` VALUES (' bfbaf ','2021-12-01','bdakjbdj','15:51','15:51','hgfhg'),(' exam ','2021-12-20','hall','00:00','15:04','no busy'),(' final exam ','2021-12-29','new','15:59','16:59','check 123'),(' gyyr ','2021-12-03','bdakjbdj','15:51','15:51','hgfhg'),(' hhhhhhh ','2021-12-08','HHHH','00:12','02:21','It is awesome'),(' SE mid exam ','2021-12-16','E118 Hall','19:30','22:00','none'),(' SE mid exam2 ','2021-12-17','nb','15:21','18:21','desc'),(' SE mid exam3 ','2021-12-22','nb2','20:30','16:00','not necessary');
 /*!40000 ALTER TABLE `eventschedule` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1020,7 +1017,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('Atr/1131/11','IDR/1111/11','male','2011-11-11','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7'),('Atr/6777/11','NathanZK','male','2011-11-11','6666','1212@gmail.com','09111111','ElecEng','2011','2011','active','4');
+INSERT INTO `student` VALUES ('Atr/0000/11','Lillian','male','2011-11-11','0000','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('Atr/0011/11','Natha','male','2011-11-11','1111','1212@gmail.com','09111111','biomed','2011','2011','valid','4'),('Atr/0505/11','NathanZK','male','2011-11-11','5555','1212@gmail.com','09111111','SME','2011','2011','valid','4'),('Atr/1111/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('Atr/1131/11','IDR/1111/11','male','2011-11-11','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('Atr/1212/12','john john','male','2012-12-12','1111','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('atr/2222/11','nati nati','male','2001-11-11','1111','nathanzelalem100@gmail.com','1111111111111','ElecEng','2011','2011','active','4'),('ATR/3333/11','Ivan Jerganov','Male','1999-01-01','IvanD',NULL,NULL,'ElecEng','2015','2021','Active','3.7'),('Atr/4444/11','Joshua','male','2011-11-11','4444','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('ATR/5555/11','Bisrat','male','2011-11-11','5555','1212@gmail.com','09111111','ElecEng','2011','2011','valid','4'),('Atr/6777/11','NathanZK','male','2011-11-11','6666','1212@gmail.com','09111111','ElecEng','2011','2011','active','4');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1048,6 +1045,32 @@ LOCK TABLES `student_course_registration` WRITE;
 /*!40000 ALTER TABLE `student_course_registration` DISABLE KEYS */;
 INSERT INTO `student_course_registration` VALUES (3,'Atr/1111/11','ECEB','pending');
 /*!40000 ALTER TABLE `student_course_registration` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `studentofinstructor`
+--
+
+DROP TABLE IF EXISTS `studentofinstructor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `studentofinstructor` (
+  `year` int NOT NULL,
+  `course` varchar(45) NOT NULL,
+  `department` varchar(45) NOT NULL,
+  `section` varchar(45) NOT NULL,
+  `Stream` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `studentofinstructor`
+--
+
+LOCK TABLES `studentofinstructor` WRITE;
+/*!40000 ALTER TABLE `studentofinstructor` DISABLE KEYS */;
+INSERT INTO `studentofinstructor` VALUES (5,'Micro','ECEG','4A','Computer');
+/*!40000 ALTER TABLE `studentofinstructor` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1143,4 +1166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-31 10:59:28
+-- Dump completed on 2022-01-02  1:21:25
