@@ -59,18 +59,29 @@ router
     let bdr1 = req.body.dorm1;
     let bdr2 = req.body.dorm2;
     let bdr3 = req.body.dorm3;
-    let sql = `UPDATE dormitoryreq 
-    SET preferedComp1 = "${bdr1}", preferedComp2 = "${bdr2}", preferedComp3= "${bdr3}"
-    WHERE StuduentD = "${adr}"`;
+
+    let sql = `INSERT INTO dormitoryreq (StuduentD, preferedComp1, preferedComp2, preferedComp3) VALUES
+                ("${adr}", "${bdr1}", "${bdr2}", "${bdr3}")`;
     connection.query(sql , (error , result) => {
         if (error) {
-            console.error("error: " + error.message);
-            res.render("student/Application", {msg: 1});
+            sql = `UPDATE dormitoryreq SET preferedComp1 = "${bdr1}", preferedComp2 = "${bdr2}", 
+                    preferedComp3 = "${bdr3}" WHERE StuduentD = "${adr}"`;
+            connection.query(sql, (err, re) => {
+                if (err) return console.log(err.message);
+                console.log("Updating ")
+            });
+            res.render("student/Application", {msg: "Updated Your previous Choices."});
+            return console.error(error.message);
         }
-        sql = `UPDATE dormitory SET RequestStatus = "pending"`;
+        sql = `UPDATE dormitory SET RequestStatus = "pending" WHERE StudentD = "${adr}"`;
         connection.query(sql, (error, result) => {
             if(error) return console.log(error.message);
-            console.log("updated the dormitory table.");
+            if (result.affectedRows === 0){
+                sql = `INSERT INTO dormitory (StudentD, RequestStatus) VALUES ("${adr}", "pending")`;
+                connection.query(sql, (er, re) => {
+                    if (er) return console.log(er.message);
+                });
+            }
         });
         res.redirect("/dormitory/placement");
      });
