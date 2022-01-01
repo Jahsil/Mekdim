@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const connection = require('../../../middleware/connection');
 const authentication = require('../../../middleware/authentication.js');
-
+const fetch= require('node-fetch');
 const formidable = require('formidable');
 const fs = require('fs');
 const path = '../../../public/';
@@ -76,8 +76,8 @@ router.post('/contactInstructor' , authentication.isStudentLoggedIn , (req , res
 
 //KALAB YIBELTAL  ATR/5464/11
 router.get("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
-    var contentr
-    var authorr
+    let contentr;
+    let authorr;
     //adding 'quote of the day' to attract the user
     fetch("https://api.quotable.io/random")
     .then((data) => data.json())
@@ -190,7 +190,7 @@ router.get('/projectandassigmnet' , authentication.isStudentLoggedIn, (req , res
       for(let i = 0; i < result.length; i++){
           let sql1 = `SELECT * FROM assignments WHERE Course = "${result[i].CourseChosen}"`;
           connection.query(sql1, (err, res1) => {
-              if(res1.length == 0){
+              if(res1.length === 0){
                   return;
               } 
 
@@ -199,10 +199,10 @@ router.get('/projectandassigmnet' , authentication.isStudentLoggedIn, (req , res
                   path: res1[0].AssignmentPath
               });
 
-              if (i == result.length - 1){
+              if (i === result.length - 1){
                   // console.log("sending assignments ...");
                   // console.log(temp);
-                  if(temp.length == 0){
+                  if(temp.length === 0){
                       res.render("student/projectandassigmnet", {msg: null});
                       return;
                   }
@@ -224,7 +224,7 @@ router.get("/projandassSubmition", authentication.isStudentLoggedIn, (req, res) 
       for(let i = 0; i < result.length; i++){
           let sql1 = `SELECT * FROM assignments WHERE Course = "${result[i].CourseChosen}"`;
           connection.query(sql1, (err, res1) => {
-              if(res1.length == 0){
+              if(res1.length === 0){
                   return;
               } 
 
@@ -233,13 +233,11 @@ router.get("/projandassSubmition", authentication.isStudentLoggedIn, (req, res) 
                   path: res1[0].AssignmentPath
               });
 
-              if (i == result.length - 1){
-                  
-                  if(temp.length == 0){
+              if (i === result.length - 1){
+                  if(temp.length === 0){
                       res.render("student/submitpage", {msg: null});
                       return;
                   }
-                 
                   res.render('student/submitpage', {msg: temp});
               }
 
@@ -264,8 +262,7 @@ router.post("/projandassSubmition", authentication.isStudentLoggedIn, (req, res)
       });
       let sql = `INSERT into assignmentsubmission (Student, Assignment, course) VALUES ("${req.userData.StudentID}", "${newpath}", "${fields.courses}")`;
       connection.query(sql, (error, result) => {
-          if(error) return // console.log(error.message);
-          
+          if(error) return console.log(error.message);
       });
   });
 });

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grade submit and change </title>
+<link rel="stylesheet" href="../../assets/css/instructor/Inbox.css">
+</head>
+<body>
+<%- include('../partials/instructornav') %>
+  <div class="dark">
+  <br><br>
+<h1>Table of student grades</h1>
+
+<br><br>
+<table>
+  <tr>
+    <th>StudentID</th>
+    <th>  Ex. Final exam Assessment1</th>
+    <th>Assessment2</th>
+    <th>Assessment3</th>
+    <th>Assessment4</th>
+    <th>Evaluation grade</th>
+    
+  </tr>
+  <tr>
+    <td> <form action="/gradeSubmit2" method="post">
+      <input type="text" id="studentID" name="StudentID"><br><br>
+       </td>
+    <td>
+  <input type="text" id="nameOfAssesments" name="nameOfAssesments"><br><br>
+ 	</td>
+   <td>
+    <input type="text" id="nameOfAssesments2" name="nameOfAssesments2"><br><br>
+     </td>
+     <td>
+      <input type="text" id="nameOfAssesments3" name="nameOfAssesments3"><br><br>
+       </td>
+       <td>
+        <input type="text" id="nameOfAssesments4" name="nameOfAssesments4"><br><br>
+         </td>
+    <td>
+  <input type="number" id="evaluationGrade" name="evaluationGrade"><br><br>
+ 	</td>
+    
+    </tr>
+     <tr>
+    </tr>
+</table>
+<div id="div_b">
+<input type="submit" value="Submit">
+    </form>
+</div>
+<footer class="footer">
+
+    <div class="container">
+
+      <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+
+  </div>
+
+  </footer>
+  </div>
+ <script>
+
+  var icon =document.getElementById("icon");
+  icon.onclick= function(){
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+    
+      meklog.src="../../assets/images/logo3.png";
+      img.src="../../assets/images/teacher1.png";
+      
+    
+    } else{
+      meklog.src="../../assets/images/logo.png";
+      
+    }
+  
+  }
+  
+    </script>
+</body>
+</html>
+

@@ -36,6 +36,7 @@ const StudentGrade = require('./routes/user/student/grade');
 
 const InstructorCourse = require('./routes/user/instructor/courses');
 const InstructorassignmentsAndProjejects = require('./routes/user/instructor/assignmentsAndProjejects');
+const InstructorGrade = require("./routes/user/instructor/grade");
 
 //Routes
 
@@ -62,6 +63,7 @@ app.use(StudentGrade);
 
 app.use(InstructorCourse);
 app.use(InstructorassignmentsAndProjejects);
+app.use(InstructorGrade);
 
 
 app.listen(port , ()=>console.log("server running on port ", port));
