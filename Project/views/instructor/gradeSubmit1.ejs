@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grade Submit</title>
+    <link rel="stylesheet" href="../../assets/css/instructor/Inbox.css">
+  </head>
+<body>
+<%- include('../partials/instructornav') %>
+  <div class="dark">
+<h1>How many assignments did you make including final and mid exams?</h1>
+<br><br>
+
+<form action="/gradeSubmit1" method="post">
+  <label for="numberOfAssesments">Number of assesments:</label>
+  <input type="number" id="numberOfAssesments" name="numberOfAssesments"><br><br>
+    <input type="submit" value="Submit">
+<!--  <button><a href="/gradeSubmit2"> Submit </a> </button>-->
+   
+</form>
+<footer class="footer">
+
+    <div class="container">
+
+      <div class="footer_bottom"><small class="end">Copyright © 2021 by Mekdim. All rights reserved.</small> </div>
+
+  </div>
+
+  </footer>
+  </div>
+<script>
+
+  var icon =document.getElementById("icon");
+  icon.onclick= function(){
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+    
+      meklog.src="../../assets/images/logo3.png";
+      img.src="../../assets/images/teacher1.png";
+      
+    
+    } else{
+      meklog.src="../../assets/images/logo.png";
+      
+    }
+  
+  }
+  
+    </script>
+
+</body>
+</html>
