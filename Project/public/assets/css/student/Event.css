@@ -34,12 +34,12 @@
   grid-column: span 3;
   text-align: left;
   font-style: bold;
-  background-color: var(--quinary-color);
+  background-color: var(--quaternary-color);
 }
 
 .content{/* IT shows the property of Content*/
   grid-column: span 9;
-  background-color: var(--quinary-color);
+  background-color: var(--quaternary-color);
   text-align: center;
 }
 .footer{/*Describes the footer Property of the page*/
@@ -72,7 +72,8 @@ body{/*The property of the body is shown here*/
     background-color: var(--quinary-color);
     padding: 20px;
     text-align: left;
-    width: 25%;
+    width: 90%;
+    height: 50%;
     margin-top: 6px;
  }
  .exam_content{/*property of the exam content */
@@ -80,7 +81,7 @@ body{/*The property of the body is shown here*/
     background-color: var(--quinary-color);
     padding: 20px;
     text-align: left;
-    width: 25%;
+    width: 50%;
     margin-top: 6px;
  }
  .prelude{/*Property of the prelude class*/
@@ -115,3 +116,27 @@ input[type=button] {/*property of input button*/
   }
   input[type=button]:hover {/*property of the input button when the cursor hover over it */
     background-color: var(--primary-color);}
+    h4{
+      background-color: var(--quinary-color);
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+   p{
+     background-color: var(--quinary-color);
+     margin-left: 25%;
+     margin-right: 25%;
+   }
+
+   table {/*Property of the table*/
+    border-collapse: collapse;
+    width: 80%;
+  }
+  th {/*property of header in the table*/
+  background-color: var(--secondary-color);
+  color: var(--quinary-color);
+}
+  th, td {/*property of the component of the table*/
+    text-align: left;
+    padding: 8px;
+    width: 120px;
+  }
