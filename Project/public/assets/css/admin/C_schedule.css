@@ -35,12 +35,12 @@
   grid-column: span 3;
   text-align: left;
   font-style: bold;
-  background-color: var(--quinary-color);
+  background-color: var(--quaternary-color);
 }
 
 .content{/* IT shows the property of Content*/
   grid-column: span 9;
-  background-color: var(--quinary-color);
+  background-color: var(--quaternary-color);
   text-align: center;
 }
 .footer{/*Describes the footer Property of the page*/
@@ -76,7 +76,7 @@ body{/*The property of the body is shown here*/
   background-color: var(--secondary-color);
   border: 2px solid  ;
   border-radius: 4px;
-  background-color: white;
+  background-color:var(--quinary-color);
   font-size: 16px;
   resize: none;
 }
@@ -86,6 +86,7 @@ input[type=text], select, textarea {/*Property of the input of text and select, 
   border: 1px solid var(--quaternary-color);
   border-radius: 4px;
   resize: vertical;
+  background-color: var(--quinary-color);
 }
 input[type=date],input[type=time] {/*Property of the input when it is time and date*/
   width: 50%;
@@ -93,6 +94,7 @@ input[type=date],input[type=time] {/*Property of the input when it is time and d
   border: 1px solid var(--quaternary-color);
   border-radius: 4px;
   resize: vertical;
+  background-color: var(--quinary-color);
 }
 label {/* Propert of the label*/
   padding: 12px 12px 12px 0;
@@ -131,13 +133,15 @@ input[type=submit]:hover {/*propert of the submit button when the cursor hover o
       float: left;
       width: 25%;
       margin-top: 6px;
+      background-color: var(--quinary-color);
     }
     
     .col-75 {/*The property of the right column in the content*/
       text-align: left;
       float: left;
-      width: 65%;
+      width: 75%;
       margin-top: 6px;
+      background-color: var(--quaternary-color);
     }
     .row:after {/*Property of the row in the content*/
       content: "";
@@ -163,3 +167,14 @@ table {/*Property of the table */
       padding: 8px;
       width: 120px;
     }
+
+    h2{
+      background-color: var(--quinary-color);
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+   p{
+     background-color: var(--quinary-color);
+     margin-left: 25%;
+     margin-right: 25%;
+   }
