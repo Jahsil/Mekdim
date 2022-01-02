@@ -3,7 +3,7 @@
 .wrapper{/*it divided the whole page into three rows and 12 columns*/
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows:  100px 1000px 60px;
+  grid-template-rows:  100px 560px 60px;
 }
 :root{
   --primary-color:#266777 !important;
@@ -35,13 +35,14 @@
   grid-column: span 3;
   text-align: left;
   font-style: bold;
-  background-color: var(--quinary-color);
+  background-color: var(--quaternary-color);
 }
 
 .content{/* IT shows the property of Content*/
   grid-column: span 9;
-  background-color: var(--quinary-color);
+  background-color: var(--quaternary-color);
   text-align: center;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
 .footer{/*Describes the footer Property of the page*/
 grid-column: span 12;
@@ -79,12 +80,15 @@ body{/*The property of the body is shown here*/
     text-align: left;
     padding: 8px;
     width: 120px;
+    height: 40px;
     border-bottom: 1px solid var(--tertiary-color);
   }
-  label {/*property of the label*/
-    padding: 12px 12px 12px 0;
+  p {/*property of the label*/
+    padding: 10px 10px 10px 0;
     margin-left: auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  
+    
 }
 
 
@@ -96,4 +100,19 @@ body{/*The property of the body is shown here*/
   width: 20%;;
   padding:15px;
  margin: auto;
+}
+
+#checklist{
+  background-color:var(--quinary-color) ;
+  margin-right: 5%;
+}
+ h2{
+   background-color: var(--quinary-color);
+   margin-left: 25%;
+   margin-right: 25%;
+ }
+p{
+  background-color: var(--quinary-color);
+  margin-left: 25%;
+  margin-right: 25%;
 }
