@@ -82,13 +82,17 @@ router.get("/adddrop", authentication.isStudentLoggedIn,(req, res) => {
 //PETROS and GORGE
 router.get('/registration', authentication.isStudentLoggedIn, (req , res)=> {
     let x = req.userData.StudentID;
-    let sql1 = `SELECT * FROM student WHERE StudentID = "{x}"`;
+    let sql1 = `SELECT * FROM student_semister WHERE student_id = "{x}"`;
     connection.query(sql1, (err, result) => {
         if (err) return console.log(err.message);
-        let sql = `SELECT * FROM course WHERE semester = "{result[0].semester}"`;
+        let sql = `SELECT * FROM course_semister WHERE semister = "{result[0].semister}"`;
         connection.query(sql, (error, result1) => {
             if (error) return console.log(error.message);
-            res.render('student/registration' , {msg: result1});
+            let sql = `SELECT * FROM course WHERE CourseID = "{result1[0].course_id}"`;
+            connection.query(sql, (error, result2) => {
+                if (error) return console.log(error.message);
+                res.render('student/registration' , {msg: result2});
+            });
         });
     });;
 });
@@ -96,15 +100,9 @@ router.get('/registration', authentication.isStudentLoggedIn, (req , res)=> {
 //PETROS and GORGE
 router.post('/registration', authentication.isStudentLoggedIn, (req , res) => {
     let x = req.userData.StudentID;
-    let sql1 = `SELECT * FROM student WHERE StudentID = "{x}"`;
+    let sql1 = `INSERT INTO course_student (StudentInCourse, CourseChosen, CourseGrade) VALUES ("{req.userData.StudentID}", "{req.body.course}", "F")`;
     connection.query(sql1, (err, result) => {
         if (err) return console.log(err.message);
-
-        let sql = `SELECT * FROM course WHERE semester = "{result[0].semester}"`;
-        connection.query(sql, (error, result1) => {
-            if (error) return console.log(error.message);
-            // not implemented... couldn't do it
-        });
     });;
 
 });
