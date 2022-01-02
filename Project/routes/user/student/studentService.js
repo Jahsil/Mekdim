@@ -68,14 +68,14 @@ router
                     preferedComp3 = "${bdr3}" WHERE StuduentD = "${adr}"`;
             connection.query(sql, (err, re) => {
                 if (err) return console.log(err.message);
-                console.log("Updating ")
             });
             res.render("student/Application", {msg: "Updated Your previous Choices."});
-            return console.error(error.message);
+            return console.error(error.message + " => \"UPDATING\" ...");
         }
         sql = `UPDATE dormitory SET RequestStatus = "pending" WHERE StudentD = "${adr}"`;
         connection.query(sql, (error, result) => {
             if(error) return console.log(error.message);
+
             if (result.affectedRows === 0){
                 sql = `INSERT INTO dormitory (StudentD, RequestStatus) VALUES ("${adr}", "pending")`;
                 connection.query(sql, (er, re) => {

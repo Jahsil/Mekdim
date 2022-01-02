@@ -33,7 +33,7 @@ router.get('/evaluation' , authentication.isStudentLoggedIn , (req , res)=> {
 router.post('/evaluation' ,authentication.isStudentLoggedIn ,(req , res)=> {   
     let sql = `select * from staffevaluation where StudentID = "${req.userData.StudentID}" and InstructorID = "${req.body.instructor}" `;
     connection.query(sql , (error , result) => {   
-        if(result == undefined)
+        if(result === undefined)
         {
             res.render('student/staff' , {instructor : global , message: 1});
         }
@@ -147,19 +147,19 @@ router.post("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
 
 //KALAB YIBELTAL  ATR/5464/11
 router.post('/makeuprequest',authentication.isStudentLoggedIn,(req,res)=>{
-   var id = req.userData.StudentID
-  var idtrial="Atr/1111/11" // incase "req.userData.StudentID" is not working insert "Atr/1111/11"
+    const id = req.userData.StudentID;
+    const idtrial = "Atr/1111/11"; // incase "req.userData.StudentID" is not working insert "Atr/1111/11"
    //inplace of id
-   
-  var form = new formidable.IncomingForm();
+
+    let form = new formidable.IncomingForm();
     //parsing and storing the received file new address
     form.parse(req, function (err, fields, files) {
         if(err){
             return console.log(err.message);
         }
         console.log(files.filen.filepath);
-        var oldpath = files.filen.filepath;
-        var newpath = 'C:Files/MakeupExamRequest/' + files.filen.originalFilename;
+        let oldpath = files.filen.filepath;
+        let newpath = '../../..Files/MakeupExamRequest/' + files.filen.originalFilename;
         fs.rename(oldpath, newpath, function (err) {
           if (err) return console.log(err.message);
           console.log('File uploaded!');
@@ -253,7 +253,7 @@ router.post("/projandassSubmition", authentication.isStudentLoggedIn, (req, res)
       if(err) return console.log(err.message);
      
       var oldpath = files.assFile.filepath;
-      var newpath = `C:Files/AssignmentsSubmitted/${files.assFile.originalFilename}`;
+      var newpath = `../../../Files/AssignmentsSubmitted/${files.assFile.originalFilename}`;
       console.log(newpath);
       fs.rename(oldpath, newpath, function (err) {
         if (err) return console.log(err.message);
