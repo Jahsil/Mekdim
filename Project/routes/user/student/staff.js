@@ -75,9 +75,9 @@ router.post('/contactInstructor' , authentication.isStudentLoggedIn , (req , res
 
 
 //KALAB YIBELTAL  ATR/5464/11
+let contentr;
+let authorr;
 router.get("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
-    let contentr;
-    let authorr;
     //adding 'quote of the day' to attract the user
     fetch("https://api.quotable.io/random")
     .then((data) => data.json())
@@ -93,8 +93,8 @@ router.get("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
 router.post("/contactdephead",authentication.isStudentLoggedIn, (req, res) => {
     //inserting into contactdephead tablestudent name(from userData.FullName)and
     //  ( department, subject and body) from the form
-      connection.query('insert into contactdephead (NULL,"'+req.userData.FullName+'" , "'+req.body.department+'" ,"'+req.body.subject+'", "'+req.body.bodyy+'"', (error , result) =>{
-        res.render("student/contactdephead", { error: true}); 
+      connection.query('insert into contactdephead values (NULL,"'+req.userData.FullName+'" , "'+req.body.department+'" ,"'+req.body.subject+'", "'+req.body.bodyy+'")', (error , result) =>{
+        res.render("student/contactdephead", {  content: contentr, author:authorr,page:true,error: false}); 
       })
     /* we can send the students note directly to the department head email
         however nor email or yahoo allow such acces to their platform but 
