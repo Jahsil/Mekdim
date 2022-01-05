@@ -13,6 +13,16 @@ router.get('/Calendar' , (req , res)=> {
     res.render('guest/calendar' , {error: false });
 });
 
+router.get('/blog1' , (req , res)=> {
+    res.render('guest/blog1' , {error: false });
+});
+
+router.get('/blog2' , (req , res)=> {
+    res.render('guest/blog2' , {error: false });
+});
+router.get('/blog3' , (req , res)=> {
+    res.render('guest/blog3' , {error: false });
+});
 
 
 module.exports = router;
