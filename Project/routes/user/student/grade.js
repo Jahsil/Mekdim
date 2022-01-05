@@ -44,7 +44,13 @@ router.get('/gradechange' ,  authentication.isStudentLoggedIn ,(req , res)=> {
 //BEREKET LINGEREW
 router.post('/gradechange', authentication.isStudentLoggedIn , (req,res) => {
 
-    let sql=`insert into gradechangerequest (InstructorGC,CourseGC,Grievance) values("${req.body.instructorName}","${req.body.courseName}","${req.body.grivance}")`;
+    let sql=`insert into gradechangerequest (InstructorGC,CourseGC,Grievance) values( (select InstructorID from
+        instructor where FullName="${req.body.instructorName}"),
+        (select CourseID from course where
+        NAME="${req.body.courseName}"),"${req.body.grivance}")`;
+    
+    
+    
 
     connection.query(sql);
 
